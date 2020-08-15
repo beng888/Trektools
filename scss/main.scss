@@ -133,6 +133,9 @@ main {
   .link-text {
     display: none;
   }
+  .pin {
+    transform: translateY(-7px);
+  }
 }
 
 /* Large screens */
@@ -183,6 +186,9 @@ main {
     margin-left: 5rem;
     padding: 1rem;
   }
+  .pin {
+    transform: translateY(2px);
+  }
 }
 @media only screen and (min-width: 992px) {
   .navbar {
@@ -220,6 +226,9 @@ main {
 
   .navbar:hover {
     width: 100vw;
+  }
+  .pin {
+    transform: translateY(2px);
   }
 }
 
