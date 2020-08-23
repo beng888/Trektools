@@ -49,11 +49,11 @@ main {
   height: 100%;
 }
 
-.nav-item {
+.mapnav-item {
   width: 80%;
 }
 
-.nav-item:last-child {
+.mapnav-item:last-child {
   margin-top: auto;
 }
 
@@ -136,6 +136,18 @@ main {
   .pin {
     transform: translateY(-7px);
   }
+
+  .leaflet-popup-content-wrapper {
+    width: 300px;
+
+    div img {
+      left: 0;
+    }
+    iframe {
+      width: 280px;
+      height: 256px;
+    }
+  }
 }
 
 /* Large screens */
@@ -161,6 +173,19 @@ main {
       .logo svg {
         transform: rotate(0deg);
         transition: var(--transition-speed);
+      }
+    }
+
+    .leaflet-popup-content-wrapper {
+      width: 300px;
+
+      div img {
+        left: 0;
+      }
+
+      iframe {
+        width: 280px;
+        height: 256px;
       }
     }
   }
