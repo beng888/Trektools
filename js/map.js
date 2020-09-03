@@ -1,15 +1,27 @@
 $(".pin").click(function () {
   blur.classList.toggle("active");
   event.preventDefault();
+  $("#body").append('<div class="blocker"></div>');
+  $("body").css("overflow", "hidden");
 });
-$(document).click(function (event) {
-  //if you click on anything except the modal itself or the "open modal" link, close the modal
-  if (!$(event.target).closest(".mapmodal,.pin").length) {
-    $("body").find(".mapmodal").removeClass("visible");
-    $(".mapdiv").removeClass("active");
-    event.preventDefault();
-  }
+
+$(document).on("click", ".blocker", function () {
+  $("body").find(".mapmodal").removeClass("visible");
+  $(".mapdiv").removeClass("active");
+  $(".blocker").remove();
+  $("body").css("overflow", "scroll");
+  event.preventDefault();
 });
+
+// $(document).click(function (event) {
+//   //if you click on anything except the modal itself or the "open modal" link, close the modal
+//   if (!$(event.target).closest(".mapmodal,.pin").length) {
+//     $("body").find(".mapmodal").removeClass("visible");
+//     $(".mapdiv").removeClass("active");
+//     event.preventDefault();
+//     body.classList.toggle("bodyoverflow");
+//   }
+// });
 $(".ilocos-norte-open-modal").click(function () {
   $(".ilocosnortemodal").addClass("visible");
   $.getScript("./js/markers/ilocosnorte.js");
@@ -346,6 +358,251 @@ $(".siquijor-open-modal").click(function () {
     siquijormap.invalidateSize();
   }, 10);
 });
+$(".northernsamar-open-modal").click(function () {
+  $(".northernsamarmodal").addClass("visible");
+  $.getScript("./js/markers/northernsamar.js");
+  setTimeout(function () {
+    northernsamarmap.invalidateSize();
+  }, 10);
+});
+$(".samar-open-modal").click(function () {
+  $(".samarmodal").addClass("visible");
+  $.getScript("./js/markers/samar.js");
+  setTimeout(function () {
+    samarmap.invalidateSize();
+  }, 10);
+});
+$(".easternsamar-open-modal").click(function () {
+  $(".easternsamarmodal").addClass("visible");
+  $.getScript("./js/markers/easternsamar.js");
+  setTimeout(function () {
+    easternsamarmap.invalidateSize();
+  }, 10);
+});
+$(".biliran-open-modal").click(function () {
+  $(".biliranmodal").addClass("visible");
+  $.getScript("./js/markers/biliran.js");
+  setTimeout(function () {
+    biliranmap.invalidateSize();
+  }, 10);
+});
+$(".leyte-open-modal").click(function () {
+  $(".leytemodal").addClass("visible");
+  $.getScript("./js/markers/leyte.js");
+  setTimeout(function () {
+    leytemap.invalidateSize();
+  }, 10);
+});
+$(".southernleyte-open-modal").click(function () {
+  $(".southernleytemodal").addClass("visible");
+  $.getScript("./js/markers/southernleyte.js");
+  setTimeout(function () {
+    southernleytemap.invalidateSize();
+  }, 10);
+});
+$(".dinagat-open-modal").click(function () {
+  $(".dinagatmodal").addClass("visible");
+  $.getScript("./js/markers/dinagat.js");
+  setTimeout(function () {
+    dinagatmap.invalidateSize();
+  }, 10);
+});
+$(".surigaodelnorte-open-modal").click(function () {
+  $(".surigaodelnortemodal").addClass("visible");
+  $.getScript("./js/markers/surigaodelnorte.js");
+  setTimeout(function () {
+    surigaodelnortemap.invalidateSize();
+  }, 10);
+});
+$(".surigaodelsur-open-modal").click(function () {
+  $(".surigaodelsurmodal").addClass("visible");
+  $.getScript("./js/markers/surigaodelsur.js");
+  setTimeout(function () {
+    surigaodelsurmap.invalidateSize();
+  }, 10);
+});
+$(".agusandelnorte-open-modal").click(function () {
+  $(".agusandelnortemodal").addClass("visible");
+  $.getScript("./js/markers/agusandelnorte.js");
+  setTimeout(function () {
+    agusandelnortemap.invalidateSize();
+  }, 10);
+});
+$(".agusandelsur-open-modal").click(function () {
+  $(".agusandelsurmodal").addClass("visible");
+  $.getScript("./js/markers/agusandelsur.js");
+  setTimeout(function () {
+    agusandelsurmap.invalidateSize();
+  }, 10);
+});
+$(".davaooriental-open-modal").click(function () {
+  $(".davaoorientalmodal").addClass("visible");
+  $.getScript("./js/markers/davaooriental.js");
+  setTimeout(function () {
+    davaoorientalmap.invalidateSize();
+  }, 10);
+});
+$(".davaodeoro-open-modal").click(function () {
+  $(".davaodeoromodal").addClass("visible");
+  $.getScript("./js/markers/davaodeoro.js");
+  setTimeout(function () {
+    davaodeoromap.invalidateSize();
+  }, 10);
+});
+$(".davaodelnorte-open-modal").click(function () {
+  $(".davaodelnortemodal").addClass("visible");
+  $.getScript("./js/markers/davaodelnorte.js");
+  setTimeout(function () {
+    davaodelnortemap.invalidateSize();
+  }, 10);
+});
+$(".davaocity-open-modal").click(function () {
+  $(".davaocitymodal").addClass("visible");
+  $.getScript("./js/markers/davaocity.js");
+  setTimeout(function () {
+    davaocitymap.invalidateSize();
+  }, 10);
+});
+$(".davaodelsur-open-modal").click(function () {
+  $(".davaodelsurmodal").addClass("visible");
+  $.getScript("./js/markers/davaodelsur.js");
+  setTimeout(function () {
+    davaodelsurmap.invalidateSize();
+  }, 10);
+});
+$(".davaooccidental-open-modal").click(function () {
+  $(".davaooccidentalmodal").addClass("visible");
+  $.getScript("./js/markers/davaooccidental.js");
+  setTimeout(function () {
+    davaooccidentalmap.invalidateSize();
+  }, 10);
+});
+$(".sarangani-open-modal").click(function () {
+  $(".saranganimodal").addClass("visible");
+  $.getScript("./js/markers/sarangani.js");
+  setTimeout(function () {
+    saranganimap.invalidateSize();
+  }, 10);
+});
+$(".southcotabato-open-modal").click(function () {
+  $(".southcotabatomodal").addClass("visible");
+  $.getScript("./js/markers/southcotabato.js");
+  setTimeout(function () {
+    southcotabatomap.invalidateSize();
+  }, 10);
+});
+$(".sultankudarat-open-modal").click(function () {
+  $(".sultankudaratmodal").addClass("visible");
+  $.getScript("./js/markers/sultankudarat.js");
+  setTimeout(function () {
+    sultankudaratmap.invalidateSize();
+  }, 10);
+});
+$(".maguindanao-open-modal").click(function () {
+  $(".maguindanaomodal").addClass("visible");
+  $.getScript("./js/markers/maguindanao.js");
+  setTimeout(function () {
+    maguindanaomap.invalidateSize();
+  }, 10);
+});
+$(".cotabato-open-modal").click(function () {
+  $(".cotabatomodal").addClass("visible");
+  $.getScript("./js/markers/cotabato.js");
+  setTimeout(function () {
+    cotabatomap.invalidateSize();
+  }, 10);
+});
+$(".bukidnon-open-modal").click(function () {
+  $(".bukidnonmodal").addClass("visible");
+  $.getScript("./js/markers/bukidnon.js");
+  setTimeout(function () {
+    bukidnonmap.invalidateSize();
+  }, 10);
+});
+$(".misamisoriental-open-modal").click(function () {
+  $(".misamisorientalmodal").addClass("visible");
+  $.getScript("./js/markers/misamisoriental.js");
+  setTimeout(function () {
+    misamisorientalmap.invalidateSize();
+  }, 10);
+});
+$(".camiguin-open-modal").click(function () {
+  $(".camiguinmodal").addClass("visible");
+  $.getScript("./js/markers/camiguin.js");
+  setTimeout(function () {
+    camiguinmap.invalidateSize();
+  }, 10);
+});
+$(".lanaodelsur-open-modal").click(function () {
+  $(".lanaodelsurmodal").addClass("visible");
+  $.getScript("./js/markers/lanaodelsur.js");
+  setTimeout(function () {
+    lanaodelsurmap.invalidateSize();
+  }, 10);
+});
+$(".lanaodelnorte-open-modal").click(function () {
+  $(".lanaodelnortemodal").addClass("visible");
+  $.getScript("./js/markers/lanaodelnorte.js");
+  setTimeout(function () {
+    lanaodelnortemap.invalidateSize();
+  }, 10);
+});
+$(".misamisoccidental-open-modal").click(function () {
+  $(".misamisoccidentalmodal").addClass("visible");
+  $.getScript("./js/markers/misamisoccidental.js");
+  setTimeout(function () {
+    misamisoccidentalmap.invalidateSize();
+  }, 10);
+});
+$(".zamboangadelnorte-open-modal").click(function () {
+  $(".zamboangadelnortemodal").addClass("visible");
+  $.getScript("./js/markers/zamboangadelnorte.js");
+  setTimeout(function () {
+    zamboangadelnortemap.invalidateSize();
+  }, 10);
+});
+$(".zamboangadelsur-open-modal").click(function () {
+  $(".zamboangadelsurmodal").addClass("visible");
+  $.getScript("./js/markers/zamboangadelsur.js");
+  setTimeout(function () {
+    zamboangadelsurmap.invalidateSize();
+  }, 10);
+});
+$(".zamboangasibugay-open-modal").click(function () {
+  $(".zamboangasibugaymodal").addClass("visible");
+  $.getScript("./js/markers/zamboangasibugay.js");
+  setTimeout(function () {
+    zamboangasibugaymap.invalidateSize();
+  }, 10);
+});
+$(".zamboangacity-open-modal").click(function () {
+  $(".zamboangacitymodal").addClass("visible");
+  $.getScript("./js/markers/zamboangacity.js");
+  setTimeout(function () {
+    zamboangacitymap.invalidateSize();
+  }, 10);
+});
+$(".basilan-open-modal").click(function () {
+  $(".basilanmodal").addClass("visible");
+  $.getScript("./js/markers/basilan.js");
+  setTimeout(function () {
+    basilanmap.invalidateSize();
+  }, 10);
+});
+$(".sulu-open-modal").click(function () {
+  $(".sulumodal").addClass("visible");
+  $.getScript("./js/markers/sulu.js");
+  setTimeout(function () {
+    sulumap.invalidateSize();
+  }, 10);
+});
+$(".tawitawi-open-modal").click(function () {
+  $(".tawitawimodal").addClass("visible");
+  $.getScript("./js/markers/tawitawi.js");
+  setTimeout(function () {
+    tawitawimap.invalidateSize();
+  }, 10);
+});
 var fIcon = L.icon({
   iconUrl: "3000pin.svg",
   iconSize: [34.948795, 25.066328],
@@ -379,6 +636,12 @@ var bIcon = L.icon({
 var aIcon = L.icon({
   iconUrl: "500pin.svg",
   iconSize: [34.948795, 25.066328],
+  iconAnchor: [18, 30],
+  popupAnchor: [0, -25],
+});
+var abcIcon = L.icon({
+  iconUrl: "pin.png",
+  iconSize: [45, 40],
   iconAnchor: [18, 30],
   popupAnchor: [0, -25],
 });
