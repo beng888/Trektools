@@ -3,15 +3,15 @@ ilocosNorte.innerHTML +=
 
 function showPalemlem() {
   $("#modal").append('<div class="blocker2"></div>');
-  $.getScript("./js/mountains/palemlem.js");
+  $.getScript("./js/mountaintrails/ilocosnorte/palemlem.js");
 }
 
 function showSicapoo() {
   $("#modal").append('<div class="blocker2"></div>');
-  $.getScript("./js/mountains/sicapoo.js");
+  $.getScript("./js/mountaintrails/ilocosnorte/sicapoo.js");
 }
 
 function showSimigaysay() {
   $("#modal").append('<div class="blocker2"></div>');
-  $.getScript("./js/mountains/simigaysay.js");
+  $.getScript("./js/mountaintrails/ilocosnorte/simigaysay.js");
 }

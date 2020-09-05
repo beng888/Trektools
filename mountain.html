@@ -7,13 +7,19 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     />
+    <link href='https://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  
     <link rel="stylesheet" href="./css/main.min.css" />
     <!-- <script src="./js/tab.js" defer></script> -->
 
     <title>Mountains</title>
   </head>
-
   <body id="body" class="scroll">
+ 
+
+    
+    
     <div id="modal"></div>
     <div id="ilocosnortemap" class="ilocosnortemodal mapmodal"></div>
     <div id="ilocossurmap" class="ilocossurmodal mapmodal"></div>
@@ -117,663 +123,1299 @@
         <div class="line"></div>
         <div class="line"></div>
       </div>
-      <div class="menu-inner">
-        <ul class="mapnav">
-          <li class="mapnav-item">
-            <a href="#" class="mapnav-link">
-              <svg
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 512 512"
-                style="enable-background: new 0 0 512 512"
-                xml:space="preserve"
-              >
-                <g>
-                  <circle style="fill: #1669ad" cx="256" cy="256" r="256" />
-                  <circle
-                    style="fill: #2a81c2"
-                    cx="256"
-                    cy="256.002"
-                    r="203.503"
-                  />
-                  <circle
-                    style="fill: #e65439"
-                    cx="230.025"
-                    cy="317.135"
-                    r="66.714"
-                  />
-                  <path
-                    style="fill: #cdccca"
-                    d="M158.438,199.891h26.109h2.111c1.4,0,2.533-1.135,2.533-2.533c0-1.4-1.133-2.533-2.533-2.533h-2.111
-		h-1.738c-2.017,0-3.653-1.637-3.653-3.654s1.637-3.654,3.653-3.654h53.396c2.019,0,3.655,1.637,3.655,3.654
-		s-1.637,3.654-3.655,3.654h-14.282h-2.001c-1.418,0-2.564,1.148-2.564,2.566c0,1.225,0.859,2.244,2.008,2.5h3.911
-		c4.975,0,9.008,4.033,9.008,9.008s-4.034,9.008-9.008,9.008h-64.838c-4.978,0-9.009-4.033-9.009-9.008
-		S153.46,199.891,158.438,199.891z"
-                  />
-                  <path
-                    style="fill: #494a4a"
-                    d="M301.087,383.963l-134.784-99.377c-8.545-6.301-18.869-9.631-29.854-9.631
-		c-15.358,0-29.629,6.484-39.152,17.791l-23.305,27.666c25.411,76.289,97.383,131.301,182.212,131.301c0.04,0,0.08,0,0.122,0
-		l39.977-18.836c11.509-5.422,18.348-13.521,19.256-22.809C316.465,400.785,311.326,391.514,301.087,383.963z"
-                  />
-                  <path
-                    style="fill: #323232"
-                    d="M315.536,410.225c-2.374-3.313-5.547-6.467-9.48-9.367l-134.785-99.38
-		c-8.545-6.299-18.869-9.629-29.854-9.629c-15.358,0-29.629,6.484-39.152,17.791l-22.268,26.438
-		c29.533,68.037,97.305,115.635,176.206,115.635c0.04,0,0.08,0,0.122,0l39.977-18.836
-		C307.745,427.486,314.567,419.445,315.536,410.225z"
-                  />
-                  <path
-                    style="fill: #494a4a"
-                    d="M256.203,451.713c94.405,0,172.898-68.131,188.995-157.904l-77.707-77.467
-		c-8.817-8.789-20.498-13.631-32.893-13.631c-12.852,0-24.833,5.146-33.735,14.492L125.979,400.791
-		C160.203,432.394,205.944,451.713,256.203,451.713z"
-                  />
-                  <path
-                    style="fill: #323232"
-                    d="M315.771,232.109L142.265,414.248c31.872,23.539,71.275,37.465,113.938,37.465
-		c94.393,0,172.875-68.111,188.987-157.865l-62.792-62.6c-8.818-8.789-20.499-13.631-32.894-13.631
-		C336.653,217.617,324.673,222.764,315.771,232.109z"
-                  />
-                  <path
-                    style="fill: #e8e9ec"
-                    d="M290.253,93.07H187.354c-3.583,0-6.488,2.904-6.488,6.486c0,3.584,2.905,6.488,6.488,6.488h4.944
-		c1.937,0.213,3.45,1.838,3.45,3.832c0,2.141-1.735,3.875-3.875,3.875h-0.929h-64.161c-9.109,0-16.494,7.385-16.494,16.494
-		s7.385,16.494,16.494,16.494h112.746c9.108,0,16.493-7.385,16.493-16.494s-7.385-16.494-16.493-16.494h-9.087
-		c-2.082-0.057-3.754-1.754-3.754-3.848c0-2.131,1.728-3.859,3.859-3.859h3.874h55.831c3.582,0,6.486-2.904,6.486-6.488
-		C296.739,95.975,293.835,93.07,290.253,93.07z"
-                  />
-                  <path
-                    style="fill: #e8e9ec"
-                    d="M427.024,143.728h-39.789c-1.85,0-3.349,1.498-3.349,3.346c0,1.85,1.499,3.35,3.349,3.35h1.064h2.66
-		c0.738,0,1.336,0.598,1.336,1.336s-0.598,1.338-1.336,1.338h-2.66v0.018h-34.935c-6.88,0-12.457,5.578-12.457,12.457v0.916
-		c0,6.881,5.577,12.459,12.457,12.459h0.312h1.193c0.774,0,1.402,0.627,1.402,1.402c0,0.773-0.628,1.4-1.402,1.4h-1.193v0.02
-		h-30.583c-1.916,0-3.47,1.553-3.47,3.467c0,1.916,1.554,3.471,3.47,3.471h51.615c1.916,0,3.469-1.555,3.469-3.471
-		c0-1.914-1.553-3.467-3.469-3.467H373.4v-0.02h-1.635c-0.775,0-1.402-0.627-1.402-1.4c0-0.775,0.627-1.402,1.402-1.402h1.635
-		h40.071c6.88,0,12.458-5.578,12.458-12.459v-0.916c0-6.879-5.578-12.457-12.458-12.457h-1.658v-0.018h-1.935
-		c-0.737,0-1.336-0.6-1.336-1.338s0.599-1.336,1.336-1.336h1.935h15.21c1.85,0,3.347-1.5,3.347-3.35
-		C430.371,145.227,428.874,143.728,427.024,143.728z"
-                  />
-                  <path
-                    style="fill: #e8e9ec"
-                    d="M307.217,307.936c7.95-21.197,39.254-64.924,76.023-4.303c-4.968-37.764,16.06-48.361,55.235-16.48
-		c-0.01-0.025-0.02-0.049-0.029-0.074l-70.954-70.736c-8.817-8.789-20.498-13.631-32.893-13.631
-		c-12.852,0-24.833,5.146-33.735,14.492l-86.427,90.729C214.646,307.717,287.866,233.342,307.217,307.936z"
-                  />
-                  <path
-                    style="fill: #cdccca"
-                    d="M438.475,287.152L438.475,287.152l-56.076-55.904c-8.818-8.789-20.499-13.631-32.894-13.631
-		c-12.852,0-24.832,5.146-33.734,14.492l-40.613,42.633c13.504,0.244,25.695,8.662,32.059,33.193
-		c7.95-21.197,39.254-64.924,76.023-4.303C378.271,265.869,399.3,255.271,438.475,287.152z"
-                  />
-                  <path
-                    style="fill: #e8e9ec"
-                    d="M136.448,274.955c-15.358,0-29.629,6.484-39.152,17.791l-20.561,24.41l0,0
-		c16.322-10.047,37.688-16.053,41.166,17.51c6.957-18.611,27.826-33.021,42.732-4.699c-1.49-22.857,15.699-36.885,42.881-17.945l0,0
-		l-37.212-27.436C157.758,278.285,147.434,274.955,136.448,274.955z"
-                  />
-                  <path
-                    style="fill: #cdccca"
-                    d="M174.661,303.977l-3.39-2.498c-8.545-6.299-18.869-9.629-29.854-9.629
-		c-15.336,0-29.587,6.467-39.109,17.742c7.735,1.51,13.868,8.416,15.594,25.074c6.957-18.611,27.826-33.021,42.732-4.699
-		C159.785,316.951,165.001,306.812,174.661,303.977z"
-                  />
-                </g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-              </svg>
-              <span>Mountains</span>
-            </a>
-          </li>
+      <div class="menu-inner scroll">
+        <aside class="accordion">
+          <h1>Search Trails</h1>
+          <div>
+            <h2>By Difficulty</h2>
+            <div>
+              <h3>Difficulty 1/9</h3>
+              <div>
+                <h4>The seven lakes of San Pablo</h4>
+                <p>
+                  San Pablo City, Laguna <br>
+                  Major jumpoff: San Pablo Plaza (Poblacion)  <br>
+                  Days required / Trekking time: 1 day / 1-2 hours  <br>
+                  Specs: Minor, Difficulty 1/9, Trail class 1-2  <br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                
+                <h4>HISTORICAL TRAILS: MT. SAMAT</h4>
+                <p>
+                  Pilar, Bataan<br>
+                  Jumpoff: Brgy. Diwa, Pilar<br>
+                  LLA: 553 MASL<br>
+                  Days required / Hours to summit: 1 day / 1 hour<br>
+                  Specs: Minor climb, Difficulty 1/9, Trail class 1, Historical trail<br>
+                    <br>
+                      <button>Read More</button>
+                </p>
+    
+                <h4>Magdapio Falls</h4>
+                <p>
+                  MAGDAPIO (PAGSANJAN) FALLS VIA CAVINTI LAND ROUTE<br>
+                  Cavinti, Laguna<br>
+                  Major jump-off: Brgy. Tibatib, Cavinti<br>
+                  Height of waterfalls: 90 meters<br>
+                  Time to waterfalls / Days required: 60 mins / 1 day<br>
+                  Specs: Minor Climb, Difficulty 1/9, Trail Class 1 with soft rappelling involved<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
 
-          <li class="mapnav-item">
-            <a href="#" class="mapnav-link">
-              <svg
-                id="Capa_1"
-                enable-background="new 0 0 512 512"
-                height="512"
-                viewBox="0 0 512 512"
-                width="512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <g><circle cx="256" cy="256" fill="#7c83e7" r="256" /></g>
-                  <path
-                    d="m502.461 325.444-140.697-140.697-310.994 168.907 153.008 153.008c16.861 3.495 34.326 5.338 52.222 5.338 117.316 0 216.193-78.916 246.461-186.556z"
-                    fill="#515bdf"
-                  />
-                  <g>
-                    <path
-                      d="m50.77 353.491s91.884-231.105 205.229-231.105 205.23 231.105 205.23 231.105z"
-                      fill="#ff6426"
-                    />
-                    <path
-                      d="m256 122.385c113.345 0 205.23 231.105 205.23 231.105h-205.23z"
-                      fill="#ff4c04"
-                    />
-                    <path
-                      d="m50.77 353.491h410.459s-10.549-26.528-28.902-61.605h-352.654c-18.354 35.077-28.903 61.605-28.903 61.605z"
-                      fill="#ff4c04"
-                    />
-                    <path
-                      d="m256 353.491h205.229s-10.549-26.528-28.902-61.605h-176.327z"
-                      fill="#be3700"
-                    />
-                    <path
-                      d="m386.531 349.943c0-42.484-13.306-82.521-37.467-112.734-24.703-30.892-57.754-47.905-93.064-47.905-35.311 0-68.361 17.013-93.065 47.905-24.161 30.214-37.467 70.25-37.467 112.734 0 1.157.053 2.348.136 3.547h260.792c.083-1.201.135-2.394.135-3.547z"
-                      fill="#f6df5a"
-                    />
-                    <path
-                      d="m386.531 349.943c0-42.484-13.306-82.521-37.467-112.734-24.703-30.892-57.754-47.905-93.064-47.905v164.187h130.396c.083-1.202.135-2.395.135-3.548z"
-                      fill="#edb943"
-                    />
-                    <path d="m376.027 353.489v.002h.002z" fill="#fd5" />
-                    <path
-                      d="m324.069 148.798c-21.301-16.17-44.209-26.412-68.069-26.412s-46.768 10.242-68.069 26.412z"
-                      fill="#f6df5a"
-                    />
-                    <path
-                      d="m324.069 148.798c-21.301-16.17-44.209-26.412-68.069-26.412v26.412z"
-                      fill="#edb943"
-                    />
-                    <path
-                      d="m375.92 339.963-65.276-52.387-41.125-86.981c-4.438-.621-8.949-.941-13.52-.941-66.375 0-120.182 67.287-120.182 150.29 0 1.2.056 2.381.155 3.547h240.054c.099-1.166.155-2.347.155-3.547.001-3.354-.088-6.682-.261-9.981z"
-                      fill="#ff4c04"
-                    />
-                    <path
-                      d="m269.52 200.595 41.125 86.981 65.276 52.388c-3.813-72.728-48.995-131.332-106.401-139.369z"
-                      fill="#002659"
-                    />
-                    <path
-                      d="m269.52 200.595c3.813 72.727 48.995 131.332 106.401 139.369z"
-                      fill="#f6df5a"
-                    />
-                    <path
-                      d="m256 199.654c-66.375 0-120.182 67.287-120.182 150.29 0 1.2.056 2.381.155 3.547h120.027z"
-                      fill="#ff6426"
-                    />
-                  </g>
-                </g>
-              </svg>
-              <span>Events</span>
-            </a>
-          </li>
+                <h4>TATLONG KRUS AND MATABUNGKA FALLS</h4>
+                <p>
+                  Paete, Laguna <br>
+                  Major jump-off: Brgy. Ilaya Norte, Paete <br>
+                  Height of waterfalls: 20-25 meters <br>
+                  Hours to summit / days required: 45 mins / half day <br>
+                  Specs: Minor climb, Difficulty 1/9, Trail Class 1 <br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                
+                <h4>Solong Falls</h4>
+                <p>
+                  San Miguel, Catanduanes <br>
+                  Jump-off point: Brgy. Solong, San Miguel <br>
+                  Height: 40 meters <br>
+                  Trail time: 5 minutes <br>
+                  Specs: Difficulty 1/9, Trail Class 1 <br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                
+                <h4>AMBON-AMBON FALLS</h4>
+                <p>
+                  Laurel, Batangas <br>
+                  Height: 60 meters (estimate) <br>
+                  Jump-off point: Las Haciendas Estates, Laurel <br>
+                  Trail length: 20-30 minutes <br>
+                  Specs: Difficulty 1/9, Trail class 1-2 <br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+              </div>
+    
+              <h3>Difficulty 2/9</h3>
+              <div>
+              <h4>Mt. Tibig (563+) in Lobo, Batangas </h4>
+              <p>
+                Jump-off point: Hulong Banalo, Lobo<br>
+                LLA: 13°40′30.9′′N 121°9′37.2′′ E, 563 MASL<br>
+Days required / Hours to summit: 1 day / 1.5-2.5 hours<br>
+Specs: Minor climb, Difficulty 2/9, Trail class 1-3<br>
+Features: Scenic views of Verde Island Passage and Southern Batangas<br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Mt. Mabilog (441+)</h4>
+              <p>
+                San Pablo and Nagcarlan, Laguna<br>
+                Major jumpoff: Purok 3 (Sandig), Brgy. Sta. Catalina, San Pablo<br>
+                Alternate jumpoffs: (1) Brgy. Sulsuguin, Nagcarlan<br>
+                (2) Lake Pandin, Brgy. Sto. Angel, San Pablo<br>
+                LLA: 14°7’57″N, 121°21’30″E, 441 MASL<br>
+                Days required / Hours to summit: 1 day / 2-3 hours<br>
+                Specs: Minor climb, Difficulty 2/9, Trail class 1-3<br>
+                Features: Views of Southern Tagalog mountains and lakes<br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Mt. Osdung (2,617+), Kibungan, Benguet</h4>
+              <p>
+                Kibungan, Benguet<br>
+                Major jumpoff: Collideng Junction, Halsema Hwy, Brgy. Madaymen<br>
+                LLA: 16°43’6″N, 120°45’40″E, 2617 MASL (#16)<br>
+                Days required / Hours to summit: Half-day / 1-2 hours*<br>
+                Specs: Minor climb, Difficulty 2/9*, Trail class 1-2<br>
+                *- if coming from Collideng Junction<br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Malinta Hill (135+)</h4>
+              <p>
+                Corregidor, Manila Bay<br>
+                Major jumpoff: East of Bottomside, Corregidor<br>
+                LLA: 14°22’60N, 120°34’60, 135m<br>
+                Days required / Hours to summit: Half-day / 1 hour<br>
+                Specs: Minor climb, Difficulty 2/9, Trail class 1-3, Historical trail<br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Mt. Pinatubo Crater Lake (960+)</h4>
+              <p>
+                Capas, Tarlac <br>
+Major jump-off: Brgy. Sta. Juliana, Capas, Tarlac <br>
+LLA: 15°8’35″N, 120°20’54″E, 960 MASL <br>
+Days required / Hours to crater: 1 day, 45 min 4×4 + 2 hrs hike <br>
+Specs: Minor climb, Difficulty 2/9, Trail class 1 <br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Historical trails: Mt. Buntis (280+) and Mt. Nagpatong (100+)</h4>
+              <p>
+                Maragondon, Cavite<br>
+Jump-off (Mt. Buntis): Kaingin Hanging Bridge, Maragondon<br>
+LLA: 280m (Mt. Buntis; unverified); 100m (Mt. Nagpatong)<br>
+Days required / Hours to summit: Half day / 1.5-2 hours (Mt. Buntis)<br>
+Specs: Minor climb, Difficulty 2/9, Trail class 1-2<br>
+Features: Historical sights, bird sanctuaries, views of Mariveles<br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Mt. Cabuyao (2,025 +) / Mt. Sto. Tomas (2,256 +)</h4>
+              <p>
+                Tuba, Benguet<br>
+Major jump-off: Green Valley, Brgy. Dontogan, Baguio City<br>
+LLA (Mt. Cabuyao): 16° 21.530N, 120° 33.888E, 2025 MASL<br>
+LLA (Mt. Sto Tomas): 16° 20.12N, 120° 33.661E, 2256 MASL<br>
+Days required / Hours to summit: 1 day / 2 hours (ST) 3 hours (C)<br>
+Specs: Minor climb, Difficulty 2/9, Trail class 1
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Balaan Bukid (170+)</h4>
+              <p>
+                Guimaras Island <br>
+Major jumpoff: Bgy. Hoskyn, Jordan, Guimaras <br>
+LLA: 10°39’48″N, 122°34’5″E, 170+ MASL <br>
+Days required / Hours to summit: Half-day / 45 minutes <br>
+Specs: Minor Climb, Difficulty 2/9, Trail Class 1 <br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Taal Volcano (311+)</h4>
+              <p>
+                Batangas Province    <br>
+Jump-off point: Talisay, Batangas    <br>
+LLA: 14°00.1′ N, 120°59.1′ E, 311 MASL    <br>
+Days required / Time to summit: Half-day, 45 minutes    <br>
+Specs: Minor climb, Difficulty 2/9, Trail class 1, Trail length: 1.7kms    <br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Mt. Ampacao (1,889+)</h4>
+              <p>
+                Sagada, Mt. Province<br>
+Major jump-off: Ambasing Elementary School, Brgy. Ambasing, Sagada<br>
+Altitude: 1889 MASL (386 meter gain)<br>
+Days required / Hours to summit: Half day, 1.5 hours<br>
+specs: Minor climb, Difficulty 2/9, Trail class 1,3<br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Tayak Hill (560+)</h4>
+              <p>
+                Rizal, Laguna<br>
+Major jump-off: Brgy. Tala, Rizal;<br>
+LLA: 14.0688 N 121.420 E (approx); 560 MASL<br>
+Days required / Hours to summit: Half day / 1.5 hours<br>
+Specs: Minor climb, Difficulty 2/9, Trail class 1<br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Mt. Manalmon (196+)</h4>
+              <p>
+                San Miguel, Bulacan<br>
+Major jump-off: Sitio Madlum, Brgy. Sibul, San Miguel<br>
+LLA: 15°15.11’N; 121°1.22′ E; 196 MASL<br>
+Days required / Hours to summit: Half-day / 1 hour<br>
+Specs: Minor climb, Difficulty 2/9, Trail class 1-2<br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Mt. Romelo (240+)</h4>
+              <p>
+                Siniloan, Laguna<br>
+Major Jump-off: Brgy. Macatad, Upland Siniloan<br>
+Elevation: 300 MASL<br>
+Days required / hours to summit: 1 day, 2-3 hours<br>
+Specs: Minor Climb, Difficulty 2/9, Trail Class 1<br>
+Features: Waterfalls, rain forest<br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Mt. Pinatubo (960+)</h4>
+              <p>
+                Central Luzon<br>
+Major jump-off: Brgy. Sta. Juliana, Capas, Tarlac<br>
+LLA: 15°8’35″N, 120°20’54″E, 960 MASL<br>
+Days required / Hours to crater: 1 day, 45 min 4×4 + 2 hrs hike<br>
+Specs: Minor climb, Difficulty 2/9, Trail class 1<br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Manabu Peak (760+)</h4>
+              <p>
+                Sto. Tomas, Batangas<br>
+Jump-off point: Sulok, Brgy. Sta Cruz, Sto. Tomas<br>
+LLA: 13.9777°, 121.2413°, 760 MASL<br>
+Days required / Hours to summit: 1 day / 1-2 hours<br>
+Specs: Minor climb, Difficulty 2/9, Trail class 1-2<br>
+Features: Woodlands, meadowy peak, views of Batangas mountains<br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Mt. Bongao (314+)</h4>
+              <p>
+                Bongao, Tawi-Tawi<br>
+Major jump-off: Pasiagan Village, Bongao<br>
+LLA: 5.01361°N 119.7422°E, 314 MASL<br>
+Days required / Hours to summit: Half-day / 2 hours<br>
+Specs: Minor climb, Difficulty 2/9, Trail class 2<br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Mt. Gulugod-Baboy (525+)</h4>
+              <p>
+                Anilao, Mabini, Batangas<br>
+Jump-off point: Philpan Dive Resort, Anilao, Mabini<br>
+LLA: 13°42’55″N; 120°53’43″E; 525 MASL<br>
+Days required / Hours to summit: Half-day / 1-2 hours<br>
+Specs: Minor climb, Difficulty 2/9, Trail class 1-2<br>
+Features: Scenic views of Batangas Bay and Balayan Bay<br>
+                <br>
+                <button>Read More</button>
+              </p>
+              <h4>Mt. Tagapo (438+)</h4>
+              <p>
+                Talim Island, Laguna de Bay<br>
+Major jump-off: Brgy. Janosa (Talim Island) Binangonan, Rizal<br>
+LLA 14.32° N 121.23° E, 438 MASL<br>
+Days required / Hours to summit: 1 day / 2 hours<br>
+Specs: Minor climb, Difficulty 2/9, Trail class 1-2<br>
+Last updated: February 25, 2015<br>
+                <br>
+                <button>Read More</button>
+              </p>
+            </div>
+              
+              <h3>Difficulty 3/9</h3>
+              <div>
+                <h4>Mt. Sawi (594m) in Gabaldon, Nueva Ecija</h4>
+                <p>
+                  Gabaldon, Nueva Ecija<br>
+Major jumpoff: Brgy. Malinao, Gabaldon<br>
+LLA: 594 MASL<br>
+Days required / Hours to summit: 1 day / 2-3 hours<br>
+Specs: Minor climb, Difficulty 3/9, Trail class 1-3<br>
+Features: Scenic views of Nueva Ecija<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Maysawa Circuit: Mt. Sapari (592m) and Mt. Binutasan (577m)</h4>
+                <p>
+                  Tanay, Rizal<br>
+Trailhead: Sitio Maysawa, Brgy. Cuyambay, Tanay<br>
+LLA: 14°37′11.5′′N, 121°21′31.1′′ E, 592 MASL (Mt. Sapari); 14° 37′38.9′′N, 121°21′59.6′′ E 577 (Mt. Binutasan)<br>
+Days required / Hours to summit: 1 day / 1.5h (Sapari); 2.5 (Binutasan)<br>
+Specs: Minor climb, Difficulty 3/9, Trail class 1-3<br>
+Features: Scenic views of the Sierra Madre, sea of clouds, river<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Hugom (570m) in San Juan, Batangas</h4>
+                <p>
+                  San Juan, Batangas<br>
+Trailhead: Brgy. Hugom, San Juan<br>
+LLA: 13.6731 N, 121.3593 E, 570 MASL<br>
+Days required / Hours to summit: 1 day / 2.5-4 hours<br>
+Specs: Minor climb,  Difficulty 3/9, Trail class 1-3<br>
+Features: Tropical rainforest, scenic views of Laiya beach<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Ulap (1846m) in Itogon, Benguet</h4>
+                <p>
+                  Itogon, Benguet<br>
+Entry point: Brgy. Ampucao, Itogon<br>
+Exit point: Brgy. Sta. Fe, Itogon<br>
+LLA: 16.2904 N, 120.6312 E, 1846 MASL (Mt. Ulap)<br>
+Days required / Hours to summit: 1 day / 2-3 hours<br>
+Specs: Difficulty 3/9, Trail class 1-3,<br>
+Features: Grassland and pine ridges, scenic views of the Cordilleras, burial caves<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Sipit Ulang (252+) in Rodriguez, Rizal</h4>
+                <p>
+                  Rodriguez, Rizal<br>
+Major jumpoff: Brgy. Mascap, Rodriguez, Rizal<br>
+LLA: 14°45′20.7′′ N, 121°10′38.2′ 252 MASL (+210m)<br>
+Days required / Hours to summit: 1 day / 2-3.5 hours<br>
+Specs: Minor, Difficulty 3/9 (Paniki Trail), Trail class 1-4 with limestone scrambling<br>
+Features: Limestone formations, scenic views of Wawa<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Ayaas (627+) in Rodriguez, Rizal</h4>
+                <p>
+                  Rodriguez, Rizal<br>
+Major jumpoff: Brgy. Wawa, Rodriguez, Rizal<br>
+Minor jumpoff: Brgy. Mascap, Rodriguez, Rizal<br>
+LLA: 14°45′3.38′′ N, 121°12′27.5′ 627 MASL (+570)<br>
+Days required / Hours to summit: 1 day / 3-4 hours<br>
+Specs: Minor, Difficulty 3/9, Trail class 1-3 with river trekking<br>
+Features: River trekking, scenic views, waterfalls<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Pamitinan (426+) and Mt. Binacayan (424+) in Rodriguez, Rizal</h4>
+                <p>
+                  Rodriguez, Rizal<br>
+Major jumpoff: Brgy. Wawa, Rodriguez, Rizal<br>
+LLA (Pamitinan): 14°43′51.7′′N 121°11′29.2′′ E 426 MASL<br>
+LLA (Binacayan): 14°43′30.5′′N 121°11′26.1′′ E 424 MASL<br>
+Days required / Hours to summit: 1 day / 1.5-3 hours (P); 2-3 hours (B)<br>
+Specs: Minor, Difficulty 3/9 (P); 3/9 (B) / Trail class 1-4<br>
+Features: Limestone formations, scenic views of Sierra Madre and Rizal province<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Batolusong/Mapatag Plateau and Susong Dalaga Peak (645+/780+)</h4>
+                <p>
+                  Tanay, Rizal <br>
+Major jumpoff: Brgy. San Andres, Tanay, Rizal* <br>
+LLA: 645 MASL / 780 MASL <br>
+Days required / Hours to destination: 1 day /1.5h (Mapatag); 3-4 (Susong Dalaga Peak) <br>
+Specs: Minor climb, Difficulty 3/9, Trail class 1-3 <br>
+Features: Grassland slopes, views of Laguna, Rizal, and Quezon <br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Balagbag (777+) in Rodriguez, Rizal</h4>
+                <p>
+                  Rodriguez, Rizal <br>
+First jumpoff: Sitio Karahume, Brgy. Macabud, Rodriguez <br>
+second jumpoff: Sitio Balagbag, Brgy. San Isidro, Rodriguez <br>
+LLA: 777 MASL (unverified) <br>
+Days required / Hours to summit: 1 day / 1-2 hours <br>
+Specs: Minor climb, Difficulty 3/9, Trail class 1-2 <br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Banoi (960+)</h4>
+                <p>
+                  Lobo, Batangas <br>
+Major jumpoff: Sitio Malabnig, Brgy. Balatbat, Lobo <br>
+LLA: 960 MASL (Main Peak) 850 MASL (Two Towers’ Peak) <br>
+Days required / Hours to summit: 1 day / 3-5 hours <br>
+Specs: Minor climb, Difficulty 3/9, Trail class 1-3 <br>
+Features: Woodlands, scenic views of Southern Batangas <br>
+                  <br>
+                  <button>Read More</button>
+                </p>   
+                <h4>Nagsasa Cove via Mt. Nagsasa (450+)</h4>
+                <p>
+                  Subic, Zambales<br>
+Major Jumpoff: Sitio San Martin, Subic<br>
+LLA: 14°49.03N, 120°06.25E, 450 MASL<br>
+Days required / Hours to cove: 1-2 days / 3-4 hours<br>
+Specs: Minor climb, Difficulty 3/9, Trail class 1-2<br>
+Features: River crossing, beach<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Darala (600+)</h4>
+                <p>
+                  Coron, Palawan<br>
+Major jumpoff: Brgy. Balisungan, Coron<br>
+LLA: 600 MASL<br>
+Days required / Hours to summit: 1 day / 3 hours<br>
+Specs: Minor climb, Diffculty 3/9, Trail class 1-3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Bungkol Baka (551+)</h4>
+                <p>
+                  San Jose, Tarlac<br>
+Major jumpoff: Sitio San Pedro, Brgy. Iba, San Jose<br>
+LLA: 551 MASL<br>
+Days required / Hours to summit: 1 day / 3-4 hours<br>
+Specs: Minor climb, Difficulty 3/9, Trail class 1-3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Valungid Peak (160+)</h4>
+                <p>
+                  Bo. Chavayan, Sabtang, Batanes<br>
+Jumpoff: Opposite Chamantad sanctuary, Bo. Chavayan<br>
+LLA: 160 MASL<br>
+Days required / Hours to summit: Half-day / 30 minutes<br>
+Specs: Minor climb, Difficulty 3/9, Trail class 4<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Osmeña Peak/Traverse to Kawasan Falls (1,013 +)</h4>
+                <p>
+                  Dalaguete and Badian, Cebu <br>
+Entry point: Mantalongon Market, Dalaguete, Cebu<br>
+Exit point: Brgy. Matutinao, Badian, Cebu<br>
+LLA: 09° 49.209N; 123° 26.541E; 1013 MASL<br>
+Days required / Trek time: 1-2 days / 1-2 hours (summit) 4-5 hours (falls)<br>
+Specs: Minor Climb, Difficulty 3/9, Trail Class 1-2<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Manunggal (1,003 +)</h4>
+                <p>
+                  Balamban, Cebu<br>
+Jump-off point: Brgy. Magsaysay, Balamban<br>
+LLA: 1003 MASL<br>
+Days required / Hours to summit: 1-2 days / 3-5 hours<br>
+Specs: Minor climb, Difficulty 3/9, Historical trail, Trail class 1-2<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Matarem (473+)</h4>
+                <p>
+                  Batan Island, Batanes<br>
+Major jumpoff: Brgy. San Vicente, Ivana<br>
+LLA: 20.3933 N, 121.9416 E, 473 MASL<br>
+Days required / Hours to summit: 1 day / 2.5-3 hours<br>
+Specs: Minor climb, Difficulty 3/9, Trail class 1-3 <br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Anawangin Cove via Mt. Pundaquit (464+)</h4>
+                <p>
+                  San Antonio, Zambales<br>
+Major jump-off: Brgy. Pundaquit, San Antonio<br>
+LLA (summit): 14 53’59” 129 94’24”, 464 MASL<br>
+LLA (cove): 14 52 41 120 04’04”, 0 MASL<br>
+Days required / Hours to cove: 1 day / 4-5 hours<br>
+Specs: Minor Climb, Difficulty 3/9, Trail Class 2<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Kapugan (1,305+)</h4>
+                <p>
+                  Kiangan, Ifugao<br>
+Major jump-off: Brgy. Ambabag, Kiangan<br>
+LLA: 16°47’30″N 121°4’52″E, 1305 MASL<br>
+Days required / Hours to summit: Half-day / 2 hours<br>
+Specs: Minor Climb, Difficulty 3/9, Trail Class 3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Cinco Picos (881+)</h4>
+                <p>
+                  Subic, Zambales<br>
+Major jump-off: Sitio Cawag Settment, Subic<br>
+LLA: 14° 47′ N 120° 9′ E, 881 MASL<br>
+Days required / Hours to summit: 2 days / 6-7 hours<br>
+Specs: Major climb, Difficulty 3/9, Trail class 3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Timbak/Singakalsa (2,717+)</h4>
+                <p>
+                  Atok, Benguet<br>
+Major jumpoff: KM. 55, Atok, Benguet<br>
+Elevation: 2717 MASL (#9)<br>
+Days required / Hours to summit: 1 day / 1.5-2.5 hours<br>
+Specs (Backtrail): Minor climb, Difficulty 2/9, Trail class 2<br>
+Features: Village life, mummies, views of major Cordillera peaks<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Daguldul (670+)</h4>
+                <p>
+                  San Juan, Batangas<br>
+Major jump-off: Brgy. Hugom, San Juan<br>
+LLA: 13°40.380N 121°19.160E, 672 MASL (+ 672 m)<br>
+Days required / Hours to summit: 1-2 days / 5 hours<br>
+Specs: Minor climb, Difficulty 3/9, Trail class 1-3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Malipunyo (Mt. Malarayat) 1005+</h4>
+                <p>
+                  Batangas and Laguna<br>
+Entry point: Brgy. Talisay, Lipa<br>
+Exit point: Brgy. Atisan, San Pablo City<br>
+Elevation: 1005 MASL<br>
+Days required / Hours to summit: 1 day / 3-5 hours<br>
+Specs: Minor climb, Difficulty 3/9, Trail class 2-3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Marami (405+)</h4>
+                <p>
+                  Maragondon, Cavite<br>
+Jump-off point: Brgy. Ramirez, Magallanes, Cavite<br>
+Alternate jumpoff: Brgy.Talipusngo, Maragondon, Cavite<br>
+LLA: 405 MASL<br>
+Days required / Hours to summit: 1-2 days / 4-6 hours<br>
+Specs: Minor climb, Difficulty 3/9, Trail class 1-3<br>
+Features: Rocky outcrops, scenic views of Cavite<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Sembrano (745+)</h4>
+                <p>
+                  Pililia, Rizal<br>
+Major jump-off: Brgy. Hall of Malaya, Pililla<br>
+LLA: 14°23’10″N; 121°21’57” E; 745 MASL<br>
+Days required / Hours to summit: 1 day / 3-4 hours<br>
+Specs: Minor climb, Difficulty 3/9, Trail class 1-3<br>
+Features: Views of Laguna Lake and Southern Tagalog mountains<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Pulag Ambangeg Trail (2,922+)</h4>
+                <p>
+                  Bokod, Benguet<br>
+Major jump-off: Ambangeg Ranger Stn, Bokod, Benguet<br>
+LLA: 16°34’58″N 120°53’15″E, 2922 MASL (#3)<br>
+Days required / Hours to summit: 4-5 hours / 1-2 days<br>
+Specs: Major Climb, Difficulty 3/9, Trail class 1-2<br>
+Trail system: Grand Cordillera Trail, Section 3<br>
+Features: Sea of clouds, dwarf bamboo slopes, pine forests<br>
 
-          <li class="mapnav-item">
-            <a href="#" class="mapnav-link">
-              <svg
-                height="512"
-                viewBox="0 0 52 59"
-                width="512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="Page-1" fill="none" fill-rule="evenodd">
-                  <g
-                    id="051---Survival-Guide"
-                    fill-rule="nonzero"
-                    transform="translate(-1)"
-                  >
-                    <path
-                      id="Shape"
-                      d="m53 43v14c-.0032948 1.1032019-.8967981 1.9967052-2 2h-43c-3.75067297-.000293-6.83181997-2.9622553-6.98-6.71.01729172-.7322075.09758819-1.4615672.24-2.18.00234825-.0168486.00568737-.0335442.01-.05.87030247-2.9943501 3.61174103-5.0555209 6.73-5.06h43c1.1032019-.0032948 1.9967052-.8967981 2-2z"
-                      fill="#f5efca"
-                    />
-                    <path
-                      id="Shape"
-                      d="m53 3v40c0 1.6568542-1.3431458 3-3 3h-43c-3.3137085 0-6 2.6862915-6 6v-46c0-3.3137085 2.6862915-6 6-6h43c1.6568542 0 3 1.34314575 3 3z"
-                      fill="#3b97d3"
-                    />
-                    <path
-                      id="Shape"
-                      d="m53 49v2h-34c-.5522847 0-1-.4477153-1-1s.4477153-1 1-1z"
-                      fill="#e4c05c"
-                    />
-                    <path
-                      id="Shape"
-                      d="m12 51h-5c-.55228475 0-1-.4477153-1-1s.44771525-1 1-1h5c.5522847 0 1 .4477153 1 1s-.4477153 1-1 1z"
-                      fill="#e4c05c"
-                    />
-                    <path
-                      id="Shape"
-                      d="m41 55h-34c-.55228475 0-1-.4477153-1-1s.44771525-1 1-1h34c.5522847 0 1 .4477153 1 1s-.4477153 1-1 1z"
-                      fill="#e4c05c"
-                    />
-                    <path
-                      id="Shape"
-                      d="m53 53v2h-5c-.5522847 0-1-.4477153-1-1s.4477153-1 1-1z"
-                      fill="#e4c05c"
-                    />
-                    <g fill="#f3d55b">
-                      <path
-                        id="Shape"
-                        d="m23 6c-.5522847 0-1 .44771525-1 1v8c0 .5522847-.4477153 1-1 1s-1-.4477153-1-1v-8c0-.55228475-.4477153-1-1-1s-1 .44771525-1 1v8c0 1.6568542 1.3431458 3 3 3s3-1.3431458 3-3v-8c0-.55228475-.4477153-1-1-1z"
-                      />
-                      <path
-                        id="Shape"
-                        d="m33 6h-2c-.5522847 0-1 .44771525-1 1v10c0 .5522847.4477153 1 1 1h2c1.6568542 0 3-1.3431458 3-3v-6c0-1.65685425-1.3431458-3-3-3zm1 9c0 .5522847-.4477153 1-1 1h-1v-8h1c.5522847 0 1 .44771525 1 1z"
-                      />
-                      <path
-                        id="Shape"
-                        d="m27 6c-.5522847 0-1 .44771525-1 1v10c0 .5522847.4477153 1 1 1s1-.4477153 1-1v-10c0-.55228475-.4477153-1-1-1z"
-                      />
-                      <path
-                        id="Shape"
-                        d="m43 13c.5522847 0 1-.4477153 1-1s-.4477153-1-1-1h-3v-3h3c.5522847 0 1-.44771525 1-1s-.4477153-1-1-1h-4c-.5522847 0-1 .44771525-1 1v10c0 .5522847.4477153 1 1 1h4c.5522847 0 1-.4477153 1-1s-.4477153-1-1-1h-3v-3z"
-                      />
-                      <path
-                        id="Shape"
-                        d="m13 8c.5522847 0 1 .44771525 1 1s.4477153 1 1 1 1-.44771525 1-1c0-1.65685425-1.3431458-3-3-3s-3 1.34314575-3 3v6c0 1.6568542 1.3431458 3 3 3s3-1.3431458 3-3v-2c0-.5522847-.4477153-1-1-1h-1c-.5522847 0-1 .4477153-1 1s.4477153 1 1 1v1c0 .5522847-.4477153 1-1 1s-1-.4477153-1-1v-6c0-.55228475.4477153-1 1-1z"
-                      />
-                    </g>
-                    <path
-                      id="Shape"
-                      d="m49 22c-1.98 4.43-7.23 9.12-14.45 10.67-2.25.49-4.02.86-5.42 1.16.0599094-.2512885.0495307-.5142157-.03-.76l-1.82-5.69c-.0761909-.2568265-.2298642-.4838439-.44-.65 6.2832773-2.0709749 12.7489376-3.5408998 19.31-4.39.98-.13 1.94-.25 2.85-.34z"
-                      fill="#bdc3c7"
-                    />
-                    <path
-                      id="Shape"
-                      d="m29.13 33.83c-.1115778.4952564-.4766975.8946061-.96 1.05l-1.58.5c-.7395846.2417942-1.5363907-.1543832-1.79-.89h-.01c0-.01-.01-.03-.01-.04l-1.81-5.68c-.0950192-.2890582-.0950192-.6009418 0-.89v-.01h.01c.1396716-.4353642.4831354-.7750947.92-.91l1.57-.51c.4745898-.1452626.9904653-.0398282 1.37.28.2101358.1661561.3638091.3931735.44.65l1.82 5.69c.0795307.2457843.0899094.5087115.03.76z"
-                      fill="#f29c1f"
-                    />
-                    <path
-                      id="Shape"
-                      d="m15.33 37.9c-1.0229977.6158236-1.9666943 1.3546608-2.81 2.2-2.43 2.56-9.11.18-7.52-3.37.66504457-1.0144773 1.58606137-1.8354585 2.67-2.38.75764127.9691207 1.70321219 1.7752369 2.78 2.37 1.4340312.9623998 3.1646846 1.3808774 4.88 1.18z"
-                      fill="#d25627"
-                    />
-                    <path
-                      id="Shape"
-                      d="m24.79 34.49c-3.3357748.5043956-6.5398568 1.659632-9.43 3.4h-.01c-.0051905.0057054-.0123214.0092708-.02.01-1.7153154.2008774-3.4459688-.2176002-4.88-1.18-1.07678781-.5947631-2.02235873-1.4008793-2.78-2.37.53-.32 1.11-.65 1.73-.97h.01c4.3931535-2.1317352 8.9231376-3.9691181 13.56-5.5-.0950192.2890582-.0950192.6009418 0 .89l1.81 5.68c0 .01.01.03.01.04z"
-                      fill="#e57e25"
-                    />
-                    <path
-                      id="Shape"
-                      d="m5 9c-.55228475 0-1-.44771525-1-1v-2c0-1.65685425 1.34314575-3 3-3h2c.55228475 0 1 .44771525 1 1s-.44771525 1-1 1h-2c-.55228475 0-1 .44771525-1 1v2c0 .55228475-.44771525 1-1 1z"
-                      fill="#fff"
-                    />
-                    <path
-                      id="Shape"
-                      d="m48 43h-3c-.5522847 0-1-.4477153-1-1s.4477153-1 1-1h3v-3c0-.5522847.4477153-1 1-1s1 .4477153 1 1v3c0 1.1045695-.8954305 2-2 2z"
-                      fill="#fff"
-                    />
-                    <path
-                      id="Shape"
-                      d="m25 22h-14c-.5522847 0-1-.4477153-1-1s.4477153-1 1-1h14c.5522847 0 1 .4477153 1 1s-.4477153 1-1 1z"
-                      fill="#ecf0f1"
-                    />
-                    <path
-                      id="Shape"
-                      d="m17 26h-6c-.5522847 0-1-.4477153-1-1s.4477153-1 1-1h6c.5522847 0 1 .4477153 1 1s-.4477153 1-1 1z"
-                      fill="#ecf0f1"
-                    />
-                    <path
-                      id="Shape"
-                      d="m3.02 52.49c.32963416 2.6094139 2.57019412 4.5526688 5.2 4.51h42.78c1.1032019-.0032948 1.9967052-.8967981 2-2v2c-.0032948 1.1032019-.8967981 1.9967052-2 2h-43c-3.75067297-.000293-6.83181997-2.9622553-6.98-6.71-.01694733-.095682-.02365184-.1928974-.02-.29-.00126681-.6389999.08623606-1.2750784.26-1.89.00234825-.0168486.00568737-.0335442.01-.05.87030247-2.9943501 3.61174103-5.0555209 6.73-5.06h43c1.1032019-.0032948 1.9967052-.8967981 2-2v2c-.0032948 1.1032019-.8967981 1.9967052-2 2h-43c-1.4112231.0013387-2.75638175.5980357-3.70453582 1.6432899-.94815406 1.0452542-1.41128946 2.4420379-1.27546418 3.8467101z"
-                      fill="#2980ba"
-                    />
-                  </g>
-                </g>
-              </svg>
-              <span>Skills</span>
-            </a>
-          </li>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Talamitam (630+)</h4>
+                <p>
+                  Nasugbu, Batangas<br>
+Jump-off point: Sitio Bayabasan, Brgy. Aga, Nasugbu (KM. 83)<br>
+LLA: 14.1158° N; 120.7577° N; 630 MASL<br>
+Days required/ Hours to summit: 1 day / 1.5-2.2 hours<br>
+Specs: Minor climb, Difficulty 3/9, Trail class 1-3 with steep assault (100m)<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Kalisungan (760+)</h4>
+                <p>
+                  Calauan, Laguna<br>
+Jump-off point: Brgy. Lamot 2, Calauan<br>
+LLA: 14° 08.790N; 121° 20.683E; 760 MASL<br>
+Days required / Hours to summit: 1 day / 2.5-3 hours<br>
+Specs: Minor climb, Difficulty 3/9, Trail class 1-2<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Arayat/ Arayat Trail (1,030+)</h4>
+                <p>
+                  Arayat, Pampanga<br>
+Major jump off: Arayat National Park, Brgy. Bano, Arayat<br>
+LLA: 15.20° N 120.742° E, 1030 MASL<br>
+Days required / Hours to summit: 1 day / 4 hours<br>
+Specs: Minor climb, Difficulty 3/9, Trail class 3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Maculot – Rockies (706+) and Rockies-Summit-Grotto Traverse (930+)</h4>
+                <p>
+                  Cuenca, Batangas<br>
+Major Jumpoff: Mountaineer’s Store, Brgy. 7 “Siete”, Cuenca<br>
+Exit point (traverse): Brgy 5 (to Grotto), Cuenca<br>
+LLA: 13°55 N; 121°2 E; 706 MASL (Rockies) / 930 MASL (summit)<br>
+Days required / Hours to Rockies / summit : 1 day / 1-2 hr / 2-4 hr<br>
+Specs: Minor, Difficulty 3/9 (Rockies); 4/9 (Traverse) Trail class 1-3.<br>
+Features: Scenic views of Taal Lake, rock formations, forests<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                    
+                  
+              </div>
+              
+              <h3>Difficulty 4/9</h3>
+              <div>
+                <h4>Mt. Pigingan (1328m) in Itogon, Benguet</h4>
+                <p>
+                  Itogon, Benguet<br>
+Major jumpoff: Sitio Balocloc, Brgy. Dalupirip, Itogon<br>
+LLA: 1328 MASL (to be verified)<br>
+Days required / Hours to summit: 1-2 days / 5-7 hours<br>
+Specs: Borderline major, Difficulty 4/9, Trail class 1-4<br>
+Features: Pine forests,  scenic views of the Cordilleras<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Maynoba (728m) in Tanay, Rizal</h4>
+                <p>
+                  Tanay, Rizal<br>
+Trailhead: Brgy. Cayabu, Tanay, Rizal<br>
+LLA: 14°36′22.4′′N, 121°25′18.6′′ E, 728 MASL (+470m)<br>
+Days required / Hours to summit: 1 day / 2-3 hours<br>
+Specs: Minor hike, Difficulty 3/9 (Summit); 4/9 (Loop hike), Trail class 1-4<br>
+Features: Sea of clouds, scenic views of the Sierra Madre, waterfalls<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Napulak (1,239+) in Igbaras, Iloilo</h4>
+                <p>
+                  Igbaras, Iloilo<br>
+Entry point: Brgy. Bagay, Igbaras<br>
+Exit point: Brgy. Tigbanaba, Igbaras<br>
+LLA: E, 1239 MASL (+1030m)<br>
+Days required / Hours to summit: 1-2 days / 4-6 hours<br>
+Specs: Minor climb, Difficulty 4/9, Trail class 1-5<br>
+Features: Tropical rainforest, scenic views of Igbaras, rock formations<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Hapunang Banoi (517+)</h4>
+                <p>
+                  Rodriguez, Rizal<br>
+Major jumpoff: Brgy. Wawa, Rodriguez, Rizal<br>
+LLA: 14°44′25.3′′ N, 121°11′30.4′ 517 MASL (+460m)<br>
+Days required / Hours to summit: 1 day / 2-3.5 hours<br>
+Specs: Minor, Difficulty 4/9, Trail class 1-4 with limestone scrambling<br>
+Features: Limestone formations, scenic views of Sierra Madre and Rizal province<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Lubog (955+) in Rodriguez, Rizal</h4>
+                <p>
+                  Rodriguez, Rizal<br>
+Trailhead: Sitio Lubog, Brgy. Puray, Rodriguez<br>
+LLA: 14°50′10.4′′ N, 121°14′12.9′′, 955 MASL (+337)<br>
+Specs: Minor, Difficulty 4/9, Trail class 1-4 with rock scrambling<br>
+Feautures: Limestone formations, scenic views of the Sierra Madre<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Daraitan (739+)</h4>
+                <p>
+                  Tanay, Rizal and General Nakar, Quezon<br>
+Major jumpoff: Brgy. Daraitan (village centre), Tanay<br>
+Minor jumpoff: Sitio Cablao Brgy. Pagsangahan, General Nakar<br>
+LLA: 14°36′48.5′′N 121°26′19.5′′ E, 739 MASL (+600)<br>
+Days required / Hours to summit: 1 day / 2.5-4 hours<br>
+Specs: Minor climb, Difficulty 4/9, Trail class 1-3<br>
+Features: Tropical forest, limestone formations, river trek<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Lobo/Bangkalan Peak and Nagpatong Peak (710+)</h4>
+                <p>
+                  Lobo, Batangas<br>
+Major jumpoff: Curba, Brgy. Nagtaluntong, Lobo<br>
+LLA: 710m (Nagpatong); 670m (Bangkalan)<br>
+Days required / Hours to peak: 1-2 days / 3-4h (B); 3-4.5h (N)<br>
+Specs: Minor climb, Difficulty 4/9, Trail class 1-3<br>
+Features: Scenic views, tropical forests, streams<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Pulog (1020+) in Bacon, Sorsogon</h4>
+                <p>
+                  Bacon, Sorsogon<br>
+Major jumpoff: Brgy. Sta Cruz, Bacon<br>
+Alternate jumpoff: Brgy. San Juan, Bacon<br>
+LLA: 1020 MASL<br>
+Days required / Hours to summit: 1 day / 3-4 hours<br>
+Specs: Minor climb, Difficulty 4/9, Trail class 1-3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Pullol (1,400+) in Ambaguio, Nueva Vizcaya</h4>
+                <p>
+                  Ambaguio, Nueva Vizcaya<br>
+Major jumpoff: Wangwang Junction, Ambaguio<br>
+LLA: 1400 MASL (est.)<br>
+Days required / Hours to summit: 1 day / 3-4 hours<br>
+Specs: Minor climb, Difficulty 4/9, Trail Class 3<br>
+Features: Forests, Views of Mt. Pulag’s East Face<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Magsanga (655+) in Isabel, Leyte</h4>
+                <p>
+                  Isabel, Leyte<br>
+Entry & Exit point: Brgy. Puting Bato, Isabel<br>
+LLA: 655 masl<br>
+Days required / Hours to summit: 1 day / 2-3 hours<br>
+Specs: Minor, Difficulty 4/9, Trail class 2-3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Cinco Picos Traverse to Silanguin Cove (881 +)</h4>
+                <p>
+                  Subic, Zambales<br>
+Entry point: Sitio Cawag Settment, Subic<br>
+Exit point: Silanguin Cove, Pundaquit, Zambales<br>
+LLA: 14° 47′ N 120° 9′ E, 881 MASL<br>
+Days required / Hours to summit: 2 days / 6-7 hours<br>
+Specs: Major climb, Difficulty 4/9, Trail class 1-3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Calavite (1,521 +)</h4>
+                <p>
+                  Paluan, Occidental Mindoro <br>
+Jump-off: Sitio Ulasan, Brgy. Harrison, Paluan<br>
+LLA: 13°29’N,120°24’E, 1521 MASL<br>
+Days required / Hours to summit: 1-2 days / 5-6 hours<br>
+Specs: Major climb, Difficulty 4/9, Trail class 1-3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Iraya (1,009 +)</h4>
+                <p>
+                  Basco, Batanes<br>
+Major Jumpoff: Sitio Banaraw near Basco Airport<br>
+LLA: 20°27’58″N 122°0’35″E, 1009 MASL<br>
+Days required / Hours to summit: 1 day / 3-4 hours<br>
+Specs: Minor climb, Difficulty 4/9, Trail class 1-3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Malasimbo (1,168+)</h4>
+                <p>
+                  Puerto Galera, Oriental Mindoro<br>
+Major jumpoff: Mangyan Village, Talipanan Beach, Puerto Galera<br>
+LLA: 13.45°N; 120.9°E; 1,168 MASL<br>
+Days required /Hours to summit: 1-2 days / 4-5 hours<br>
+Specs: Minor climb, Difficulty 4/9, Trail class 2-3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Asog (1,140+)</h4>
+                <p>
+                  Camarines Sur<br>
+Major jump-offs: Sitio Ilian, Brgy. San Nicolas, Iriga City; Brgy. Cabatuan, Buhi<br>
+Elevation: 1,140 MASL<br>
+Days required / Hours to summit: 1-2 days / 4 hours<br>
+Specs: Minor Climb, Difficulty 4/9, Trail Class 1-4<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Cristobal (1,470+)</h4>
+                <p>
+                  Dolores, Quezon; San Pablo and Nagcarlan, Laguna<br>
+Major jump-off: Brgy. Sta. Lucia, Dolores, Quezon<br>
+LLA: 14.064° N 121.428° E, 1470 MASL (600m gain)<br>
+Days required / Hours to summit: 1-2 days / 4-5 hours<br>
+Specs: Minor climb, Difficulty 4/9, Trail class 3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Parker/Lake Holon (1,400+)</h4>
+                <p>
+                  T’boli, South Cotabato<br>
+Jump-off point: T’boli<br>
+LLA: 1400 MASL<br>
+Days required / Hours to Lake Holon: 1-2 days / 3-4 hours<br>
+Specs: Minor climb, Difficulty 4/9, Trail class 1-3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Makiling/UPLB Trail (1,090+)</h4>
+                <p>
+                  Los Baños, Laguna<br>
+Major Jump-off: Station 1, UP College of Forestry<br>
+LLA: 14.13°N 121.20°E, 1090 MASL (Peak 2)<br>
+Hours to summit / days required: 1-2 days / 4-5 hours<br>
+Specs: Minor climb, Difficulty 4/9, Trail class 3<br>
+Features: Tropical forests, variety of flora and fauna<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Tarak Ridge (1,130+)</h4>
+                <p>
+                  Mariveles, Bataan<br>
+Jump off point: Brgy. Alas-asin, Mariveles<br>
+LLA: 14°30.357′N, 120°30′E, 1,006 MASL (ridge); 1,130 MASL (peak)<br>
+Days required / Hours to summit: 2 days, 5-6 hours<br>
+Specs: Major climb, Difficulty 4/9, Trail class 3<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Hibok-Hibok (1,332+)</h4>
+                <p>
+                  Camiguin Island<br>
+Jump-off point: Ardent Hot Spring, Mambajao, Camiguin<br>
+LLA: 9°12′2″N; 124°40′5″E; 1332 MASL<br>
+Days required / Hours to summit: 1 day / 3-5 hours<br>
+Specs: Minor climb, Difficulty 4/9, Trail class 3<br>
+Features: Volcanic crater, tropical forest, scenic views of Camiguin<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Batulao (811+)</h4>
+                <p>
+                  Nasugbu, Batangas<br>
+Jump-off point: Evercrest Golf Course, Nasugbu<br>
+LLA: 14.0408 N 120.8011 E 811 MASL<br>
+Days required / Hours to summit: 1 day / 2-4 hours<br>
+Specs: Minor climb, Difficulty 4/9, Trail class 3 with 60-70 degrees assault<br>
+Features: Open trails, rolling slopes, scenic views of Batangas<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+                <h4>Mt. Malindig (1,157+)</h4>
+                <p>
+                  Buenavista, Marinduque<br>
+Jump-off point: Brgy. Sihi, Buenavista<br>
+LLA: 13.2413°N; 122.0136°E; 1157 MASL<br>
+Days required / Hours to summit: 1-2 days / 4.5-5.5 hours<br>
+Specs: Minor climb, Difficulty 4/9, Trail class 1-2<br>
+                  <br>
+                  <button>Read More</button>
+                </p>
+    
+              </div>
+              
+              <h3>Difficulty 5/9</h3>
+           <div>
+            <h4>Mt. Naguiling (1,007+) in Lobo, Batangas</h4>
+            <p>
+              Lobo, Batangas<br>
+Major jumpoff: Brgy. Jaybanga, Lobo<br>
+Alternate jumoff: Brgy. Curba (if via Bangkalan)<br>
+LLA: 13°39′50.7′′N 121°18′0.5′′ E 1007 MASL (+850)<br>
+Days required / Hours to summit: 1-2 days / 4-7 hours<br>
+Specs: Major climb, Difficulty 5/9, Trail class 1-3 <br>
+Features: Views of Southern Batangas, woodlands, agricultural heartland<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Bahile (747+) in Puerto Princesa, Palawan</h4>
+            <p>
+              Puerto Princesa City, Palawan<br>
+Major jumpoff: Rural Agricultural Center, Brgy. Salvacion<br>
+LLA: 9°59′7.87′′N 118°44′32.3′′ E, 747 MASL (+700m)<br>
+Days required / Hours to summit: 1-2 days / 4-6 hours<br>
+Specs: Minor climb, Difficulty 5/9, Trail class 1-4<br>
+Features: Ultramafic forests, unusual fauna, scenic views of east and west coasts of Puerto Princesa<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Malinao, Albay (1,450+)</h4>
+            <p>
+              Alinao, Albay<br>
+Major jumpoff: Brgy. Tanawan, Alinao<br>
+LLA: 1450 MASL (peak) 1564 MASL (highest point)<br>
+Days required / hours to summit: 1-2 days / 5-7 hours<br>
+Specs: Major climb, Difficulty 5/9, Trail class 2-3<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Tampurong/Matti-Kapatagan Traverse (1,682+)</h4>
+            <p>
+              Digos, Davao del Sur<br>
+Entry point: Sitio Matti, Brgy. Binaton, Digos<br>
+Exit point: Brgy. Kapatagan Poblacion, Digos<br>
+LLA: 1682 MASL<br>
+Days required / Hours to summit: 1-2 days / 4-6 hours<br>
+Specs: Minor climb, Difficulty 5/9, Trail class 2-4<br>
+Features: Mossy forest, views of Mt. Apo<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Kalawitan (2,714+)</h4>
+            <p>
+              Sabangan, Mt. Province<br>
+Major jumpoff: Panorama Viewpoint, Halsema Hwy, Sabangan<br>
+LLA: 2714 MASL (#10/n)<br>
+Days required / Hours to summit: 2-3* days / 6-7 hours<br>
+Specs: Major, Difficulty 5/9, Trail class 2-4<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Tirad Peak (1,388+) in Gregorio del Pilar, Ilocos Sur</h4>
+            <p>
+              Gregorio del Pilar, Ilocos Sur<br>
+Major jumpoff: Poblacion, Gregorio del Pilar<br>
+LLA: 1388 MASL<br>
+Days required / hours to summit: 2 days / 6-8 hours<br>
+Specs: Major climb, Difficulty 5/9, Trail class 1-4, Historical trail<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Lanaya (720+) in Alegria, Cebu</h4>
+            <p>
+              Alegria, Cebu<br>
+Entry point: poblacion Alegria (highway)/Brgy. Legaspi (foot)<br>
+Exit point: Brgy. Lumpan<br>
+LLA: 9°42’N, 123°21’E (inexact), 720 MASL<br>
+Days required/Hours to summit: 1-2 days; 4-5 hours<br>
+Specs: Minor, Exploration, Difficulty 6/9, Trail class 2-3<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Tres Marias (1,315+)</h4>
+            <p>
+              Almeria, Biliran<br>
+Major jumpoff: Brgy. Sampao, Almeria<br>
+LLA: 1315 MASL<br>
+Days required / Hours to summit: 6-7 hours / 2 days<br>
+Specs: Major Climb, Difficulty 5/9, Trail class 2-4<br>
+Features: Waterfalls, Stream crossing, Mossy Forest<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Maktrav: Mt. Makiling/Sto. Tomas-Los Banos Traverse (1,090+)</h4>
+            <p>
+              Sto. Tomas, Batangas and Los Banos, Laguna<br>
+Entry point: Sitio Jordan, Brgy. San Miguel, Sto. Tomas<br>
+Exit point: UP College of Forestry, Los Banos, Laguna<br>
+LLA: 14.13°N 121.20°E, 1090 MASL (Peak 2)<br>
+Hours to Peak 2 / days required: 1-2 days / 5-8 hours<br>
+Specs: Major climb, Difficulty 5/9, Trail class 3 with roped segments<br>
+Features: Roped segments, rocky face, limatik, rattan, tropical rainforest<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Palemlem (1,271+)</h4>
+            <p>
+              Adams, Ilocos Norte<br>
+Major jumpoff: Sitio Maligligay, Adams<br>
+LLA: 1271 MASL<br>
+Days required / Hours to summit: 1-2 days / 4-6 hours<br>
+Specs: Major climb*, Difficulty 5/9, Trail class 2-3<br>
+Features: Tropical forest, Coastal views<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Bakun Trio: Mts. Tenglawan, Kabunian, and Lobo (2,000+)</h4>
+            <p>
+              Minor climb, Difficulty 5/9, Trail class 1-3.
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Tirad Pass Traverse – Sagada (1,312+)</h4>
+            <p>
+              Gregorio del Pilar, Ilocos Sur<br>
+Entry point: Poblacion, Gregorio del Pilar<br>
+Exit point: Polacion, Quirino, Ilocos Sur<br>
+LLA: N 17.08.43.5; E 120.38.02.4; 1312 MASL (HP)<br>
+Days / hours required: 2 days / 2 hours (shrine); 8 hours (traverse)<br>
+Specs: Major climb, Difficulty 5/9, Trail class 1-2, Historical trail<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Hibok-Hibok/Crater Trail via Brgy. Yumbing (1,332+)</h4>
+            <p>
+              Camiguin Island<br>
+Entry point: Brgy. Yumbing, Mambajao, Camiguin<br>
+Exit point: Ardent Hot Springs, Mamajao, Camiguin<br>
+LLA: 9°12′2″N; 124°40′5″E; 1332 MASL<br>
+Days required / Hours to summit: 1-2 days / 5 hours<br>
+Specs: Minor climb, Difficulty 5/9, Trail class 3<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Arayat/Traverse (1,030+)</h4>
+            <p>
+              Arayat and Magalang, Pampanga<br>
+Entry point: Brgy. Ayala, Magalang, Pampanga<br>
+Exit point: Brgy. Juan Bano, Arayat, Pampanga<br>
+LLA: 15.2067N, 120.7441E, 1030 MASL<br>
+Days required / Hours to summit: 1-2 days / 5 hours (NP) 8 hours (SP)<br>
+Specs: Major climb, Difficulty 5/9, Trail class 1-4 (10kms)<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Balingkilat (1,100+)</h4>
+            <p>
+              Subic, Zambales<br>
+Jumpoff: Sitio Cawag Settlement, Subic Town<br>
+LLA: 14.89 N, 120.11 E (est.), 1100 MASL<br>
+Days required / Hours to summit: 1-2 days / 4-6 hours<br>
+Specs: Minor climb, Difficulty 5/9, Trail class 1-4<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Natib (1,287+)</h4>
+            <p>
+              Orani, Bataan<br>
+Major jumpoff: Brgy. Tala, Orani<br>
+Minor jumpoff: Kanawan (Hanging Bridge), Morong<br>
+LLA: 14.7119 N; 120.3997 E; 1287 MASL<br>
+Days required / Hours to summit: 1-2 days / 3.5-5 hours<br>
+Specs (Backtrail): Major climb, Difficulty 5/9, Trail class 1-3<br>
+Specs (Traverse): Major climb, Difficulty 6/9, Trail class 1-3<br>
+Features: Scenic views of Central Luzon; Woodlands; Tropical forests<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Lumot (2,320+)</h4>
+            <p>
+              Balatucan Range, Misamis Oriental<br>
+Major jump-off: Sitio Harrohay, Brgy. Lunotan, Gingoog City<br>
+LLA: 8°40’51″N, 125°2’34″E, 2320 MASL (summit)<br>
+Days required / Hours to summit: 3 days / 8 hours<br>
+Specs: Major climb, Difficulty 5/9, Trail class 3<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Isarog/Panicuason Trail (1,966+)</h4>
+            <p>
+              Naga City, Camarines Sur<br>
+Major jump-off: Brgy. Panicuason, Naga City<br>
+LLA: 13°40′ N, 123°21′ E, 1966 MASL<br>
+Days requires / Hours to summit: 2 days / 8-10 hours<br>
+Specs: Major climb, Difficulty 5/9, Trail class 3<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Matutum (2,293+)</h4>
+            <p>
+              Tupi, South Cotabato<br>
+Major jump-off: Sito Glandang, Brgy. Kablon, Tupi<br>
+LLA: 6°22’N, 125°06.5’E, 2293 MASL<br> 
+Days required / hours to summit: 1-2 days / 4-6 hours<br>
+Specs: Minor climb, Difficulty 5/9, Trail class 3<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Banahaw de Lucban (1,875+)</h4>
+            <p>
+              Lucban, Quezon<br>
+Major Jump-off: Brgy. Ayuti, Lucban, Quezon<br>
+LLA: 14°04’N 121°30’E 1875 MASL<br>
+Days required / Hours to summit: 2 days, 5-6 hours<br>
+Specs: Major climb, Difficulty 5/9, Trail class 3<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Ugo/Traverse (2,150+)</h4>
+            <p>
+              Nueva Vizcaya and Benguet<br>
+Jump-off points: Kayapa, N. Vizcaya; Brgy. Tinongdan, Itogon, Benguet<br>
+LLA: 16.31916°N, 120.80166°E, 2130 MASL<br>
+Days required / hours to summit: 2-3 days, 9-10 hrs<br>
+Specs: Major climb, Difficulty 5/9, Trail Class 1-3<br>
+Features: Pine forests, highland villages, views of Cordillera peaks<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Palali (1,715+)</h4>
+            <p>
+              Quezon, Nueva Vizcaya<br>
+Jump-off point: Purok 5, Brgy. Maddiangat, Quezon<br>
+LLA: 16.4283°N; 121.2236°E; 1,715 MASL<br>
+Days required / Hours to summit: 2 days / 6-8 hours<br>
+Specs: Major Climb, Difficulty 5/9, Trail class 2-3<br>
+Features: Tropical rainforest, Scenic views of Nueva Vizcaya<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Banahaw (2,158+)</h4>
+            <p>
+              Quezon Province<br>
+Major jump-off: Brgy. Kinabuhayan, Dolores<br>
+Elevation: 2158 MASL<br>
+Days required /Hours to summit: Level 2-3 days / 6-7 hours<br>
+Specs: Major climb, Difficulty 5/9, Trail class 3<br>
+              <br>
+              <button>Read More</button>
+            </p>
+            <h4>Mt. Tapulao (2,037+)</h4>
+            <p>
+              Palauig, Zambales<br>
+Major jump-off: Sitio Dampay, Brgy. Dampay-Salaza, Palauig<br>
+LLA: 15.4833 N, 120.1166 E, 2037 MASL<br>
+Days required / Hours to summit: 1-2 days / 6-12 hours<br>
+Specs: Major Climb, Difficulty 5/9, Trail class 1-3<br>
+Features: Pine forests, views of West Philippine Sea<br>
+              <br>
+              <button>Read More</button>
+            </p>
 
-          <li class="mapnav-item">
-            <a href="#" class="mapnav-link">
-              <svg
-                version="1.1"
-                id="Capa_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 512.001 512.001"
-                style="enable-background: new 0 0 512.001 512.001"
-                xml:space="preserve"
-              >
-                <path
-                  style="fill: #87dcfa"
-                  d="M506.758,261.13c0,137.671-111.399,250.87-250.87,250.87C116.78,512,5.019,399.143,5.019,261.13
-	c0-138.552,112.318-250.87,250.87-250.87C394.698,10.26,506.758,122.816,506.758,261.13z"
-                />
-                <path
-                  style="fill: #82cd64"
-                  d="M121.534,262.177l-54.387,15.171c-4.299,1.2-8.704-1.534-9.539-5.919L41.181,219.91
-	c-1.834-5.752-0.62-12.041,3.221-16.698l11.707-14.191c2.679-3.248,4.145-7.327,4.145-11.538v-42.951c0-3.228,2.111-6.078,5.2-7.017
-	l48.132-14.639L121.534,262.177z"
-                />
-                <path
-                  style="fill: #46a5cd"
-                  d="M506.758,261.131c0,137.674-111.399,250.87-250.87,250.87c-47.006,0-90.895-12.885-128.403-35.288
-	c-18.873-11.264-36.135-24.943-51.353-40.595l110.129-39.333c14.372-5.133,30.018-5.49,44.609-1.019l44.541,13.649
-	c16.867,5.168,35.177-0.533,46.129-14.362c44.466-56.15,45.09-58.686,56.736-66.185l67.674-43.572
-	c13.102-8.435,22.082-21.963,24.769-37.311c3.315-18.931,2.247-37.133,9.998-59.12l7.735-21.943
-	c2.096,5.141,4.016,10.376,5.761,15.683C502.36,207.321,506.758,233.72,506.758,261.131z"
-                />
-                <path
-                  style="fill: #ffaf82"
-                  d="M329.995,380.627l-18.517,16.374c-1.246,1.103-3.167,0.931-4.269-0.381l-71.996-73.32
-	c-1.293-1.515-1.152-3.795,0.313-5.069l21.763-18.923c1.465-1.274,3.721-1.077,5.014,0.437l67.957,76.494
-	C331.36,377.55,331.241,379.525,329.995,380.627z"
-                />
-                <path
-                  style="fill: #fa875a"
-                  d="M314.85,388.52l-69.136-72.801c-1.711-2.004-2.205-4.43-1.099-5.393l-9.742,8.471
-	c-1.107,0.962-0.613,3.389,1.099,5.393l70.588,71.66c1.458,1.736,3.421,2.474,4.363,1.641l8.289-7.33
-	C318.272,390.993,316.308,390.255,314.85,388.52z"
-                />
-                <path
-                  style="fill: #aa6100"
-                  d="M388.29,378.058l1.37,1.59c1.09,1.266,0.949,3.176-0.317,4.267l-53.385,45.998
-	c-1.266,1.09-3.176,0.949-4.267-0.317l-22.513-26.128c-1.046-1.214-0.909-3.062,0.306-4.108l26.046-22.442
-	c1.21-1.043,3.056-0.905,4.103,0.31l7.492,8.695c1.464,1.699,4.03,1.89,5.729,0.425l11.166-9.62
-	c7.157-6.167,17.878-5.527,24.255,1.343L388.29,378.058z"
-                />
-                <path
-                  style="fill: #884d00"
-                  d="M338.578,419.159l-20.287-23.546c-1.045-1.212-0.908-3.059,0.306-4.104l-9.11,7.85
-	c-1.212,1.045-1.349,2.892-0.305,4.104l21.541,24.999l0,0l10.565-9.103C340.482,420.052,339.27,419.962,338.578,419.159z"
-                />
-                <path
-                  style="fill: #cc7400"
-                  d="M342.657,380.657l-31.938,27.519c-0.841,0.725-2.111,0.631-2.836-0.211l-7.744-8.988
-	c-0.725-0.841-0.631-2.111,0.211-2.836l31.938-27.519c0.841-0.725,2.111-0.631,2.836,0.211l7.744,8.988
-	C343.593,378.662,343.498,379.932,342.657,380.657z"
-                />
-                <path
-                  style="fill: #aa6100"
-                  d="M316.673,399.743l-7.103-8.244c-0.902-1.047-1.085-2.367-0.409-2.951l-9.11,7.85
-	c-0.676,0.582-0.493,1.904,0.409,2.951l7.103,8.244c0.902,1.047,2.182,1.423,2.858,0.84l9.11-7.85
-	C318.853,401.166,317.574,400.79,316.673,399.743z"
-                />
-                <path
-                  style="fill: #ffb655"
-                  d="M388.687,378.518l1.813,2.104c2.032,2.358,2.652,5.154,1.387,6.244l-53.385,45.998
-	c-1.266,1.09-3.939,0.063-5.971-2.295l-1.813-2.104L388.687,378.518z"
-                />
-                <path
-                  style="fill: #ff9811"
-                  d="M347.615,425.014l-9.11,7.85c-1.266,1.09-3.942,0.062-5.974-2.296l-1.812-2.103l9.11-7.85
-	l1.812,2.103C343.672,425.076,346.349,426.104,347.615,425.014z"
-                />
-                <path
-                  style="fill: #ffaf82"
-                  d="M132.325,411.057l-19.916-14.641c-1.34-0.986-1.579-2.9-0.53-4.254l49.996-70.175
-	c1.207-1.584,3.466-1.928,5.021-0.765l23.093,17.274c1.555,1.163,1.839,3.41,0.632,4.994l-53.952,66.897
-	C135.621,411.741,133.665,412.043,132.325,411.057z"
-                />
-                <path
-                  style="fill: #fa875a"
-                  d="M121.411,397.921l50.093-67.27c1.597-2.096,3.864-3.091,5.039-2.213l-10.338-7.733
-	c-1.175-0.879-3.442,0.117-5.039,2.212l-48.671,68.449c-1.389,1.791-1.695,3.866-0.682,4.612l8.915,6.554
-	C119.716,401.787,120.023,399.712,121.411,397.921z"
-                />
-                <path
-                  style="fill: #aa6100"
-                  d="M147.15,467.494l-1.265,1.675c-1.007,1.334-2.904,1.598-4.237,0.592l-56.236-42.464
-	c-1.334-1.007-1.598-2.904-0.592-4.237l20.783-27.524c0.965-1.278,2.801-1.535,4.08-0.569l27.438,20.718
-	c1.274,0.962,1.53,2.796,0.564,4.076l-6.916,9.16c-1.351,1.79-0.996,4.337,0.794,5.69l11.762,8.881
-	c7.539,5.693,9.177,16.306,3.811,23.991L147.15,467.494z"
-                />
-                <path
-                  style="fill: #884d00"
-                  d="M96.475,427.586l18.728-24.803c0.964-1.277,2.799-1.533,4.076-0.569l-9.597-7.247
-	c-1.277-0.964-3.112-0.708-4.076,0.569L85.72,421.87l0,0l11.129,8.403C96.004,429.635,95.836,428.431,96.475,427.586z"
-                />
-                <path
-                  style="fill: #cc7400"
-                  d="M134.97,423.439l-33.645-25.405c-0.887-0.669-1.062-1.931-0.393-2.816l7.15-9.468
-	c0.669-0.887,1.931-1.062,2.816-0.393l33.645,25.405c0.887,0.669,1.062,1.931,0.393,2.816l-7.15,9.468
-	C137.118,423.933,135.857,424.109,134.97,423.439z"
-                />
-                <path
-                  style="fill: #aa6100"
-                  d="M110.826,402.072l6.558-8.685c0.833-1.103,2.086-1.561,2.798-1.023l-9.597-7.247
-	c-0.712-0.538-1.965-0.081-2.798,1.023l-6.558,8.685c-0.833,1.103-0.93,2.432-0.218,2.97l9.597,7.247
-	C109.896,404.505,109.993,403.175,110.826,402.072z"
-                />
-                <path
-                  style="fill: #ffb655"
-                  d="M146.783,467.979l-1.674,2.217c-1.876,2.484-4.478,3.682-5.811,2.675l-56.236-42.464
-	c-1.334-1.007-0.894-3.837,0.982-6.321l1.674-2.217L146.783,467.979z"
-                />
-                <path
-                  style="fill: #ff9811"
-                  d="M92.661,437.654l-9.597-7.247c-1.333-1.007-0.893-3.841,0.982-6.324l1.673-2.215l9.597,7.247
-	l-1.673,2.215C91.768,433.814,91.329,436.647,92.661,437.654z"
-                />
-                <path
-                  style="fill: #965028"
-                  d="M135.668,254.576l4.264,89.457c0.088,1.843,1.536,3.332,3.377,3.47l46.404,3.475
-	c2.15,0.161,3.971-1.565,3.925-3.72l-2.126-101.311L135.668,254.576z"
-                />
-                <path
-                  style="fill: #69280f"
-                  d="M158.179,348.619l-14.867-1.115c-1.848-0.145-3.293-1.631-3.376-3.469l-4.264-89.46l13.752-2.127
-	L158.179,348.619z"
-                />
-                <path
-                  style="fill: #4bb9e1"
-                  d="M248.53,100.148c-4.379-3.436-10.665-2.917-14.42,1.191l-42.487,46.482
-	c-0.361,0.395-0.98,0.411-1.36,0.033l-19.711-19.565l3.573-3.685c1.023-1.055,0.997-2.741-0.058-3.764l-25.54-24.766
-	c-7.329-7.107-19.033-6.927-26.139,0.403l-1.312,1.354c-7.107,7.329-6.927,19.033,0.403,26.139l25.54,24.766
-	c1.055,1.023,2.741,0.997,3.764-0.058l1.937-1.998c23.951,26.118,22.465,24.082,31.718,31.7l0,0
-	c6.216,5.117,15.404,4.226,20.521-1.989l45.555-61.543C253.939,110.218,253.061,103.704,248.53,100.148z"
-                />
-                <path
-                  style="fill: #965028"
-                  d="M265.82,298.247c0,0-4.026,6.979-13.752,23.87l-9.044,15.714c-0.723,1.456-2.498,2.055-3.954,1.311
-	l-49.226-21.126c-1.997-0.857-4.19-1.142-6.342-0.842c-1.032,0.144-2.065,0.263-3.094,0.36c-31.262,2.953-33.688-2.777-48.338-22.61
-	c-0.248-0.351-0.485-0.712-0.723-1.094c-0.124-0.196-0.248-0.403-0.372-0.619c-0.062-0.103-0.124-0.206-0.176-0.31
-	c-4.739-8.259-7.95-22.786-9.178-32.48c-0.134-1.084-0.248-2.116-0.341-3.066l18.222-5.844l54.141-17.365l3.521,16.488l67.531,43.63
-	C266.037,295.119,266.512,296.822,265.82,298.247z"
-                />
-                <path
-                  style="fill: #80391b"
-                  d="M252.068,322.117l-9.044,15.714c-0.723,1.456-2.498,2.055-3.954,1.311l-49.226-21.126
-	c-1.997-0.857-4.19-1.142-6.342-0.842c-1.032,0.144-2.065,0.263-3.094,0.36c-31.262,2.953-33.688-2.777-48.338-22.61
-	c-5.542-7.852-9.203-24.835-10.448-34.504c-0.134-1.084-0.248-2.116-0.341-3.066l18.222-5.844
-	c2.819,8.951,7.433,22.104,10.107,25.873l6.535,9.199c13.607,13.339,31.788,20.628,50.506,20.628h0.134
-	c9.818-0.021,19.534,2.055,28.32,6.442L252.068,322.117z"
-                />
-                <polygon
-                  style="fill: #ffaf82"
-                  points="145.904,96.992 115.734,102.768 115.017,60.279 139.39,57.299 "
-                />
-                <polygon
-                  style="fill: #ff9b69"
-                  points="123.151,59.275 123.831,99.32 115.729,102.766 115.019,60.274 "
-                />
-                <path
-                  style="fill: #87afb9"
-                  d="M197.969,239.285c-8.466,3.004-32.377,11.377-53.356,17.624c-10.355,3.087-19.988,5.647-26.709,6.804
-	c-3.335,0.568-6.442-1.838-6.69-5.214l-9.075-141.309c-1.208-11.181,3.954-21.547,12.554-27.525c1.332,0.114,2.55,0.206,3.675,0.299
-	c2.56,0.196,4.656,0.341,6.535,0.465c0.32,0.021,0.65,0.041,0.96,0.062c0.465,0.021,0.919,0.052,1.373,0.083
-	c0.062,0.01,0.124,0.01,0.186,0.01c0.434,0.031,0.867,0.052,1.301,0.083c0.733,0.041,1.456,0.083,2.199,0.124
-	c0.341,0.021,0.671,0.041,1.012,0.062c0.165,0.01,0.33,0.021,0.496,0.031c0.516,0.031,1.043,0.062,1.59,0.093
-	c0.103,0.01,0.217,0.021,0.33,0.021c0.981,0.062,2.034,0.134,3.19,0.217c0.96,0.072,1.982,0.145,3.097,0.227
-	s2.313,0.176,3.624,0.289c0.258,0.021,0.516,0.041,0.785,0.062c22.899,1.91,49.34,120.381,55.256,143.105
-	C200.788,236.745,199.766,238.645,197.969,239.285z"
-                />
-                <path
-                  style="fill: #6c9baa"
-                  d="M144.613,256.909c-10.355,3.087-19.988,5.647-26.709,6.804c-3.335,0.568-6.442-1.838-6.69-5.214
-	l-9.075-141.309c-1.208-11.181,3.954-21.547,12.554-27.525c1.332,0.114,2.55,0.206,3.675,0.299c2.56,0.206,4.656,0.351,6.535,0.465
-	c0.32,0.021,0.65,0.041,0.96,0.062c0.475,0.031,0.929,0.062,1.373,0.083c0.062,0.01,0.124,0.01,0.186,0.01
-	c0.444,0.031,0.867,0.052,1.301,0.083c0.733,0.041,1.456,0.083,2.199,0.124c0.341,0.021,0.671,0.041,1.012,0.062
-	c0.165,0.01,0.33,0.021,0.496,0.031c0.516,0.031,1.043,0.062,1.59,0.093c0.103,0.01,0.217,0.021,0.33,0.021
-	c0.991,0.072,2.044,0.134,3.19,0.217c0.96,0.072,1.982,0.145,3.097,0.227c1.115,0.093,2.313,0.186,3.624,0.289
-	c-7,6.133-11.006,15.476-9.922,25.46L144.613,256.909z"
-                />
-                <path
-                  style="fill: #ffaf82"
-                  d="M169.959,61.553c-1.352,0.537-3.727,0.423-3.727,0.423s-5.276,11.13-6.907,13.948
-	c-2.116,3.655-5.007,5.203-8.352,5.245c-7.165,0.093-16.364-6.793-24.179-14.753h-0.01c-3.49-3.552-8.487-1.745-11.243-4.718
-	c-6.236-6.711-9.684-15.837-9.674-24.696c0-0.413,0.01-0.816,0.031-1.229c0-0.134,0-0.268,0.01-0.413
-	c0.021-0.413,0.052-0.836,0.093-1.249c-0.01-0.031,0-0.062,0.01-0.103c0.031-0.454,0.083-0.909,0.145-1.352
-	c0.01-0.062,0.01-0.124,0.031-0.186c0.041-0.392,0.103-0.785,0.176-1.177c0.155-0.867,0.351-1.724,0.578-2.571
-	c0.062-0.217,0.124-0.434,0.186-0.65c0.382-1.311,0.857-2.591,1.425-3.83c1.425-3.128,3.438-5.998,6.091-8.466
-	c12.72-11.801,35.154-9.55,46.965,3.17c4.099,4.429,7.929,14.402,5.493,23.89c-0.547,2.158,3.066,9.065,5.049,12.978
-	C173.253,58.001,172.231,60.644,169.959,61.553z"
-                />
-                <path
-                  style="fill: #ff9b69"
-                  d="M150.973,81.169c-7.165,0.093-16.364-6.793-24.179-14.753h-0.01
-	c-3.49-3.552-8.487-1.745-11.243-4.718c-6.236-6.711-9.684-15.837-9.674-24.696c0-0.413,0.01-0.816,0.031-1.229
-	c0-0.134,0-0.268,0.01-0.413c0.021-0.413,0.052-0.836,0.093-1.249c-0.01-0.031,0-0.062,0.01-0.103
-	c0.031-0.454,0.083-0.909,0.145-1.352c0.01-0.062,0.01-0.124,0.031-0.186c0.041-0.392,0.103-0.785,0.176-1.177
-	c0.155-0.867,0.351-1.724,0.578-2.571c0.062-0.217,0.124-0.434,0.186-0.65c0.382-1.311,0.857-2.591,1.425-3.83
-	c-1.177,11.512,2.891,23.932,11.088,32.78c3.221,3.479,9.054,1.352,13.143,5.513C138.739,68.583,144.933,75.883,150.973,81.169z"
-                />
-                <path
-                  style="fill: #aa6432"
-                  d="M150.898,33.32c-0.141,2.885-0.665,5.648-1.517,8.231c-0.417,1.265-2.119,1.538-2.887,0.45
-	c-1.395-1.974-3.273-3.019-5.073-2.57c-2.049,0.511-4.475,3.554-3.901,8.883c0.105,0.977-0.203,1.951-0.884,2.66
-	c-3.417,3.561-9.697,9.966-13.734,10.999c-5.201,1.332-2.639,1.225-7.022,1.177c-11.49-2.989-15.693-18.537-15.02-32.282
-	c0.761-15.529,12.58-27.564,26.4-26.887C141.071,4.659,151.658,17.79,150.898,33.32z"
-                />
-                <path
-                  style="fill: #965028"
-                  d="M118.149,33.743c-2.931,9.996-1.911,20.205,2.136,28.966c-1.754,0.551-1.087,0.477-4.401,0.442
-	c-11.495-2.994-15.696-18.535-15.022-32.281c0.756-15.53,12.58-27.566,26.401-26.892c4.517,0.227,8.69,1.774,12.236,4.32
-	C129.508,13.243,121.533,22.202,118.149,33.743z"
-                />
-                <path
-                  style="fill: #46a5cd"
-                  d="M167.713,30.854l-67.325,7.701c-1.854,0.263-1.678-1.358-1.837-3.224
-	c-1.177-13.849,2.209-30.791,20.035-33.326c37.782-7.956,43.846,9.529,48.882,21.533c0.332,0.793,24.464-1.622,24.701-0.81
-	c0.098,0.337,1.306,4.353-3.089,5.088C181.125,29.147,167.713,30.854,167.713,30.854z"
-                />
-                <path
-                  style="fill: #ba6746"
-                  d="M276.559,464.6L276.559,464.6c-2.133,0.369-4.194-1.217-4.623-3.556l-56.029-305.457
-	c-0.788-4.296,1.768-8.358,5.685-9.035l0,0c3.917-0.677,7.687,2.291,8.387,6.602l49.741,306.545
-	C280.101,462.046,278.691,464.232,276.559,464.6z"
-                />
-                <path
-                  style="fill: #4bb9e1"
-                  d="M428.934,369.393L428.934,369.393c-1.711,1.326-4.336,0.813-5.887-1.149L220.5,111.965
-	c-2.848-3.604-2.609-8.536,0.535-10.971l0,0c3.143-2.434,7.979-1.434,10.756,2.225l197.503,260.185
-	C430.805,365.397,430.645,368.067,428.934,369.393z"
-                />
-                <path
-                  style="fill: #6cd0f5"
-                  d="M255.888,512.001c-77.886,0-147.193-35.371-193.105-90.73l20.091,5.844l58.074,46.707l96.096,2.947
-	c10.638,0.326,21.118-2.633,30.016-8.475c48.806-32.049,25.38-18.097,70.794-38.062c64.465-56.574,75.768-59.312,86.69-80.833
-	c18.177-35.816,19.273-39.28,26.001-47.274l25.572-30.385c6.707-7.968,10.856-17.772,11.907-28.134l6.191-61.002
-	C547.142,341.387,429.276,512.001,255.888,512.001z"
-                />
-                <path
-                  style="fill: #82cd64"
-                  d="M108.473,257.35l-12.097-11.142l6.049,5.571l-6.052-5.567c0.33-0.359,33.195-36.493,46.356-81.942
-	c4.899-16.915,2.932-35.01-5.397-49.643c-2.196-3.858-6.785-10.316-12.896-10.316c-0.02,0-0.038,0.001-0.058,0.001
-	c-3.772,0.025-14.086,2.877-28.36,28.756l-14.401-7.942c13.582-24.625,27.931-37.161,42.651-37.26
-	c0.058-0.001,0.117-0.001,0.174-0.001c10.696,0,20.344,6.61,27.184,18.628c10.511,18.47,13.026,41.197,6.9,62.353
-	C144.258,218.111,109.928,255.771,108.473,257.35z"
-                />
-                <path
-                  style="fill: #fa875a"
-                  d="M136.571,211.109l-22.515-81.511c-1.965-6.749,2.43-13.964,9.816-16.113l0,0
-	c7.386-2.15,14.966,1.579,16.931,8.329l20.421,73.343L136.571,211.109z"
-                />
-                <path
-                  style="fill: #46738c"
-                  d="M157.668,149.071l-11.444-39.32c-3.284-11.283-15.094-17.768-26.378-14.484l-2.083,0.607
-	c-11.283,3.284-17.768,15.094-14.484,26.378l11.444,39.32c0.473,1.625,2.173,2.558,3.798,2.086l37.061-10.787
-	C157.207,152.396,158.141,150.696,157.668,149.071z"
-                />
-                <path
-                  style="fill: #ffaf82"
-                  d="M244.339,171.757c2.285,5.593-0.295,11.989-5.822,14.429l-81.585,36.045
-	c-8.659,3.304-18.357-1.038-21.66-9.697l0,0c-3.304-8.659,1.038-18.357,9.697-21.66l84.826-27.425
-	c5.555-1.796,11.557,0.993,13.765,6.399L244.339,171.757z"
-                />
-                <path
-                  style="fill: #4191be"
-                  d="M114.973,19.181c-1.757,5.994-2.487,12.041-2.287,17.964l-12.301,1.406
-	c-1.852,0.263-1.68-1.354-1.833-3.216c-1.179-13.848,2.207-30.791,20.037-33.33c1.903-0.4,3.724-0.737,5.471-1.01
-	C120.081,6.316,116.954,12.424,114.973,19.181z"
-                />
-                <circle
-                  style="fill: #ba6746"
-                  cx="159.324"
-                  cy="42.843"
-                  r="3.399"
-                />
-                <path
-                  style="fill: #64a54b"
-                  d="M100.714,267.987l-33.564,9.364c-4.305,1.198-8.703-1.538-9.54-5.926l-16.426-51.518
-	c-1.838-5.751-0.619-12.038,3.221-16.694l11.708-14.196c0.279-0.33,0.547-0.681,0.795-1.032
-	C65.323,218.058,80.51,245.315,100.714,267.987z"
-                />
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-              </svg>
-
-              <span>Gear</span>
-            </a>
-          </li>
-
-          <li class="mapnav-item">
-            <a href="#" class="mapnav-link">
-              <svg
-                id="Layer_5"
-                enable-background="new 0 0 64 64"
-                height="512"
-                viewBox="0 0 64 64"
-                width="512"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-              >
-                <linearGradient
-                  id="SVGID_1_"
-                  gradientUnits="userSpaceOnUse"
-                  x1="32"
-                  x2="32"
-                  y1="63"
-                  y2="1"
-                >
-                  <stop offset="0" stop-color="#9f2fff" />
-                  <stop offset="1" stop-color="#0bb1d3" />
-                </linearGradient>
-                <path
-                  d="m13 51h.026c-.635.838-1.026 1.87-1.026 3v4c0 2.757 2.243 5 5 5h30c2.757 0 5-2.243 5-5v-4c0-1.13-.391-2.162-1.026-3h.026c3.86 0 7-3.14 7-7v-14c0-3.818-3.075-6.927-6.877-6.994.55-1.546.865-3.202.874-4.932l4.539-4.538c.943-.945 1.464-2.2 1.464-3.536 0-1.335-.52-2.591-1.464-3.535-.945-.945-2.201-1.465-3.536-1.465-1.336 0-2.591.521-3.535 1.465l-3.169 3.169c-1.022-.404-2.132-.634-3.296-.634h-3v-3c0-2.757-2.243-5-5-5h-6c-2.757 0-5 2.243-5 5v3h-3c-1.164 0-2.274.229-3.296.634l-3.168-3.169c-.945-.944-2.2-1.465-3.536-1.465-1.335 0-2.591.52-3.536 1.465-.944.944-1.464 2.2-1.464 3.535 0 1.336.521 2.591 1.465 3.535l4.539 4.539c.008 1.73.324 3.386.874 4.932-3.803.067-6.878 3.176-6.878 6.994v14c0 3.86 3.14 7 7 7zm7-39.92v2.92c0 3.909 2.51 7.235 6 8.475v8.474c-6.701-.513-12-6.118-12-12.949 0-3.519 2.613-6.432 6-6.92zm30 6.92c0 6.831-5.299 12.436-12 12.949v-8.474c3.49-1.24 6-4.565 6-8.475v-2.92c3.387.488 6 3.401 6 6.92zm-2 31h-1-.93-8.07v-16.051c3.945-.262 7.471-2.05 10-4.786zm-17.414-23-2.586 2.586v-5.172zm5.414-2.586v5.172l-2.586-2.586zm-.414 7.586-3.586 3.586-3.586-3.586 3.586-3.586zm.414 2.414v5.172l-2.586-2.586zm-5.414 2.586-2.586 2.586v-5.172zm-2.172 5 3.586-3.586 3.586 3.586-3.586 3.586zm2.172 5-2.586 2.586v-5.172zm5.414-2.586v5.172l-2.586-2.586zm-4-18.828-1.586-1.586h3.172zm0 22.828 1.586 1.586h-3.172zm10-33.414c0 3.86-3.14 7-7 7h-6c-3.86 0-7-3.14-7-7v-3h20zm-26 14.163c2.529 2.735 6.055 4.524 10 4.786v16.051h-8.054-.946-1zm31 32.837h-30c-1.654 0-3-1.346-3-3v-3h36v3c0 1.654-1.346 3-3 3zm2.816-8h-35.632c.414-1.161 1.514-2 2.816-2h.946 28.124.93c1.302 0 2.402.839 2.816 2zm1.184-4h-1v-15h6v10c0 2.757-2.243 5-5 5zm0-24c2.757 0 5 2.243 5 5v2h-6v-6.549c.086-.15.175-.298.256-.451zm-.121-17.121c1.132-1.134 3.108-1.134 4.242 0 .567.566.879 1.32.879 2.121s-.312 1.555-.879 2.121l-3.461 3.461c-.569-2.035-1.832-3.78-3.523-4.961zm-24.879-1.879c0-1.654 1.346-3 3-3h6c1.654 0 3 1.346 3 3v3h-12zm-18 4c0-.801.312-1.555.878-2.121 1.134-1.134 3.11-1.134 4.243 0l2.742 2.742c-1.691 1.181-2.954 2.926-3.523 4.961l-3.461-3.461c-.567-.566-.879-1.32-.879-2.121zm5 15h.744c.081.153.17.301.256.451v6.549h-6v-2c0-2.757 2.243-5 5-5zm-5 9h6v15h-1c-2.757 0-5-2.243-5-5z"
-                  fill="url(#SVGID_1_)"
-                />
-              </svg>
-              <span>Ultralight</span>
-            </a>
-          </li>
-        </ul>
+           </div>
+              
+              <h3>Difficulty 6/9</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.
+              </p>
+              
+              <h3>Difficulty 7/9</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.
+              </p>
+              
+              <h3>Difficulty 8/9</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.
+              </p>
+              
+              <h3>Difficulty 9/9</h3>
+              <div>
+                <h4>News Subitem 1</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat.
+                </p>
+    
+                <h4>News Subitem 2</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+    
+            <h2>By Region</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+    
+            <h2>Day Hikable</h2>
+            <div>
+              <h3>News Item #3a</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.
+              </p>
+    
+              <h3>News Item #3b</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            
+            <h2>Ultras</h2>
+            <div>
+              <h3>News Item #3a</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.
+              </p>
+    
+              <h3>News Item #3b</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+    
+          <h1>Updates</h1>
+          <div>
+            <h2>Update #1</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+    
+            <h2>Update #2</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+    
+            <h2>Update #3</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+    
+            <h2>Update #4</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+          </div>
+    
+          <h1>Miscellaneous</h1>
+          <div>
+            <h2>Misc. #1</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+    
+            <h2>Misc. #2</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+    
+            <h2>Misc. #3</h2>
+            <div>
+              <h3>Misc. Item #1a</h3>
+              <div>
+                <h4>Misc. Subitem 1</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat.
+                </p>
+    
+                <h4>Misc. Subitem 2</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat.
+                </p>
+    
+                <h4>Misc. Subitem 3</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+              <h3>Misc. Item #2a</h3>
+              <div>
+                <h4>Misc. Subitem 1</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat.
+                </p>
+    
+                <h4>Misc. Subitem 2</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
 
       <svg
@@ -789,7 +1431,6 @@
       </svg>
     </div>
 
-    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
     <div class="mapdiv" id="blur">
       <a href="#" class="batanes-open-modal"

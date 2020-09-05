@@ -1,25 +1,30 @@
 document.querySelector("#modal").innerHTML += `<div id="modal-body">
 <div id="modal-bodyfirst">
-  <div class="modal-bodyfirst-text">
+  <div class="modal-bodyfirst-text scroll">
     <h2>Mt. Pulag/Akiki-Tawangan Traverse (2,922+)</h2>
     <hr />
-    <h3>Kabayan, Benguet </h3>
+    <a  href="http://www.pinoymountaineer.com/" title="Visit Site" target="blank"> <span class="mountaineeringlogo"><img src="./pinoymountaineeringlogo.png" alt="" ></a>
+    <a href="http://www.pinoymountaineer.com/author/ivan-henares" target="blank"><span style="font-style: italic;"><h3>Author: Ivan Henares</h3></span></a>
         <p>
-      Entry point: Akiki Ranger Station, Brgy. Doacan,
-      Kabayan Exit point: Brgy. Tawangan, Kabayan LLA: 16°34’58″N
-      120°53’15″E, 2922 MASL Days required / Hours to summit: 2-4 days /
-      9-12 hours Specs: Major climb, Difficulty 7/9, Trail class 2-4
+        Kabayan, Benguet<br>
+      Entry point: Akiki Ranger Station, Brgy. Doacan,<br>
+      Kabayan Exit point: Brgy. Tawangan, Kabayan LLA: 16°34’58″N<br>
+      120°53’15″E, 2922 MASL Days required / Hours to summit: 2-4 days /<br>
+      9-12 hours Specs: Major climb, Difficulty 7/9, Trail class 2-4<br>
       Features: Pine forests, mossy forests, Scenic grassland summit
     </p>
   </div>
 
   <div class="scroll modal-bodyfirst-images">
     <img src="http://2.bp.blogspot.com/-O4p7hLExdUk/UXp0RgLacBI/AAAAAAAAMBk/928Fc3Qh3tI/s1600/P1070333-001.JPG" loading="lazy" alt="Loading Image..."/>
+   
     <img src="https://steemitimages.com/640x0/https://i.imgsafe.org/7b577b1bbb.jpg" srcset="https://steemitimages.com/640x0/https://i.imgsafe.org/7b577b1bbb.jpg 1x, https://steemitimages.com/1280x0/https://i.imgsafe.org/7b577b1bbb.jpg 2x"  loading="lazy" alt="Loading Image..."/>
     <img src="http://2.bp.blogspot.com/-kAiVNon7u_U/UXaEV8oGypI/AAAAAAAAL_k/byV0HPyCDO0/s1600/Pulag+via+Akiki+Tawangan+11.JPG" loading="lazy" alt="Loading Image..."/>
+    <p>Proceeding to the summit from the Akiki Trail</p>
     <img src="http://4.bp.blogspot.com/-jfXGZko6pF4/UXaEcTnAjtI/AAAAAAAAMAE/Q2FxBuADgE0/s1600/Pulag+via+Akiki+Tawangan+17.JPG" loading="lazy" alt="Loading Image..."/>
+    <p>Mesmerizing mossy forests of the Tawangan Trail</p>
     <img src="http://4.bp.blogspot.com/-6eoT4eRlNMQ/UXaJ2EV2rxI/AAAAAAAAMA4/JsmZjzM4t5s/s1600/Pulag+via+Akiki+Tawangan+15.JPG" loading="lazy" alt="Loading Image..."/>
-    
+    <p>The beautiful and verdant paths of the Tawangan Trail</p>
   </div>
 </div>
 <div id="modal-bodysecond">
@@ -33,7 +38,7 @@ document.querySelector("#modal").innerHTML += `<div id="modal-body">
     </li>
   </ul>
 
-  <div class="tab-content">
+  <div class="tab-content scroll">
     <div id="background" data-tab-content class="activetab">
       <h1>BACKGROUND</h1>
       <li class="scroll">
@@ -116,6 +121,10 @@ document.querySelector("#modal").innerHTML += `<div id="modal-body">
           highest, is very appealing since it is just a 3 or 4-hour
           return hike. This entails an additional day, but also makes
           the itinerary more relaxed.
+        </p>
+        <h3>TRIVIA</h3>
+        <p>
+        The blogger did the Akiki-Tawangan Trail as a two-day hike from April 20-21, 2013.
         </p>
       </li>
     </div>
@@ -284,6 +293,7 @@ tabs.forEach((tab) => {
     const target = document.querySelector(tab.dataset.tabTarget);
     tabContents.forEach((tabContent) => {
       tabContent.classList.remove("activetab");
+      $("[data-tab-content]").scrollTop(0);
     });
     tabs.forEach((tab) => {
       tab.classList.remove("activetab");

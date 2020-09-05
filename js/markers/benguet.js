@@ -46,7 +46,7 @@ L.marker([16.503056, 120.883889], { icon: eIcon })
   .bindPopup(
     '<div><a href="https://ceb.wikipedia.org/wiki/Mount_Pauadan" target= "blank"><img title="Go to Wiki" src="wikilogo.png"/></a><li title="Popup Info Sourced From Peakvisor.com"><p>Mount Pauadan</p> <p>Elev: 2347 m, Prom: 96 m </p></li></div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15720.231592201948!2d120.87596742870711!3d16.50307569163449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3391b32805d4a497%3A0x6018451187ed33ec!2sMount%20Pauadan!5e1!3m2!1sen!2sph!4v1598032659451!5m2!1sen!2sph" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
   );
-L.marker([16.829444, 120.895], { icon: eIcon })
+L.marker([16.777245, 120.8580923], { icon: eIcon })
   .addTo(benguetmap)
   .bindPopup(
     '<div><img title="No Available Wikis" src="wikilogo.png"/><li title="Popup Info Sourced From Peakvisor.com"><p>Peak</p> <p>Elev: 2342 m, Prom: 87 m </p></li></div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15240.312510155305!2d120.8863851868873!3d16.829449104713845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQ5JzQ2LjAiTiAxMjDCsDUzJzQyLjAiRQ!5e1!3m2!1sen!2sph!4v1598033017028!5m2!1sen!2sph" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'

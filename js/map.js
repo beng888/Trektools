@@ -2,26 +2,23 @@ $(".pin").click(function () {
   blur.classList.toggle("active");
   event.preventDefault();
   $("#body").append('<div class="blocker"></div>');
+  $("#body").append('<span class="close-leaflet">&times;</span>');
   $("body").css("overflow", "hidden");
+  if (viewport) {
+    viewport.content = "initial-scale=0.1";
+    viewport.content = "width=1000";
+  }
 });
 
-$(document).on("click", ".blocker", function () {
+$(document).on("click", ".blocker,.close-leaflet", function () {
   $("body").find(".mapmodal").removeClass("visible");
   $(".mapdiv").removeClass("active");
   $(".blocker").remove();
+  $(".close-leaflet").remove();
   $("body").css("overflow", "scroll");
   event.preventDefault();
 });
 
-// $(document).click(function (event) {
-//   //if you click on anything except the modal itself or the "open modal" link, close the modal
-//   if (!$(event.target).closest(".mapmodal,.pin").length) {
-//     $("body").find(".mapmodal").removeClass("visible");
-//     $(".mapdiv").removeClass("active");
-//     event.preventDefault();
-//     body.classList.toggle("bodyoverflow");
-//   }
-// });
 $(".ilocos-norte-open-modal").click(function () {
   $(".ilocosnortemodal").addClass("visible");
   $.getScript("./js/markers/ilocosnorte.js");

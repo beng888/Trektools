@@ -1,9 +1,22 @@
+@import "menu";
+@import "media";
+@import "trailmodal";
+@import "sidenav";
 body {
-  color: black;
-  background-color: white;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: auto;
   font-family: sans-serif;
+  background-image: repeating-radial-gradient(
+      circle at center center,
+      rgba(46, 60, 130, 0.26) 0px,
+      rgba(46, 60, 130, 0.26) 5px,
+      transparent 5px,
+      transparent 7px
+    ),
+    linear-gradient(135deg, hsl(199, 94%, 24%) 0%, hsl(199, 94%, 24%) 39%);
+  background-size: 33px 33px;
 }
 
 .scroll::-webkit-scrollbar {
@@ -18,199 +31,18 @@ body {
   background: #6649b8;
 }
 
-///////////Navbar///////////////
-#menu {
-  opacity: 0.5;
-  z-index: 2;
-  height: 100%;
-  position: fixed;
-  background-color: #000;
-  width: 300px;
-  transition: 1000ms all cubic-bezier(0.19, 1, 0.22, 1);
-  transform: translateX(-100%);
-  left: 15px;
-}
-
-#menu:hover {
-  opacity: 1;
-  transition: 0.5s;
-
-  .hamburger {
-    width: 20px;
-  }
-}
-
-#menu.expanded {
-  transform: translateX(0%);
-  left: 0px;
-}
-
-.menu-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-#blob {
-  top: 0;
-  z-index: -1;
-  right: 60px;
-  transform: translateX(100%);
-  height: 100%;
-  position: absolute;
-}
-
-#blob-path {
-  height: 100%;
-  fill: #000;
-}
-
-.hamburger {
-  right: 5px;
-  position: absolute;
-  width: 5px;
-  height: 20px;
-  margin-top: -10px;
-}
-
-.hamburger .line {
-  width: 100%;
-  height: 4px;
-  background-color: #d4af37;
-  position: absolute;
-}
-
-.hamburger .line:nth-child(2) {
-  top: 50%;
-  margin-top: -2px;
-}
-
-.hamburger .line:nth-child(3) {
-  bottom: 0;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-  width: 30%;
-  margin-left: 10%;
-  position: absolute;
-  top: 10px;
-}
-
-ul li {
-  color: #fff;
-  padding: 20px 0;
-}
-///////////////MODAL/////////////////
-
-#modal {
-  z-index: 99;
-  position: fixed;
-
-  .blocker2 {
-    position: fixed;
-    cursor: not-allowed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
-
-  #modal-body {
-    background-image: linear-gradient(
-        45deg,
-        rgba(254, 246, 210, 0.53) 0%,
-        rgba(254, 246, 210, 0.53) 14.286%,
-        rgba(221, 240, 216, 0.53) 14.286%,
-        rgba(221, 240, 216, 0.53) 28.572%,
-        rgba(188, 233, 223, 0.53) 28.572%,
-        rgba(188, 233, 223, 0.53) 42.858%,
-        rgba(156, 227, 229, 0.53) 42.858%,
-        rgba(156, 227, 229, 0.53) 57.144%,
-        rgba(123, 220, 235, 0.53) 57.144%,
-        rgba(123, 220, 235, 0.53) 71.42999999999999%,
-        rgba(90, 214, 242, 0.53) 71.43%,
-        rgba(90, 214, 242, 0.53) 85.71600000000001%,
-        rgba(57, 207, 248, 0.53) 85.716%,
-        rgba(57, 207, 248, 0.53) 100.002%
-      ),
-      linear-gradient(
-        135deg,
-        rgb(246, 99, 200) 0%,
-        rgb(246, 99, 200) 12.5%,
-        rgb(223, 98, 196) 12.5%,
-        rgb(223, 98, 196) 25%,
-        rgb(199, 97, 192) 25%,
-        rgb(199, 97, 192) 37.5%,
-        rgb(176, 96, 188) 37.5%,
-        rgb(176, 96, 188) 50%,
-        rgb(152, 95, 184) 50%,
-        rgb(152, 95, 184) 62.5%,
-        rgb(129, 94, 180) 62.5%,
-        rgb(129, 94, 180) 75%,
-        rgb(105, 93, 176) 75%,
-        rgb(105, 93, 176) 87.5%,
-        rgb(82, 92, 172) 87.5%,
-        rgb(82, 92, 172) 100%
-      );
-    z-index: 99;
-    position: fixed;
-    font-family: "Fantasy ";
-    top: 1%;
-    bottom: 1%;
-    left: 10%;
-    right: 10%;
-    display: flex;
-    align-items: center;
-    border: 2px solid;
-    border-radius: 40px;
-    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
-      5px 5px 15px 5px rgba(0, 0, 0, 0);
-  }
-  #modal-bodyfirst {
-    position: relative;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: 1%;
-    left: 1%;
-  }
-  .modal-bodyfirst-text {
-    position: relative;
-    font-size: 17px;
-    font-weight: bolder;
-    line-height: 1.5;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .modal-bodyfirst-images {
-    position: relative;
-    max-height: calc(100vh - 300px);
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-
-    img {
-      width: 95%;
-      margin-top: 5%;
-      margin-bottom: 15%;
-    }
-  }
-}
-
 //modal-tabs//
 
 #modal-bodysecond {
   position: relative;
+  top: 0;
   width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 
 [data-tab-content] {
@@ -225,8 +57,8 @@ ul li {
 }
 
 .tabs {
-  position: fixed;
-  top: 7%;
+  width: 100%;
+  position: relative;
   display: flex;
   justify-content: space-around;
   list-style-type: none;
@@ -252,30 +84,28 @@ ul li {
 }
 
 .tab-content {
+  width: 100%;
+  height: auto;
   position: relative;
-  max-height: calc(100vh - 350px);
-  max-width: 600px;
-  margin-left: 20px;
-  margin-right: 20px;
-  h1 {
-    position: fixed;
-    top: 15%;
-    left: 58%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 5%;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 1.2rem;
   }
 
   li {
     position: relative;
-    margin-top: 5%;
-    overflow-y: auto;
-    max-height: calc(97vh - 200px);
     text-align: left;
     text-indent: 50px;
     letter-spacing: 1px;
     word-spacing: 2px;
     line-height: 1.5;
     list-style: none;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding: 1rem;
   }
 }
 // .fil1 {
@@ -297,21 +127,11 @@ ul li {
 
 .mapdiv {
   position: relative;
-  background-image: repeating-radial-gradient(
-      circle at center center,
-      rgba(46, 60, 130, 0.26) 0px,
-      rgba(46, 60, 130, 0.26) 5px,
-      transparent 5px,
-      transparent 7px
-    ),
-    linear-gradient(135deg, hsl(199, 94%, 24%) 0%, hsl(199, 94%, 24%) 39%);
-  background-size: 33px 33px;
 
   #philippines {
     position: relative;
-
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 }
 
@@ -352,6 +172,27 @@ ul li {
   cursor: not-allowed;
 }
 
+.close-leaflet {
+  border: none;
+  display: inline-block;
+  overflow: hidden;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 9999;
+
+  position: absolute;
+  right: 11%;
+  top: 1.5%;
+}
+
+.close-leaflet:hover {
+  color: red;
+  transition: 0.5s;
+}
+
 .active {
   filter: blur(20px);
 }
@@ -360,17 +201,17 @@ ul li {
 }
 
 .pin {
+  color: #000;
   position: absolute;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0.5;
-  width: 3%;
-  transition: 1s;
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-20px);
+  width: 3%;
+  transition: 1s;
 
   img {
     position: relative;
@@ -397,51 +238,51 @@ ul li {
 }
 #batanespin {
   left: 53%;
-  top: 1%;
+  top: 0.5%;
 }
 #ilocosnortepin {
   left: 41.5%;
-  top: 14%;
+  top: 13%;
 }
 #apayaopin {
   left: 46%;
-  top: 15.5%;
+  top: 14%;
 }
 #cagayanpin {
   left: 52%;
   top: 15%;
 }
 #ilocossurpin {
-  left: 39%;
+  left: 38.5%;
   top: 20%;
 }
 #abrapin {
   left: 42%;
-  top: 18%;
+  top: 17.5%;
 }
 #kalingapin {
   left: 46%;
-  top: 19.5%;
+  top: 19%;
 }
 #mtprovincepin {
   left: 43%;
-  top: 22%;
+  top: 21.5%;
 }
 #ifugaopin {
-  left: 45.5%;
-  top: 23.5%;
+  left: 47%;
+  top: 23%;
 }
 #isabelapin {
   left: 53.5%;
-  top: 21%;
+  top: 20%;
 }
 #launionpin {
   left: 38%;
-  top: 24.5%;
+  top: 23.5%;
 }
 #benguetpin {
   left: 41%;
-  top: 24.5%;
+  top: 23.5%;
 }
 #nuevavizcayapin {
   left: 44%;
@@ -453,11 +294,11 @@ ul li {
 }
 #aurorapin {
   left: 50%;
-  top: 29%;
+  top: 29.5%;
 }
 #nuevaecijapin {
   left: 44%;
-  top: 29.5%;
+  top: 29%;
 }
 #pangasinanpin {
   left: 36%;
@@ -468,8 +309,8 @@ ul li {
   top: 31%;
 }
 #zambalespin {
-  left: 35%;
-  top: 32%;
+  left: 34%;
+  top: 30.5%;
 }
 #pampangapin {
   left: 40%;
@@ -477,15 +318,15 @@ ul li {
 }
 #bulacanpin {
   left: 44%;
-  top: 34.5%;
+  top: 34%;
 }
 #bataanpin {
-  left: 38.5%;
-  top: 36.5%;
+  left: 37.5%;
+  top: 36%;
 }
 #rizalpin {
   left: 46.5%;
-  top: 36.5%;
+  top: 37%;
 }
 #cavitepin {
   left: 42%;
@@ -493,11 +334,11 @@ ul li {
 }
 #batangaspin {
   left: 44%;
-  top: 41.5%;
+  top: 41%;
 }
 #lagunapin {
   left: 47.5%;
-  top: 39.5%;
+  top: 40%;
 }
 #quezonpin {
   left: 52%;
@@ -513,7 +354,7 @@ ul li {
 }
 #catanduanespin {
   left: 75%;
-  top: 41.5%;
+  top: 42%;
 }
 #albaypin {
   left: 69.5%;
@@ -521,15 +362,15 @@ ul li {
 }
 #sorsogonpin {
   left: 73.5%;
-  top: 47.5%;
+  top: 47%;
 }
 #masbatepin {
   left: 67.5%;
-  top: 50.5%;
+  top: 50%;
 }
 #romblonpin {
   left: 56%;
-  top: 49.5%;
+  top: 50%;
 }
 #marinduquepin {
   left: 53%;
@@ -545,11 +386,11 @@ ul li {
 }
 #palawanpin {
   left: 28%;
-  top: 61.5%;
+  top: 62.5%;
 }
 #antiquepin {
   left: 54.5%;
-  top: 58%;
+  top: 59%;
 }
 #aklanpin {
   left: 56%;
@@ -557,27 +398,27 @@ ul li {
 }
 #capizpin {
   left: 61%;
-  top: 56%;
+  top: 56.5%;
 }
 #iloilopin {
   left: 57%;
-  top: 59%;
+  top: 58.5%;
 }
 #guimaraspin {
   left: 60%;
-  top: 61.5%;
+  top: 61%;
 }
 #negrosoccidentalpin {
   left: 65.5%;
   top: 60.5%;
 }
 #negrosorientalpin {
-  left: 65%;
-  top: 65%;
+  left: 64%;
+  top: 70%;
 }
 #cebupin {
   left: 70.5%;
-  top: 62.5%;
+  top: 62%;
 }
 #boholpin {
   left: 75%;
@@ -593,15 +434,15 @@ ul li {
 }
 #leytepin {
   left: 81.5%;
-  top: 57.5%;
+  top: 58%;
 }
 #biliranpin {
   left: 77.5%;
-  top: 55.5%;
+  top: 55.7%;
 }
 #samarpin {
   left: 83%;
-  top: 52.5%;
+  top: 53%;
 }
 #northernsamarpin {
   left: 80%;
@@ -617,11 +458,11 @@ ul li {
 }
 #surigaodelnortepin {
   left: 90.5%;
-  top: 68.2%;
+  top: 68%;
 }
 #surigaodelsurpin {
   left: 93.5%;
-  top: 70.5%;
+  top: 71%;
 }
 #agusandelnortepin {
   left: 87%;
@@ -633,7 +474,7 @@ ul li {
 }
 #davaoorientalpin {
   left: 96.5%;
-  top: 79%;
+  top: 80%;
 }
 #davaodeoropin {
   left: 93%;
@@ -641,11 +482,11 @@ ul li {
 }
 #davaodelnortepin {
   left: 88.5%;
-  top: 79%;
+  top: 78.5%;
 }
 #davaocitypin {
   left: 87%;
-  top: 80.5%;
+  top: 81%;
 }
 #davaodelsurpin {
   left: 86%;
@@ -653,51 +494,51 @@ ul li {
 }
 #davaooccidentalpin {
   left: 89%;
-  top: 87.5%;
+  top: 88%;
 }
 #saranganipin {
   left: 85%;
-  top: 90%;
+  top: 90.5%;
 }
 #southcotabatopin {
   left: 83%;
-  top: 87%;
+  top: 87.5%;
 }
 #sultankudaratpin {
-  left: 79%;
-  top: 85%;
+  left: 78%;
+  top: 85.5%;
 }
 #maguindanaopin {
-  left: 77%;
-  top: 83%;
+  left: 74%;
+  top: 83.5%;
 }
 #cotabatopin {
   left: 83%;
-  top: 81.5%;
+  top: 82.5%;
 }
 #bukidnonpin {
-  left: 80%;
-  top: 76%;
+  left: 83%;
+  top: 76.5%;
 }
 #misamisorientalpin {
   left: 82.5%;
-  top: 72%;
+  top: 72.5%;
 }
 #camiguinpin {
   left: 80%;
   top: 70%;
 }
 #lanaodelsurpin {
-  left: 75%;
-  top: 79%;
+  left: 77%;
+  top: 78%;
 }
 #lanaodelnortepin {
   left: 74%;
-  top: 76.5%;
+  top: 77%;
 }
 #misamisoccidentalpin {
   left: 70%;
-  top: 74%;
+  top: 74.5%;
 }
 #zamboangadelnortepin {
   left: 64%;
@@ -708,24 +549,24 @@ ul li {
   top: 77%;
 }
 #zamboangasibugaypin {
-  left: 62%;
+  left: 61%;
   top: 78.5%;
 }
 #zamboangacitypin {
-  left: 54.5%;
+  left: 54%;
   top: 83%;
 }
 #basilanpin {
   left: 52.5%;
-  top: 85.7%;
+  top: 86%;
 }
 #sulupin {
   left: 44.5%;
-  top: 89.2%;
+  top: 89%;
 }
 #tawitawipin {
   left: 33.5%;
-  top: 94.5%;
+  top: 94%;
 }
 ///////////////
 .mapnav {
@@ -775,19 +616,7 @@ ul li {
   bottom: 0;
   z-index: 9;
 }
-// .leaflet-popup-content-wrapper::before,
-// .leaflet-popup-content-wrapper::after {
-//   background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
-// }
-// .leaflet-popup-content-wrapper:nth-child(2):before,
-// .leaflet-popup-content-wrapper:nth-child(2):after {
-//   background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
-// }
-// .leaflet-popup-content-wrapper:nth-child(3):before,
-// .leaflet-popup-content-wrapper:nth-child(3):after {
-//   background: linear-gradient(235deg, #772aff, #010615, #2196f3);
-// }
-
+/////////////////////////////////////////////////
 .leaflet-popup:hover {
   .leaflet-popup-content-wrapper {
     height: 390px;
@@ -892,69 +721,8 @@ ul li {
   display: none;
 }
 
-/* Small screens */
-@media only screen and (max-width: 600px) {
-  .pin {
-    transform: translateY(-7px);
-  }
-  .leaflet-popup:hover {
-    .leaflet-popup-content-wrapper {
-      height: 340px;
-      width: 300px;
-      img {
-        left: 0;
-      }
-    }
-  }
-  .leaflet-popup-content-wrapper {
-    width: 300px;
-
-    div img {
-      left: 10px;
-    }
-    iframe {
-      width: 280px;
-      height: 256px;
-    }
-  }
-  .mapmodal {
-    top: 10%;
-    left: 0;
-    right: 0;
-    bottom: 10%;
-  }
-  #divmap text {
-    transform: translateX(10px);
-  }
-}
-
-/* Large screens */
-@media only screen and (min-width: 600px) and (max-width: 992px) {
-  .leaflet-popup-content-wrapper {
-    width: 300px;
-
-    div img {
-      left: 10px;
-    }
-
-    iframe {
-      width: 280px;
-      height: 256px;
-    }
-  }
-
-  .pin {
-    transform: translateY(2px);
-  }
-
-  .mapmodal {
-    top: 10%;
-    left: 0;
-    right: 0;
-    bottom: 10%;
-  }
-}
 ////////////trail-info////////
+
 #divmap {
   position: relative;
 }
@@ -966,7 +734,6 @@ ul li {
 }
 #divmap text {
   position: relative;
-  font-size: 1.2vw;
   background: -webkit-linear-gradient(rgb(31, 199, 199), rgb(134, 236, 17));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1006,9 +773,15 @@ ul li {
   border-radius: 10px;
   visibility: hidden;
   opacity: 0;
+
+  z-index: 999;
 }
 #image {
   position: relative;
+}
+
+.divpin {
+  width: 6%;
 }
 
 .divpin:hover {
@@ -1019,4 +792,54 @@ ul li {
   visibility: visible;
   opacity: 1;
   transition: 0.5s;
+}
+.mountaineeringlogo {
+  position: absolute;
+  right: 2rem;
+}
+
+.mountainpins {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    position: absolute;
+    cursor: pointer;
+    background: #aaa;
+    width: 400px;
+    padding: 0.5rem;
+    border-radius: 20px;
+    transform: translateY(50px);
+    visibility: visible;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  text {
+    font-size: 1.2rem;
+    transform: translateY(8px);
+  }
+
+  img {
+    border: none;
+    cursor: pointer;
+    width: 35px;
+  }
+}
+.mountainpins:hover {
+  img {
+    width: 45px;
+    transition: 0.5s;
+  }
+
+  li {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+
+    transform: translateY(0);
+    z-index: 999;
+  }
 }

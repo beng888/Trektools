@@ -1,0 +1,162 @@
+///////////Navbar///////////////
+#menu {
+  opacity: 0.5;
+  z-index: 2;
+  height: 100%;
+  position: fixed;
+  background-color: #000;
+  width: 300px;
+  transition: 1000ms all cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateX(-100%);
+  left: 30px;
+}
+
+#menu:hover {
+  opacity: 1;
+  transition: 0.5s;
+
+  .hamburger {
+    width: 20px;
+  }
+}
+
+#menu.expanded {
+  transform: translateX(0%);
+  left: 0px;
+}
+
+.menu-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#blob {
+  top: 0;
+  z-index: -1;
+  right: 60px;
+  transform: translateX(100%);
+  height: 100%;
+  position: absolute;
+}
+
+#blob-path {
+  height: 100%;
+  fill: #000;
+}
+
+.hamburger {
+  right: 5px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 4px;
+  background-color: #d4af37;
+  position: absolute;
+}
+
+.hamburger .line:nth-child(2) {
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger .line:nth-child(3) {
+  bottom: 0;
+}
+
+///////////////MODAL/////////////////
+
+.menu-inner {
+  overflow-y: auto;
+  direction: rtl;
+  max-height: 100vh;
+  .accordion {
+    left: 0;
+    margin: 20px 30px 20px 5px;
+    overflow: hidden;
+    text-align: center;
+    // border-radius: 20px;
+  }
+  .accordion h1,
+  h2,
+  h3,
+  h4 {
+    cursor: pointer;
+  }
+  .accordion h2,
+  h3,
+  h4 {
+    font-family: "News Cycle";
+  }
+  .accordion h1 {
+    padding: 15px 20px;
+    background-color: #333;
+    font-family: Lobster;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #1abc9c;
+  }
+  .accordion h1:hover {
+    color: #4afcdc;
+  }
+  .accordion h1:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+  .accordion h1:last-of-type {
+    border-radius: 0 0 10px 10px;
+  }
+  .accordion h1:not(:last-of-type) {
+    border-bottom: 1px dotted #1abc9c;
+  }
+  .accordion div,
+  .accordion p {
+    display: none;
+  }
+  .accordion h2 {
+    padding: 5px 25px;
+    background-color: #1abc9c;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  .accordion h2:hover {
+    background-color: #09ab8b;
+  }
+  .accordion h3 {
+    padding: 5px 30px;
+    background-color: #b94152;
+    font-size: 0.9rem;
+    color: #ddd;
+  }
+  .accordion h3:hover {
+    background-color: #a93142;
+  }
+  .accordion h4 {
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    background-color: #ffc25a;
+    font-size: 0.9rem;
+    color: #af720a;
+    text-transform: uppercase;
+  }
+  .accordion h4:hover {
+    background-color: #e0b040;
+  }
+  .accordion p {
+    padding: 0.5rem;
+    background-color: #ddd;
+    font-family: "Georgia";
+    font-size: 0.8rem;
+    color: #333;
+    line-height: 1.3rem;
+    letter-spacing: 1px;
+    text-align: left;
+  }
+  .accordion button {
+    position: relative;
+    left: 50%;
+  }
+}

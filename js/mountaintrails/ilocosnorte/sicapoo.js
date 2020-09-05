@@ -1,15 +1,17 @@
 document.querySelector("#modal").innerHTML += `<div id="modal-body">
 <div id="modal-bodyfirst">
-  <div class="modal-bodyfirst-text">
+  <div class="modal-bodyfirst-text scroll">
     <h2>Mt. Sicapoo/Traverse via Timarid-Simagaysay (2,354 +)</h2>
     <hr />
-    <p style="font-weight: bold">Solsona, Ilocos Norte</p>
+    <a  href="http://www.pinoymountaineer.com/" title="Visit Site" target="blank"> <span class="mountaineeringlogo"><img src="./pinoymountaineeringlogo.png" alt="" ></a>
+    <a href="http://www.pinoymountaineer.com/author/gideon-lasco" target="blank"><span style="font-style: italic;"><h3>Author: Gideon Lasco</h3></span></a>
     <p>
-    Entry point: Gasgas River, Brgy. Manalpac, Solsona
-    Exit point: Solsona Dam, Brgy. Manalpac, Solsona
-    LLA: 2354 MASL
-    Days required / Hours to summit: 4 days / 16-18 hours
-    Specs: Major climb, Exploratory, Difficulty 9/9, Trail class 2-5
+    Solsona, Ilocos Norte<br>
+    Entry point: Gasgas River, Brgy. Manalpac, Solsona<br>
+    Exit point: Solsona Dam, Brgy. Manalpac, Solsona<br>
+    LLA: 2354 MASL<br>
+    Days required / Hours to summit: 4 days / 16-18 hours<br>
+    Specs: Major climb, Exploratory, Difficulty 9/9, Trail class 2-5<br>
     Features: Pine forest, Traverse trail, River crossing
     </p>
   </div>
@@ -34,7 +36,7 @@ document.querySelector("#modal").innerHTML += `<div id="modal-body">
     </li>
   </ul>
 
-  <div class="tab-content">
+  <div class="tab-content scroll" >
     <div id="background" data-tab-content class="activetab">
       <h1>BACKGROUND</h1>
       <li class="scroll">
@@ -128,13 +130,16 @@ document.querySelector("#modal").innerHTML += `<div id="modal-body">
         <p>
         PinoyMountaineer endorses the necessity of coordinating with the ONE Degree Mountaineering Group, pioneers of this climb, when making arrangements for Mt. Sicapoo. They do not charge anything for this service, but do it out of love for the mountain. They have issued a a Climb Advisory in February 2011 which ought to be reviewed by everyone who will be climbing the mountain. ODMG can be contacted at onedegreemg@ymail.com.
         </p>
+        
         <p>
         Guides cost P500/day. Archie Pinzon: “”Tight IT 4 days, ave 5 days. approx P1,500 each excluding supplies and fare from your point of origin.”
         </p>
+        <hr>
         <p style="font-weight: bold">Transportation</p>
         <p>
         From Manila to Laoag, a number of buses ply the route including Maria de Leon, Farinas Trans, and Florida Bus Lines. These liners have terminals in Espana along Lacson St. Fare is around P600 one-way as of July 2010.
         </p>
+        <hr>
         <p style="font-weight: bold">Special concerns</p>
         <p>
         Perhaps the most dangerous part of the traverse is the descent via Gasgas River; caution must always be observed before attempting the crossing. If inclement weather is upon the team, an option may be to use the original Timarid-Simagaysay
@@ -158,6 +163,7 @@ tabs.forEach((tab) => {
     const target = document.querySelector(tab.dataset.tabTarget);
     tabContents.forEach((tabContent) => {
       tabContent.classList.remove("activetab");
+      $("[data-tab-content]").scrollTop(0);
     });
     tabs.forEach((tab) => {
       tab.classList.remove("activetab");

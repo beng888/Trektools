@@ -1,0 +1,177 @@
+#modal {
+  z-index: 99;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .blocker2 {
+    position: fixed;
+    cursor: not-allowed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  #modal-body {
+    background-image: linear-gradient(
+        45deg,
+        rgba(254, 246, 210, 0.53) 0%,
+        rgba(254, 246, 210, 0.53) 14.286%,
+        rgba(221, 240, 216, 0.53) 14.286%,
+        rgba(221, 240, 216, 0.53) 28.572%,
+        rgba(188, 233, 223, 0.53) 28.572%,
+        rgba(188, 233, 223, 0.53) 42.858%,
+        rgba(156, 227, 229, 0.53) 42.858%,
+        rgba(156, 227, 229, 0.53) 57.144%,
+        rgba(123, 220, 235, 0.53) 57.144%,
+        rgba(123, 220, 235, 0.53) 71.42999999999999%,
+        rgba(90, 214, 242, 0.53) 71.43%,
+        rgba(90, 214, 242, 0.53) 85.71600000000001%,
+        rgba(57, 207, 248, 0.53) 85.716%,
+        rgba(57, 207, 248, 0.53) 100.002%
+      ),
+      linear-gradient(
+        135deg,
+        rgb(246, 99, 200) 0%,
+        rgb(246, 99, 200) 12.5%,
+        rgb(223, 98, 196) 12.5%,
+        rgb(223, 98, 196) 25%,
+        rgb(199, 97, 192) 25%,
+        rgb(199, 97, 192) 37.5%,
+        rgb(176, 96, 188) 37.5%,
+        rgb(176, 96, 188) 50%,
+        rgb(152, 95, 184) 50%,
+        rgb(152, 95, 184) 62.5%,
+        rgb(129, 94, 180) 62.5%,
+        rgb(129, 94, 180) 75%,
+        rgb(105, 93, 176) 75%,
+        rgb(105, 93, 176) 87.5%,
+        rgb(82, 92, 172) 87.5%,
+        rgb(82, 92, 172) 100%
+      );
+    z-index: 99;
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    font-family: "Fantasy ";
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border: 2px solid;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+      5px 5px 15px 5px rgba(0, 0, 0, 0);
+  }
+  #modal-bodyfirst {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  .modal-bodyfirst-text {
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    line-height: 1.5;
+    width: 100%;
+    height: 40%;
+    padding-bottom: 2rem;
+    overflow-y: auto;
+  }
+
+  .modal-bodyfirst-images {
+    position: relative;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    height: 60%;
+    width: 100%;
+
+    img {
+      width: 95%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+  }
+}
+////////////////////////////
+
+#modal-bodysecond {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+[data-tab-content] {
+  position: relative;
+  display: none;
+  width: 100%;
+}
+
+.activetab[data-tab-content] {
+  display: block;
+  transition: 0.3s;
+}
+
+.tabs {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tab {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.tab.activetab {
+  background-color: #ccc;
+}
+
+.tab:hover {
+  background-color: #aaa;
+}
+
+.tab-content {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 5%;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  li {
+    position: relative;
+    text-align: left;
+    text-indent: 50px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 1.5;
+    list-style: none;
+    padding: 1rem;
+  }
+}

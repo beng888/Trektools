@@ -1,14 +1,16 @@
 document.querySelector("#modal").innerHTML += `<div id="modal-body">
 <div id="modal-bodyfirst">
-  <div class="modal-bodyfirst-text">
+  <div class="modal-bodyfirst-text scroll">
     <h2>Mt. Simagaysay (1,402+) Traverse to Mt. Tumarid (1,560+)</h2>
     <hr />
-    <p style="font-weight: bold">Solsona, Ilocos Norte</p>
+    <a  href="http://www.pinoymountaineer.com/" title="Visit Site" target="blank"> <span class="mountaineeringlogo"><img src="./pinoymountaineeringlogo.png" alt="" ></a>
+    <a href="http://www.pinoymountaineer.com/author/gideon-lasco" target="blank"><span style="font-style: italic;"><h3>Author: Gideon Lasco</h3></span></a>
     <p>
-    Major jumpoff: Sitio Maligligay, Adams
-LLA: 1271 MASL
-Days required / Hours to summit: 1-2 days / 4-6 hours
-Specs: Major climb*, Difficulty 5/9, Trail class 2-3
+    Solsona, Ilocos Norte<br>
+    Major jumpoff: Sitio Maligligay, Adams<br>
+LLA: 1271 MASL<br>
+Days required / Hours to summit: 1-2 days / 4-6 hours<br>
+Specs: Major climb*, Difficulty 5/9, Trail class 2-3<br>
 Features: Tropical forest, Coastal views
     </p>
   </div>
@@ -34,7 +36,7 @@ Features: Tropical forest, Coastal views
     </li>
   </ul>
 
-  <div class="tab-content">
+  <div class="tab-content scroll">
     <div id="background" data-tab-content class="activetab">
       <h1>BACKGROUND</h1>
       <li class="scroll">
@@ -59,6 +61,15 @@ Features: Tropical forest, Coastal views
         <p>
         In 2009, the blogger joined the first group of mountaineers to climb the twin mountains (Mt. Simagaysay FA July 13, 2009; Mt. Tumarid FA July 14, 2009); as well as the first to perform a traverse. The ONE Degree Mountaineering Group based in Laoag, Ilocos Norte organized this first climb led by Archie Pinzon. This itinerary is a product of this exploratory effort.
         </p>
+        <p style="font-weight: bold">
+        TRIVIA
+           </p>
+           <p>
+           The blogger carelessly and unfortunately lost all his pictures of the traverse when his camera phone fell down the waters of Coron in July 2009. The only two existing photos are posted here together with the pictures of the ONE Degree Mountaineering Group.
+           <p/>
+           <p>
+           This climb is the third of a series of explorations pursued by the ONE Degree Mountaineering Group. The first two, Mt. Palemlem and Mt. Linao both in Adams, have previously been featured in PinoyMountaineer.com. Their itineraries will be posted soon.
+           <p/>
       </li>
     </div>
     <div id="itinerary" data-tab-content>
@@ -107,10 +118,12 @@ Features: Tropical forest, Coastal views
         <p>
         Right now, there are no mechanisms in place for do-it-yourself contacting of guides in Solsona. Instead, you can make contact with the ONE Degree Mountaineering Group and they can help you make arrangements for onedegreemg@ymail.com.
         </p>
+        <hr>
         <p style="font-weight: bold">Transportation</p>
         <p>
         From Manila to Laoag, a number of buses ply the route including Maria de Leon, Farinas Trans, and Florida Bus Lines. These liners have terminals in Espana along Lacson St. Fare is around P600 one-way as of Aug. 2009
         </p>
+        <hr>
         <p style="font-weight: bold">Special Concerns</p>
         <p>
         Perhaps the most dangerous part of the traverse is the descent via Gasgas River; caution must always be observed before attemptin the crossing. If inclement weather is upon the team, the may choose to make Timarid summit the endpoint on early morning of Day 2, then turn back to the entry point, returning to Mt. Simagaysay or its slopes as Day 2 campsite.
@@ -133,6 +146,7 @@ tabs.forEach((tab) => {
     const target = document.querySelector(tab.dataset.tabTarget);
     tabContents.forEach((tabContent) => {
       tabContent.classList.remove("activetab");
+      $("[data-tab-content]").scrollTop(0);
     });
     tabs.forEach((tab) => {
       tab.classList.remove("activetab");

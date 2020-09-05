@@ -1,13 +1,15 @@
 document.querySelector("#modal").innerHTML += `<div id="modal-body">
 <div id="modal-bodyfirst">
-  <div class="modal-bodyfirst-text">
+  <div class="modal-bodyfirst-text scroll">
     <h2>Mt. Pulag/Akiki Trail (2,922+)</h2>
     <hr />
-    <h3>Kabayan, Benguet </h3>
+    <a  href="http://www.pinoymountaineer.com/" title="Visit Site" target="blank"> <span class="mountaineeringlogo"><img src="./pinoymountaineeringlogo.png" alt="" ></a>
+    <a href="http://www.pinoymountaineer.com/author/ivan-henares" target="blank"><span style="font-style: italic;"><h3>Author: Ivan Henares</h3></span></a>
     <p>
-    Major jump-off: Brgy. Doacan, Kabayan (Akiki)
-    LLA: 16°34’58″N 120°53’15″E, 2922 MASL
-    Hours to summit / Days required: 10-11 hours / 2-4 days
+    Kabayan, Benguet <br>
+    Major jump-off: Brgy. Doacan, Kabayan (Akiki)<br>
+    LLA: 16°34’58″N 120°53’15″E, 2922 MASL<br>
+    Hours to summit / Days required: 10-11 hours / 2-4 days<br>
     Specs: Major Climb, Difficulty 7/9, Trail class 3
     </p>
   </div>
@@ -33,7 +35,7 @@ document.querySelector("#modal").innerHTML += `<div id="modal-body">
     </li>
   </ul>
 
-  <div class="tab-content">
+  <div class="tab-content scroll">
     <div id="background" data-tab-content class="activetab">
       <h1>BACKGROUND</h1>
       <li class="scroll">
@@ -43,6 +45,15 @@ document.querySelector("#modal").innerHTML += `<div id="modal-body">
         <p>
         The name of the trail is onomatopeiac in origin, derived from the small brids whose high-pitched chirped sounds like “Aki-ki-ki…”. It is unsurprising that this trail would be named after a bird call, because Mt. Pulag is a bird sanctuary, home to 143 species of birds. Rare species include the whiskered pitta (Pitta koctri) and the Luzon water-redstart (Rhyacomis bicolor).
         </p>
+        <p style="font-weight: bold">
+        TRIVIA
+           </p>
+           <p>
+           There are two schools of thought as to the origin of Mt. Pulag’s name: Some say it is derived from the Ibaloi word ‘pulag’ means ‘to fall down’, reflecting its towering height. Others believe it is from the the Kalanguya word ‘napulogan’ which means bald – referring to its treeless grassland summit. Either way, it is a sacred ground to the locals of the region, to the locals of the region. Animism (worship of natural objects such as trees, animals) still exists in some areas in Benguet, and they believe that ancestral spirits roam in the mountain. This gives rise to Pulag’s being called the “Playground of the gods”.
+           <p/>
+           <p>
+           For those seeking a greater challenge, it is possible to do a three-day Akiki-Ambaguio Traverse, combining the steepest (Akiki) and longest (Ambaguio) trails of Luzon’s highest mountain! This Pulag Crossover was done by the blogger in December 2010 and is narrated in Hiking matters 115-117. The blogger also did a two-day Akiki-Tawangan Traverse in 2012. 
+           <p/>
       </li>
     </div>
     <div id="itinerary" data-tab-content>
@@ -191,6 +202,7 @@ tabs.forEach((tab) => {
     const target = document.querySelector(tab.dataset.tabTarget);
     tabContents.forEach((tabContent) => {
       tabContent.classList.remove("activetab");
+      $("[data-tab-content]").scrollTop(0);
     });
     tabs.forEach((tab) => {
       tab.classList.remove("activetab");

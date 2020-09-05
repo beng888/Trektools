@@ -1,13 +1,16 @@
 document.querySelector("#modal").innerHTML += `<div id="modal-body">
 <div id="modal-bodyfirst">
-  <div class="modal-bodyfirst-text">
+  <div class="modal-bodyfirst-text scroll">
     <h2>Mt. Napulauan/Traverse (2,642+)</h2>
     <hr />
-    <h3>Hungduan, Ifugao </h3>
+    <a  href="http://www.pinoymountaineer.com/" title="Visit Site" target="blank"> <span class="mountaineeringlogo"><img src="./pinoymountaineeringlogo.png" alt="" ></a>
+    <a href="http://www.pinoymountaineer.com/author/ivan-henares" target="blank"><span style="font-style: italic;"><h3>Author: Ivan Henares</h3></span></a>
+    
     <p>
-    Major jump-offs: Poblacion and Brgy. Hapao, Hungduan
-    LLA: 16°50′N, 121°10′E, 2642 MASL (#15; 1580m gain)
-    Hours to summit / Days required: 9 hours / 2-3 days
+    Hungduan, Ifugao<br>
+    Major jump-offs: Poblacion and Brgy. Hapao, Hungduan<br>
+    LLA: 16°50′N, 121°10′E, 2642 MASL (#15; 1580m gain)<br>
+    Hours to summit / Days required: 9 hours / 2-3 days<br>
     Specs: Major climb, Difficulty 7/9, Trail class 3
     </p>
   </div>
@@ -33,7 +36,7 @@ document.querySelector("#modal").innerHTML += `<div id="modal-body">
     </li>
   </ul>
 
-  <div class="tab-content">
+  <div class="tab-content scroll">
     <div id="background" data-tab-content class="activetab">
       <h1>BACKGROUND</h1>
       <li class="scroll">
@@ -106,9 +109,12 @@ document.querySelector("#modal").innerHTML += `<div id="modal-body">
         Hiking in the Cordilleras poses logistical problems, especially transportation. From Manila to Banaue, the Florida Bus Lines (ETD 2245), Victory Liner (ETD 2245), and Autobus (ETD 2200)are reliable options, an alternative is the Cable Bus Tours. Florida and Autobus have terminals at Sampaloc, Manila while the Victory terminal servicing the route is in Kamias. Meanwhile, from Banaue to Manila, Florida has a terminal near Banaue Hotel (ETD 2000). Terminals of Autobus (ETD 1730) and Victory (ETD 1700) are also in Banaue; for these buses reserving/purchasing tickets in advance is advisable. Fares either way range from P400-450, with companies giving 10-15% student discount (so bring your ID!).
         </p>
         <p>From Banaue to Hungduan, the roads are frequently ruined by landslides, and pass by precarious turns. Skilled drivers will be able to maneuver through these difficulties, however, even at night. You may arrange jeepney transporation through Cloyd of Las Vegas Lodge in Banaue (+639109932538). As of Feb 2009, P2500-P3000 is a reasonable price going to Hungduan, and P1,500 back from Hapao to Banaue</p>
+        <hr>
         <p style="font-weight: bold">Logistics</p>
         <p>A courtesy registration is done at the municipal hall of Hungduan which is located on a high area. Here, there is a water source and an eatery. Souvenir “I trekked Mt. Napulauan” shirts may be bought for P150. On the jump-off point, guides may be secured. The usual asking price, negotiable, is P500/day/5 hikers. Around 23 guides are available although no formal guide association exists as of 2009.</p>
         <p>A reliable water source exists near the summit; before that, however, no constant water source exists. Hence it is necessary to bring water according to the itinerary. Cellphone signal for both Smart and Globe is present in both the Ny-o and summit campsites, as well as some segments of the trail.</p>
+        <hr>
+
         <p style="font-weight: bold">Technical notes</p>
         <p>The itinerary above provides ample time for picture taking and delays; a two-day IT is also possible but almost always requires night trekking, and provides little time for a more relaxing climb. Hence, PinoyMountaineer recommends a 3-day itinerary.</p>
         <p>The summit area is good for a dozen tents at most; the soil is mossy and absorbs water well. Only the south part is obstructed from the viewing tree. Temperatures may drop to 5 degrees Celsius so prepare accordingly. Protection from the leeches (matok) must also be prepared for. At the Hapao jump-off, an open bathing area near a brook may be used to wash up before returning to Banaue.</p>
@@ -126,6 +132,7 @@ tabs.forEach((tab) => {
     const target = document.querySelector(tab.dataset.tabTarget);
     tabContents.forEach((tabContent) => {
       tabContent.classList.remove("activetab");
+      $("[data-tab-content]").scrollTop(0);
     });
     tabs.forEach((tab) => {
       tab.classList.remove("activetab");
