@@ -1,0 +1,263 @@
+.mapdiv {
+  h3 {
+    position: absolute;
+    z-index: 2;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 1s;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1vw;
+    text-align: center;
+  }
+
+  .carnames,
+  .westernvisayasnames {
+    transform: translate(-40px, -40px);
+  }
+  .cagayanvalleynames {
+    transform: translateX(40px);
+  }
+
+  .ilocosregionnames,
+  .centralluzonnames,
+  .mimaropanames,
+  .zamboangapeninsulanames {
+    transform: translateX(-40px);
+  }
+
+  .calabarzonnames,
+  .easternvisayasnames,
+  .caraganames,
+  .bangsamoronames2 {
+    transform: translate(40px, -40px);
+  }
+  .bicolnames,
+  .northernmindanaonames {
+    transform: translateY(-40px);
+  }
+
+  .centralvisayasnames,
+  .soccsksargennames,
+  .bangsamoronames1 {
+    transform: translate(-40px, 40px);
+  }
+
+  .davaoregionnames {
+    transform: translate(40px, 40px);
+  }
+}
+
+.regionNames {
+  position: absolute;
+  font-size: 1vw;
+  z-index: 1;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  h2,
+  h3 {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(-20px);
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.regionNames:hover {
+  cursor: pointer;
+  h3 {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.car {
+  left: 34%;
+  top: 11%;
+}
+
+.car:hover ~ .carnames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.cagayanvalley {
+  left: 60%;
+  top: 14%;
+}
+
+.cagayanvalley:hover ~ .cagayanvalleynames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.ilocosregion {
+  left: 29%;
+  top: 23%;
+}
+
+.ilocosregion:hover ~ .ilocosregionnames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.centralluzon {
+  left: 22%;
+  top: 34%;
+}
+
+.centralluzon:hover ~ .centralluzonnames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.calabarzon {
+  left: 53%;
+  top: 31%;
+}
+
+.calabarzon:hover ~ .calabarzonnames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.mimaropa {
+  left: 28%;
+  top: 50%;
+}
+
+.mimaropa:hover ~ .mimaropanames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.bicol {
+  left: 65%;
+  top: 39%;
+}
+
+.bicol:hover ~ .bicolnames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.westernvisayas {
+  left: 45%;
+  top: 57%;
+}
+
+.westernvisayas:hover ~ .westernvisayasnames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.centralvisayas {
+  left: 52%;
+  top: 71%;
+}
+
+.centralvisayas:hover ~ .centralvisayasnames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.easternvisayas {
+  left: 89%;
+  top: 49%;
+}
+
+.easternvisayas:hover ~ .easternvisayasnames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.caraga {
+  left: 93%;
+  top: 62%;
+}
+
+.caraga:hover ~ .caraganames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.northernmindanao {
+  left: 72%;
+  top: 72%;
+}
+
+.northernmindanao:hover ~ .northernmindanaonames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.davaoregion {
+  left: 91%;
+  top: 89%;
+}
+
+.davaoregion:hover ~ .davaoregionnames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.soccsksargen {
+  left: 72%;
+  top: 92%;
+}
+
+.soccsksargen:hover ~ .soccsksargennames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.bangsamoro {
+  left: 63%;
+  top: 84%;
+}
+
+.bangsamoro:hover ~ .bangsamoronames1 {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.bangsamoro:hover ~ .bangsamoronames2 {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.zamboangapeninsula {
+  left: 45%;
+  top: 80%;
+}
+
+.zamboangapeninsula:hover ~ .zamboangapeninsulanames {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}

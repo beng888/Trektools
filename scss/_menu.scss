@@ -95,7 +95,7 @@
   }
   .accordion h1 {
     padding: 15px 20px;
-    background-color: #333;
+    background-color: #581845;
     font-family: Lobster;
     font-size: 1.5rem;
     font-weight: normal;
@@ -121,14 +121,14 @@
     padding: 5px 25px;
     background-color: #1abc9c;
     font-size: 1.1rem;
-    color: #333;
+    color: #900c3f;
   }
   .accordion h2:hover {
     background-color: #09ab8b;
   }
   .accordion h3 {
     padding: 5px 30px;
-    background-color: #b94152;
+    background-color: #c70039;
     font-size: 0.9rem;
     color: #ddd;
   }
@@ -137,9 +137,9 @@
   }
   .accordion h4 {
     padding: 0.2rem 1rem 0.2rem 1rem;
-    background-color: #ffc25a;
+    background-color: #ff5733;
     font-size: 0.9rem;
-    color: #af720a;
+    color: #000;
     text-transform: uppercase;
   }
   .accordion h4:hover {
@@ -147,10 +147,10 @@
   }
   .accordion p {
     padding: 0.5rem;
-    background-color: #ddd;
+    background-color: #000;
     font-family: "Georgia";
     font-size: 0.8rem;
-    color: #333;
+    color: #ffc300;
     line-height: 1.3rem;
     letter-spacing: 1px;
     text-align: left;

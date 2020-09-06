@@ -617,10 +617,13 @@ var blur = document.getElementById("blur");
 var body = document.getElementById("body");
 var viewport = document.querySelector('meta[name="viewport"]');
 
-$(".fil1").click(function () {
+$(".trail-pin").click(function () {
   blur.classList.toggle("activefirst");
   $("body").css("overflow", "hidden");
-  $(".popup").append('<div class="blocker" onclick="hidePopup()"></div>');
+  $(".popup").append(
+    '<div style="z-index:-1;" class="blocker" onclick="hidePopup()"></div>'
+  );
+  event.preventDefault();
   if (viewport) {
     viewport.content = "initial-scale=0.1";
     viewport.content = "width=1000";
@@ -646,7 +649,8 @@ $(document).on("click", ".blocker2", function () {
   $(".blocker2").remove();
 });
 
-$("div.pin").append(`<img src="pin.png" >`);
+$(".trail-pin").append(`<img class = "trail" src="trail.png" >`);
+$(".map-pin").append(`<img class ="pins" src="pin.png" >`);
 
 ///lazy loading scripts///
 
@@ -665,1218 +669,1630 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 var x = window.matchMedia("(min-width: 992px)");
 
-if (x.matches) {
-  $ilocosnortepin = $("#ilocosnortepin");
-  $(".ilocosnortepath,#ilocosnortepin").hover(
-    function () {
-      $ilocosnortepin.css("visibility", "visible");
-      $ilocosnortepin.css("opacity", "1");
-      $ilocosnortepin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $ilocosnortepin.css("visibility", "hidden");
-      $ilocosnortepin.css("opacity", "0");
-      $ilocosnortepin.css("transform", "translateY(-20px)");
-    }
-  );
+// if (x.matches) {
 
-  $ilocossurpin = $("#ilocossurpin");
-  $(".ilocossurpath,#ilocossurpin").hover(
-    function () {
-      $ilocossurpin.css("visibility", "visible");
-      $ilocossurpin.css("opacity", "1");
-      $ilocossurpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $ilocossurpin.css("visibility", "hidden");
-      $ilocossurpin.css("opacity", "0");
-      $ilocossurpin.css("transform", "translateY(-20px)");
-    }
-  );
+// $(".fil1,.trail-pin,.map-pin").hover(
+//   function () {
 
-  $launionpin = $("#launionpin");
-  $(".launionpath,#launionpin").hover(
-    function () {
-      $launionpin.css("visibility", "visible");
-      $launionpin.css("opacity", "1");
-      $launionpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $launionpin.css("visibility", "hidden");
-      $launionpin.css("opacity", "0");
-      $launionpin.css("transform", "translateY(-20px)");
-    }
-  );
+//   },
+//   function () {
 
-  $pangasinanpin = $("#pangasinanpin");
-  $(".pangasinanpath,#pangasinanpin").hover(
-    function () {
-      $pangasinanpin.css("visibility", "visible");
-      $pangasinanpin.css("opacity", "1");
-      $pangasinanpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $pangasinanpin.css("visibility", "hidden");
-      $pangasinanpin.css("opacity", "0");
-      $pangasinanpin.css("transform", "translateY(-20px)");
-    }
-  );
+//   }
+// );
 
-  $apayaopin = $("#apayaopin");
-  $(".apayaopath,#apayaopin").hover(
-    function () {
-      $apayaopin.css("visibility", "visible");
-      $apayaopin.css("opacity", "1");
-      $apayaopin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $apayaopin.css("visibility", "hidden");
-      $apayaopin.css("opacity", "0");
-      $apayaopin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $abrapin = $("#abrapin");
-  $(".abrapath,#abrapin").hover(
-    function () {
-      $abrapin.css("visibility", "visible");
-      $abrapin.css("opacity", "1");
-      $abrapin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $abrapin.css("visibility", "hidden");
-      $abrapin.css("opacity", "0");
-      $abrapin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $kalingapin = $("#kalingapin");
-  $(".kalingapath,#kalingapin").hover(
-    function () {
-      $kalingapin.css("visibility", "visible");
-      $kalingapin.css("opacity", "1");
-      $kalingapin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $kalingapin.css("visibility", "hidden");
-      $kalingapin.css("opacity", "0");
-      $kalingapin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $mtprovincepin = $("#mtprovincepin");
-  $(".mtprovincepath,#mtprovincepin").hover(
-    function () {
-      $mtprovincepin.css("visibility", "visible");
-      $mtprovincepin.css("opacity", "1");
-      $mtprovincepin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $mtprovincepin.css("visibility", "hidden");
-      $mtprovincepin.css("opacity", "0");
-      $mtprovincepin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $ifugaopin = $("#ifugaopin");
-  $(".ifugaopath,#ifugaopin").hover(
-    function () {
-      $ifugaopin.css("visibility", "visible");
-      $ifugaopin.css("opacity", "1");
-      $ifugaopin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $ifugaopin.css("visibility", "hidden");
-      $ifugaopin.css("opacity", "0");
-      $ifugaopin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $benguetpin = $("#benguetpin");
-  $(".benguetpath,#benguetpin").hover(
-    function () {
-      $benguetpin.css("visibility", "visible");
-      $benguetpin.css("opacity", "1");
-      $benguetpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $benguetpin.css("visibility", "hidden");
-      $benguetpin.css("opacity", "0");
-      $benguetpin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $batanespath = $(".batanespath");
-  $batanespin = $("#batanespin");
-  $(".batanespath,#batanespin").hover(
-    function () {
-      $batanespin.css("visibility", "visible");
-      $batanespin.css("opacity", "1");
-      $batanespin.css("transform", "translateY(0px)");
-      $batanespath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $batanespin.css("visibility", "hidden");
-      $batanespin.css("opacity", "0");
-      $batanespin.css("transform", "translateY(-20px)");
-      $batanespath.css("mix-blend-mode", "normal");
-    }
-  );
-
-  $cagayanpath = $(".cagayanpath");
-  $cagayanpin = $("#cagayanpin");
-  $(".cagayanpath,#cagayanpin").hover(
-    function () {
-      $cagayanpin.css("visibility", "visible");
-      $cagayanpin.css("opacity", "1");
-      $cagayanpin.css("transform", "translateY(0px)");
-      $cagayanpath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $cagayanpin.css("visibility", "hidden");
-      $cagayanpin.css("opacity", "0");
-      $cagayanpin.css("transform", "translateY(-20px)");
-      $cagayanpath.css("mix-blend-mode", "normal");
-    }
-  );
-
-  $isabelapin = $("#isabelapin");
-  $(".isabelapath,#isabelapin").hover(
-    function () {
-      $isabelapin.css("visibility", "visible");
-      $isabelapin.css("opacity", "1");
-      $isabelapin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $isabelapin.css("visibility", "hidden");
-      $isabelapin.css("opacity", "0");
-      $isabelapin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $quirinopin = $("#quirinopin");
-  $(".quirinopath,#quirinopin").hover(
-    function () {
-      $quirinopin.css("visibility", "visible");
-      $quirinopin.css("opacity", "1");
-      $quirinopin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $quirinopin.css("visibility", "hidden");
-      $quirinopin.css("opacity", "0");
-      $quirinopin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $nuevavizcayapin = $("#nuevavizcayapin");
-  $(".nuevavizcayapath,#nuevavizcayapin").hover(
-    function () {
-      $nuevavizcayapin.css("visibility", "visible");
-      $nuevavizcayapin.css("opacity", "1");
-      $nuevavizcayapin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $nuevavizcayapin.css("visibility", "hidden");
-      $nuevavizcayapin.css("opacity", "0");
-      $nuevavizcayapin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $aurorapin = $("#aurorapin");
-  $(".aurorapath,#aurorapin").hover(
-    function () {
-      $aurorapin.css("visibility", "visible");
-      $aurorapin.css("opacity", "1");
-      $aurorapin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $aurorapin.css("visibility", "hidden");
-      $aurorapin.css("opacity", "0");
-      $aurorapin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $nuevaecijapin = $("#nuevaecijapin");
-  $(".nuevaecijapath,#nuevaecijapin").hover(
-    function () {
-      $nuevaecijapin.css("visibility", "visible");
-      $nuevaecijapin.css("opacity", "1");
-      $nuevaecijapin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $nuevaecijapin.css("visibility", "hidden");
-      $nuevaecijapin.css("opacity", "0");
-      $nuevaecijapin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $tarlacpin = $("#tarlacpin");
-  $(".tarlacpath,#tarlacpin").hover(
-    function () {
-      $tarlacpin.css("visibility", "visible");
-      $tarlacpin.css("opacity", "1");
-      $tarlacpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $tarlacpin.css("visibility", "hidden");
-      $tarlacpin.css("opacity", "0");
-      $tarlacpin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $zambalespin = $("#zambalespin");
-  $(".zambalespath,#zambalespin").hover(
-    function () {
-      $zambalespin.css("visibility", "visible");
-      $zambalespin.css("opacity", "1");
-      $zambalespin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $zambalespin.css("visibility", "hidden");
-      $zambalespin.css("opacity", "0");
-      $zambalespin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $pampangapin = $("#pampangapin");
-  $(".pampangapath,#pampangapin").hover(
-    function () {
-      $pampangapin.css("visibility", "visible");
-      $pampangapin.css("opacity", "1");
-      $pampangapin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $pampangapin.css("visibility", "hidden");
-      $pampangapin.css("opacity", "0");
-      $pampangapin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $bataanpin = $("#bataanpin");
-  $(".bataanpath,#bataanpin").hover(
-    function () {
-      $bataanpin.css("visibility", "visible");
-      $bataanpin.css("opacity", "1");
-      $bataanpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $bataanpin.css("visibility", "hidden");
-      $bataanpin.css("opacity", "0");
-      $bataanpin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $bulacanpin = $("#bulacanpin");
-  $(".bulacanpath,#bulacanpin").hover(
-    function () {
-      $bulacanpin.css("visibility", "visible");
-      $bulacanpin.css("opacity", "1");
-      $bulacanpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $bulacanpin.css("visibility", "hidden");
-      $bulacanpin.css("opacity", "0");
-      $bulacanpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $cavitepin = $("#cavitepin");
-  $(".cavitepath,#cavitepin").hover(
-    function () {
-      $cavitepin.css("visibility", "visible");
-      $cavitepin.css("opacity", "1");
-      $cavitepin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $cavitepin.css("visibility", "hidden");
-      $cavitepin.css("opacity", "0");
-      $cavitepin.css("transform", "translateY(-20px)");
-    }
-  );
-  $lagunapin = $("#lagunapin");
-  $(".lagunapath,#lagunapin").hover(
-    function () {
-      $lagunapin.css("visibility", "visible");
-      $lagunapin.css("opacity", "1");
-      $lagunapin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $lagunapin.css("visibility", "hidden");
-      $lagunapin.css("opacity", "0");
-      $lagunapin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $rizalpath = $(".rizalpath");
-  $rizalpin = $("#rizalpin");
-  $(".rizalpath,#rizalpin").hover(
-    function () {
-      $rizalpin.css("visibility", "visible");
-      $rizalpin.css("opacity", "1");
-      $rizalpin.css("transform", "translateY(0px)");
-      $rizalpath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $rizalpin.css("visibility", "hidden");
-      $rizalpin.css("opacity", "0");
-      $rizalpin.css("transform", "translateY(-20px)");
-      $rizalpath.css("mix-blend-mode", "normal");
-    }
-  );
-
-  $quezonpath = $(".quezonpath");
-  $quezonpin = $("#quezonpin");
-  $(".quezonpath,#quezonpin").hover(
-    function () {
-      $quezonpin.css("visibility", "visible");
-      $quezonpin.css("opacity", "1");
-      $quezonpin.css("transform", "translateY(0px)");
-      $quezonpath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $quezonpin.css("visibility", "hidden");
-      $quezonpin.css("opacity", "0");
-      $quezonpin.css("transform", "translateY(-20px)");
-      $quezonpath.css("mix-blend-mode", "normal");
-    }
-  );
-
-  $batangaspath = $(".batangaspath");
-  $batangaspin = $("#batangaspin");
-  $(".batangaspath,#batangaspin").hover(
-    function () {
-      $batangaspin.css("visibility", "visible");
-      $batangaspin.css("opacity", "1");
-      $batangaspin.css("transform", "translateY(0px)");
-      $batangaspath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $batangaspin.css("visibility", "hidden");
-      $batangaspin.css("opacity", "0");
-      $batangaspin.css("transform", "translateY(-20px)");
-      $batangaspath.css("mix-blend-mode", "normal");
-    }
-  );
-
-  $marinduquepin = $("#marinduquepin");
-  $(".marinduquepath,#marinduquepin").hover(
-    function () {
-      $marinduquepin.css("visibility", "visible");
-      $marinduquepin.css("opacity", "1");
-      $marinduquepin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $marinduquepin.css("visibility", "hidden");
-      $marinduquepin.css("opacity", "0");
-      $marinduquepin.css("transform", "translateY(-20px)");
-    }
-  );
-
-  $occidentalmindoropath = $(".occidentalmindoropath");
-  $occidentalmindoropin = $("#occidentalmindoropin");
-  $(".occidentalmindoropath,#occidentalmindoropin").hover(
-    function () {
-      $occidentalmindoropin.css("visibility", "visible");
-      $occidentalmindoropin.css("opacity", "1");
-      $occidentalmindoropin.css("transform", "translateY(0px)");
-      $occidentalmindoropath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $occidentalmindoropin.css("visibility", "hidden");
-      $occidentalmindoropin.css("opacity", "0");
-      $occidentalmindoropin.css("transform", "translateY(-20px)");
-      $occidentalmindoropath.css("mix-blend-mode", "normal");
-    }
-  );
-
-  $orientalmindoropath = $(".orientalmindoropath");
-  $orientalmindoropin = $("#orientalmindoropin");
-  $(".orientalmindoropath,#orientalmindoropin").hover(
-    function () {
-      $orientalmindoropin.css("visibility", "visible");
-      $orientalmindoropin.css("opacity", "1");
-      $orientalmindoropin.css("transform", "translateY(0px)");
-      $orientalmindoropath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $orientalmindoropin.css("visibility", "hidden");
-      $orientalmindoropin.css("opacity", "0");
-      $orientalmindoropin.css("transform", "translateY(-20px)");
-      $orientalmindoropath.css("mix-blend-mode", "normal");
-    }
-  );
-
-  $palawanpath = $(".palawanpath");
-  $palawanpin = $("#palawanpin");
-  $(".palawanpath,#palawanpin").hover(
-    function () {
-      $palawanpin.css("visibility", "visible");
-      $palawanpin.css("opacity", "1");
-      $palawanpin.css("transform", "translateY(0px)");
-      $palawanpath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $palawanpin.css("visibility", "hidden");
-      $palawanpin.css("opacity", "0");
-      $palawanpin.css("transform", "translateY(-20px)");
-      $palawanpath.css("mix-blend-mode", "normal");
-    }
-  );
-  $romblonpath = $(".romblonpath");
-  $romblonpin = $("#romblonpin");
-  $(".romblonpath,#romblonpin").hover(
-    function () {
-      $romblonpin.css("visibility", "visible");
-      $romblonpin.css("opacity", "1");
-      $romblonpin.css("transform", "translateY(0px)");
-      $romblonpath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $romblonpin.css("visibility", "hidden");
-      $romblonpin.css("opacity", "0");
-      $romblonpin.css("transform", "translateY(-20px)");
-      $romblonpath.css("mix-blend-mode", "normal");
-    }
-  );
-
-  $camarinesnortepin = $("#camarinesnortepin");
-  $(".camarinesnortepath,#camarinesnortepin").hover(
-    function () {
-      $camarinesnortepin.css("visibility", "visible");
-      $camarinesnortepin.css("opacity", "1");
-      $camarinesnortepin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $camarinesnortepin.css("visibility", "hidden");
-      $camarinesnortepin.css("opacity", "0");
-      $camarinesnortepin.css("transform", "translateY(-20px)");
-    }
-  );
-  $camarinessurpath = $(".camarinessurpath");
-  $camarinessurpin = $("#camarinessurpin");
-  $(".camarinessurpath,#camarinessurpin").hover(
-    function () {
-      $camarinessurpin.css("visibility", "visible");
-      $camarinessurpin.css("opacity", "1");
-      $camarinessurpin.css("transform", "translateY(0px)");
-      $camarinessurpath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $camarinessurpin.css("visibility", "hidden");
-      $camarinessurpin.css("opacity", "0");
-      $camarinessurpin.css("transform", "translateY(-20px)");
-      $camarinessurpath.css("mix-blend-mode", "normal");
-    }
-  );
-  $catanduanespath = $(".catanduanespath");
-  $catanduanespin = $("#catanduanespin");
-  $(".catanduanespath,#catanduanespin").hover(
-    function () {
-      $catanduanespin.css("visibility", "visible");
-      $catanduanespin.css("opacity", "1");
-      $catanduanespin.css("transform", "translateY(0px)");
-      $catanduanespath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $catanduanespin.css("visibility", "hidden");
-      $catanduanespin.css("opacity", "0");
-      $catanduanespin.css("transform", "translateY(-20px)");
-      $catanduanespath.css("mix-blend-mode", "normal");
-    }
-  );
-  $albaypath = $(".albaypath");
-  $albaypin = $("#albaypin");
-  $(".albaypath,#albaypin").hover(
-    function () {
-      $albaypin.css("visibility", "visible");
-      $albaypin.css("opacity", "1");
-      $albaypin.css("transform", "translateY(0px)");
-      $albaypath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $albaypin.css("visibility", "hidden");
-      $albaypin.css("opacity", "0");
-      $albaypin.css("transform", "translateY(-20px)");
-      $albaypath.css("mix-blend-mode", "normal");
-    }
-  );
-  $masbatepath = $(".masbatepath");
-  $masbatepin = $("#masbatepin");
-  $(".masbatepath,#masbatepin").hover(
-    function () {
-      $masbatepin.css("visibility", "visible");
-      $masbatepin.css("opacity", "1");
-      $masbatepin.css("transform", "translateY(0px)");
-      $masbatepath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $masbatepin.css("visibility", "hidden");
-      $masbatepin.css("opacity", "0");
-      $masbatepin.css("transform", "translateY(-20px)");
-      $masbatepath.css("mix-blend-mode", "normal");
-    }
-  );
-  $sorsogonpin = $("#sorsogonpin");
-  $(".sorsogonpath,#sorsogonpin").hover(
-    function () {
-      $sorsogonpin.css("visibility", "visible");
-      $sorsogonpin.css("opacity", "1");
-      $sorsogonpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $sorsogonpin.css("visibility", "hidden");
-      $sorsogonpin.css("opacity", "0");
-      $sorsogonpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $leytepin = $("#leytepin");
-  $(".leytepath,#leytepin").hover(
-    function () {
-      $leytepin.css("visibility", "visible");
-      $leytepin.css("opacity", "1");
-      $leytepin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $leytepin.css("visibility", "hidden");
-      $leytepin.css("opacity", "0");
-      $leytepin.css("transform", "translateY(-20px)");
-    }
-  );
-  $northernsamarpath = $(".northernsamarpath");
-  $northernsamarpin = $("#northernsamarpin");
-  $(".northernsamarpath,#northernsamarpin").hover(
-    function () {
-      $northernsamarpin.css("visibility", "visible");
-      $northernsamarpin.css("opacity", "1");
-      $northernsamarpin.css("transform", "translateY(0px)");
-      $northernsamarpath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $northernsamarpin.css("visibility", "hidden");
-      $northernsamarpin.css("opacity", "0");
-      $northernsamarpin.css("transform", "translateY(-20px)");
-      $northernsamarpath.css("mix-blend-mode", "normal");
-    }
-  );
-  $samarpath = $(".samarpath");
-  $samarpin = $("#samarpin");
-  $(".samarpath,#samarpin").hover(
-    function () {
-      $samarpin.css("visibility", "visible");
-      $samarpin.css("opacity", "1");
-      $samarpin.css("transform", "translateY(0px)");
-      $samarpath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $samarpin.css("visibility", "hidden");
-      $samarpin.css("opacity", "0");
-      $samarpin.css("transform", "translateY(-20px)");
-      $samarpath.css("mix-blend-mode", "normal");
-    }
-  );
-  $easternsamarpath = $(".easternsamarpath");
-  $easternsamarpin = $("#easternsamarpin");
-  $(".easternsamarpath,#easternsamarpin").hover(
-    function () {
-      $easternsamarpin.css("visibility", "visible");
-      $easternsamarpin.css("opacity", "1");
-      $easternsamarpin.css("transform", "translateY(0px)");
-      $easternsamarpath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $easternsamarpin.css("visibility", "hidden");
-      $easternsamarpin.css("opacity", "0");
-      $easternsamarpin.css("transform", "translateY(-20px)");
-      $easternsamarpath.css("mix-blend-mode", "normal");
-    }
-  );
-  $biliranpath = $(".biliranpath");
-  $biliranpin = $("#biliranpin");
-  $(".biliranpath,#biliranpin").hover(
-    function () {
-      $biliranpin.css("visibility", "visible");
-      $biliranpin.css("opacity", "1");
-      $biliranpin.css("transform", "translateY(0px)");
-      $biliranpath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $biliranpin.css("visibility", "hidden");
-      $biliranpin.css("opacity", "0");
-      $biliranpin.css("transform", "translateY(-20px)");
-      $biliranpath.css("mix-blend-mode", "normal");
-    }
-  );
-  $southernleytepath = $(".southernleytepath");
-  $southernleytepin = $("#southernleytepin");
-  $(".southernleytepath,#southernleytepin").hover(
-    function () {
-      $southernleytepin.css("visibility", "visible");
-      $southernleytepin.css("opacity", "1");
-      $southernleytepin.css("transform", "translateY(0px)");
-      $southernleytepath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $southernleytepin.css("visibility", "hidden");
-      $southernleytepin.css("opacity", "0");
-      $southernleytepin.css("transform", "translateY(-20px)");
-      $southernleytepath.css("mix-blend-mode", "normal");
-    }
-  );
-  $antiquepath = $(".antiquepath");
-  $antiquepin = $("#antiquepin");
-  $(".antiquepath,#antiquepin").hover(
-    function () {
-      $antiquepin.css("visibility", "visible");
-      $antiquepin.css("opacity", "1");
-      $antiquepin.css("transform", "translateY(0px)");
-      $antiquepath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $antiquepin.css("visibility", "hidden");
-      $antiquepin.css("opacity", "0");
-      $antiquepin.css("transform", "translateY(-20px)");
-      $antiquepath.css("mix-blend-mode", "normal");
-    }
-  );
-  $iloilopath = $(".iloilopath");
-  $iloilopin = $("#iloilopin");
-  $(".iloilopath,#iloilopin").hover(
-    function () {
-      $iloilopin.css("visibility", "visible");
-      $iloilopin.css("opacity", "1");
-      $iloilopin.css("transform", "translateY(0px)");
-      $iloilopath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $iloilopin.css("visibility", "hidden");
-      $iloilopin.css("opacity", "0");
-      $iloilopin.css("transform", "translateY(-20px)");
-      $iloilopath.css("mix-blend-mode", "normal");
-    }
-  );
-  $aklanpin = $("#aklanpin");
-  $(".aklanpath,#aklanpin").hover(
-    function () {
-      $aklanpin.css("visibility", "visible");
-      $aklanpin.css("opacity", "1");
-      $aklanpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $aklanpin.css("visibility", "hidden");
-      $aklanpin.css("opacity", "0");
-      $aklanpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $capizpin = $("#capizpin");
-  $(".capizpath,#capizpin").hover(
-    function () {
-      $capizpin.css("visibility", "visible");
-      $capizpin.css("opacity", "1");
-      $capizpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $capizpin.css("visibility", "hidden");
-      $capizpin.css("opacity", "0");
-      $capizpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $guimaraspin = $("#guimaraspin");
-  $(".guimaraspath,#guimaraspin").hover(
-    function () {
-      $guimaraspin.css("visibility", "visible");
-      $guimaraspin.css("opacity", "1");
-      $guimaraspin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $guimaraspin.css("visibility", "hidden");
-      $guimaraspin.css("opacity", "0");
-      $guimaraspin.css("transform", "translateY(-20px)");
-    }
-  );
-  $negrosoccidentalpin = $("#negrosoccidentalpin");
-  $(".negrosoccidentalpath,#negrosoccidentalpin").hover(
-    function () {
-      $negrosoccidentalpin.css("visibility", "visible");
-      $negrosoccidentalpin.css("opacity", "1");
-      $negrosoccidentalpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $negrosoccidentalpin.css("visibility", "hidden");
-      $negrosoccidentalpin.css("opacity", "0");
-      $negrosoccidentalpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $negrosorientalpin = $("#negrosorientalpin");
-  $(".negrosorientalpath,#negrosorientalpin").hover(
-    function () {
-      $negrosorientalpin.css("visibility", "visible");
-      $negrosorientalpin.css("opacity", "1");
-      $negrosorientalpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $negrosorientalpin.css("visibility", "hidden");
-      $negrosorientalpin.css("opacity", "0");
-      $negrosorientalpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $siquijorpin = $("#siquijorpin");
-  $(".siquijorpath,#siquijorpin").hover(
-    function () {
-      $siquijorpin.css("visibility", "visible");
-      $siquijorpin.css("opacity", "1");
-      $siquijorpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $siquijorpin.css("visibility", "hidden");
-      $siquijorpin.css("opacity", "0");
-      $siquijorpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $boholpin = $("#boholpin");
-  $(".boholpath,#boholpin").hover(
-    function () {
-      $boholpin.css("visibility", "visible");
-      $boholpin.css("opacity", "1");
-      $boholpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $boholpin.css("visibility", "hidden");
-      $boholpin.css("opacity", "0");
-      $boholpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $dinagatpin = $("#dinagatpin");
-  $(".dinagatpath,#dinagatpin").hover(
-    function () {
-      $dinagatpin.css("visibility", "visible");
-      $dinagatpin.css("opacity", "1");
-      $dinagatpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $dinagatpin.css("visibility", "hidden");
-      $dinagatpin.css("opacity", "0");
-      $dinagatpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $cebupath = $(".cebupath");
-  $cebupin = $("#cebupin");
-  $(".cebupath,#cebupin").hover(
-    function () {
-      $cebupin.css("visibility", "visible");
-      $cebupin.css("opacity", "1");
-      $cebupin.css("transform", "translateY(0px)");
-      $cebupath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $cebupin.css("visibility", "hidden");
-      $cebupin.css("opacity", "0");
-      $cebupin.css("transform", "translateY(-20px)");
-      $cebupath.css("mix-blend-mode", "normal");
-    }
-  );
-  $surigaodelnortepath = $(".surigaodelnortepath");
-  $surigaodelnortepin = $("#surigaodelnortepin");
-  $(".surigaodelnortepath,#surigaodelnortepin").hover(
-    function () {
-      $surigaodelnortepin.css("visibility", "visible");
-      $surigaodelnortepin.css("opacity", "1");
-      $surigaodelnortepin.css("transform", "translateY(0px)");
-      $surigaodelnortepath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $surigaodelnortepin.css("visibility", "hidden");
-      $surigaodelnortepin.css("opacity", "0");
-      $surigaodelnortepin.css("transform", "translateY(-20px)");
-      $surigaodelnortepath.css("mix-blend-mode", "normal");
-    }
-  );
-  $surigaodelsurpin = $("#surigaodelsurpin");
-  $(".surigaodelsurpath,#surigaodelsurpin").hover(
-    function () {
-      $surigaodelsurpin.css("visibility", "visible");
-      $surigaodelsurpin.css("opacity", "1");
-      $surigaodelsurpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $surigaodelsurpin.css("visibility", "hidden");
-      $surigaodelsurpin.css("opacity", "0");
-      $surigaodelsurpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $agusandelnortepin = $("#agusandelnortepin");
-  $(".agusandelnortepath,#agusandelnortepin").hover(
-    function () {
-      $agusandelnortepin.css("visibility", "visible");
-      $agusandelnortepin.css("opacity", "1");
-      $agusandelnortepin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $agusandelnortepin.css("visibility", "hidden");
-      $agusandelnortepin.css("opacity", "0");
-      $agusandelnortepin.css("transform", "translateY(-20px)");
-    }
-  );
-  $agusandelsurpin = $("#agusandelsurpin");
-  $(".agusandelsurpath,#agusandelsurpin").hover(
-    function () {
-      $agusandelsurpin.css("visibility", "visible");
-      $agusandelsurpin.css("opacity", "1");
-      $agusandelsurpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $agusandelsurpin.css("visibility", "hidden");
-      $agusandelsurpin.css("opacity", "0");
-      $agusandelsurpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $camiguinpin = $("#camiguinpin");
-  $(".camiguinpath,#camiguinpin").hover(
-    function () {
-      $camiguinpin.css("visibility", "visible");
-      $camiguinpin.css("opacity", "1");
-      $camiguinpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $camiguinpin.css("visibility", "hidden");
-      $camiguinpin.css("opacity", "0");
-      $camiguinpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $misamisorientalpin = $("#misamisorientalpin");
-  $(".misamisorientalpath,#misamisorientalpin").hover(
-    function () {
-      $misamisorientalpin.css("visibility", "visible");
-      $misamisorientalpin.css("opacity", "1");
-      $misamisorientalpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $misamisorientalpin.css("visibility", "hidden");
-      $misamisorientalpin.css("opacity", "0");
-      $misamisorientalpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $misamisoccidentalpin = $("#misamisoccidentalpin");
-  $(".misamisoccidentalpath,#misamisoccidentalpin").hover(
-    function () {
-      $misamisoccidentalpin.css("visibility", "visible");
-      $misamisoccidentalpin.css("opacity", "1");
-      $misamisoccidentalpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $misamisoccidentalpin.css("visibility", "hidden");
-      $misamisoccidentalpin.css("opacity", "0");
-      $misamisoccidentalpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $bukidnonpin = $("#bukidnonpin");
-  $(".bukidnonpath,#bukidnonpin").hover(
-    function () {
-      $bukidnonpin.css("visibility", "visible");
-      $bukidnonpin.css("opacity", "1");
-      $bukidnonpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $bukidnonpin.css("visibility", "hidden");
-      $bukidnonpin.css("opacity", "0");
-      $bukidnonpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $lanaodelnortepin = $("#lanaodelnortepin");
-  $(".lanaodelnortepath,#lanaodelnortepin").hover(
-    function () {
-      $lanaodelnortepin.css("visibility", "visible");
-      $lanaodelnortepin.css("opacity", "1");
-      $lanaodelnortepin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $lanaodelnortepin.css("visibility", "hidden");
-      $lanaodelnortepin.css("opacity", "0");
-      $lanaodelnortepin.css("transform", "translateY(-20px)");
-    }
-  );
-  $lanaodelsurpin = $("#lanaodelsurpin");
-  $(".lanaodelsurpath,#lanaodelsurpin").hover(
-    function () {
-      $lanaodelsurpin.css("visibility", "visible");
-      $lanaodelsurpin.css("opacity", "1");
-      $lanaodelsurpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $lanaodelsurpin.css("visibility", "hidden");
-      $lanaodelsurpin.css("opacity", "0");
-      $lanaodelsurpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $davaoorientalpin = $("#davaoorientalpin");
-  $(".davaoorientalpath,#davaoorientalpin").hover(
-    function () {
-      $davaoorientalpin.css("visibility", "visible");
-      $davaoorientalpin.css("opacity", "1");
-      $davaoorientalpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $davaoorientalpin.css("visibility", "hidden");
-      $davaoorientalpin.css("opacity", "0");
-      $davaoorientalpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $davaodeoropin = $("#davaodeoropin");
-  $(".davaodeoropath,#davaodeoropin").hover(
-    function () {
-      $davaodeoropin.css("visibility", "visible");
-      $davaodeoropin.css("opacity", "1");
-      $davaodeoropin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $davaodeoropin.css("visibility", "hidden");
-      $davaodeoropin.css("opacity", "0");
-      $davaodeoropin.css("transform", "translateY(-20px)");
-    }
-  );
-  $davaodelnortepath = $(".davaodelnortepath");
-  $davaodelnortepin = $("#davaodelnortepin");
-  $(".davaodelnortepath,#davaodelnortepin").hover(
-    function () {
-      $davaodelnortepin.css("visibility", "visible");
-      $davaodelnortepin.css("opacity", "1");
-      $davaodelnortepin.css("transform", "translateY(0px)");
-      $davaodelnortepath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $davaodelnortepin.css("visibility", "hidden");
-      $davaodelnortepin.css("opacity", "0");
-      $davaodelnortepin.css("transform", "translateY(-20px)");
-      $davaodelnortepath.css("mix-blend-mode", "normal");
-    }
-  );
-  $davaocitypin = $("#davaocitypin");
-  $(".davaocitypath,#davaocitypin").hover(
-    function () {
-      $davaocitypin.css("visibility", "visible");
-      $davaocitypin.css("opacity", "1");
-      $davaocitypin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $davaocitypin.css("visibility", "hidden");
-      $davaocitypin.css("opacity", "0");
-      $davaocitypin.css("transform", "translateY(-20px)");
-    }
-  );
-  $davaodelsurpin = $("#davaodelsurpin");
-  $(".davaodelsurpath,#davaodelsurpin").hover(
-    function () {
-      $davaodelsurpin.css("visibility", "visible");
-      $davaodelsurpin.css("opacity", "1");
-      $davaodelsurpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $davaodelsurpin.css("visibility", "hidden");
-      $davaodelsurpin.css("opacity", "0");
-      $davaodelsurpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $davaooccidentalpath = $(".davaooccidentalpath");
-  $davaooccidentalpin = $("#davaooccidentalpin");
-  $(".davaooccidentalpath,#davaooccidentalpin").hover(
-    function () {
-      $davaooccidentalpin.css("visibility", "visible");
-      $davaooccidentalpin.css("opacity", "1");
-      $davaooccidentalpin.css("transform", "translateY(0px)");
-      $davaooccidentalpath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $davaooccidentalpin.css("visibility", "hidden");
-      $davaooccidentalpin.css("opacity", "0");
-      $davaooccidentalpin.css("transform", "translateY(-20px)");
-      $davaooccidentalpath.css("mix-blend-mode", "normal");
-    }
-  );
-  $cotabatopin = $("#cotabatopin");
-  $(".cotabatopath,#cotabatopin").hover(
-    function () {
-      $cotabatopin.css("visibility", "visible");
-      $cotabatopin.css("opacity", "1");
-      $cotabatopin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $cotabatopin.css("visibility", "hidden");
-      $cotabatopin.css("opacity", "0");
-      $cotabatopin.css("transform", "translateY(-20px)");
-    }
-  );
-  $southcotabatopin = $("#southcotabatopin");
-  $(".southcotabatopath,#southcotabatopin").hover(
-    function () {
-      $southcotabatopin.css("visibility", "visible");
-      $southcotabatopin.css("opacity", "1");
-      $southcotabatopin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $southcotabatopin.css("visibility", "hidden");
-      $southcotabatopin.css("opacity", "0");
-      $southcotabatopin.css("transform", "translateY(-20px)");
-    }
-  );
-  $sultankudaratpin = $("#sultankudaratpin");
-  $(".sultankudaratpath,#sultankudaratpin").hover(
-    function () {
-      $sultankudaratpin.css("visibility", "visible");
-      $sultankudaratpin.css("opacity", "1");
-      $sultankudaratpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $sultankudaratpin.css("visibility", "hidden");
-      $sultankudaratpin.css("opacity", "0");
-      $sultankudaratpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $maguindanaopath = $(".maguindanaopath");
-  $maguindanaopin = $("#maguindanaopin");
-  $(".maguindanaopath,#maguindanaopin").hover(
-    function () {
-      $maguindanaopin.css("visibility", "visible");
-      $maguindanaopin.css("opacity", "1");
-      $maguindanaopin.css("transform", "translateY(0px)");
-      $maguindanaopath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $maguindanaopin.css("visibility", "hidden");
-      $maguindanaopin.css("opacity", "0");
-      $maguindanaopin.css("transform", "translateY(-20px)");
-      $maguindanaopath.css("mix-blend-mode", "normal");
-    }
-  );
-  $saranganipath = $(".saranganipath");
-  $saranganipin = $("#saranganipin");
-  $(".saranganipath,#saranganipin").hover(
-    function () {
-      $saranganipin.css("visibility", "visible");
-      $saranganipin.css("opacity", "1");
-      $saranganipin.css("transform", "translateY(0px)");
-      $saranganipath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $saranganipin.css("visibility", "hidden");
-      $saranganipin.css("opacity", "0");
-      $saranganipin.css("transform", "translateY(-20px)");
-      $saranganipath.css("mix-blend-mode", "normal");
-    }
-  );
-  $zamboangadelnortepin = $("#zamboangadelnortepin");
-  $(".zamboangadelnortepath,#zamboangadelnortepin").hover(
-    function () {
-      $zamboangadelnortepin.css("visibility", "visible");
-      $zamboangadelnortepin.css("opacity", "1");
-      $zamboangadelnortepin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $zamboangadelnortepin.css("visibility", "hidden");
-      $zamboangadelnortepin.css("opacity", "0");
-      $zamboangadelnortepin.css("transform", "translateY(-20px)");
-    }
-  );
-  $zamboangadelsurpin = $("#zamboangadelsurpin");
-  $(".zamboangadelsurpath,#zamboangadelsurpin").hover(
-    function () {
-      $zamboangadelsurpin.css("visibility", "visible");
-      $zamboangadelsurpin.css("opacity", "1");
-      $zamboangadelsurpin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $zamboangadelsurpin.css("visibility", "hidden");
-      $zamboangadelsurpin.css("opacity", "0");
-      $zamboangadelsurpin.css("transform", "translateY(-20px)");
-    }
-  );
-  $zamboangasibugaypin = $("#zamboangasibugaypin");
-  $(".zamboangasibugaypath,#zamboangasibugaypin").hover(
-    function () {
-      $zamboangasibugaypin.css("visibility", "visible");
-      $zamboangasibugaypin.css("opacity", "1");
-      $zamboangasibugaypin.css("transform", "translateY(0px)");
-    },
-    function () {
-      $zamboangasibugaypin.css("visibility", "hidden");
-      $zamboangasibugaypin.css("opacity", "0");
-      $zamboangasibugaypin.css("transform", "translateY(-20px)");
-    }
-  );
-  $zamboangacitypath = $(".zamboangacitypath");
-  $zamboangacitypin = $("#zamboangacitypin");
-  $(".zamboangacitypath,#zamboangacitypin").hover(
-    function () {
-      $zamboangacitypin.css("visibility", "visible");
-      $zamboangacitypin.css("opacity", "1");
-      $zamboangacitypin.css("transform", "translateY(0px)");
-      $zamboangacitypath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $zamboangacitypin.css("visibility", "hidden");
-      $zamboangacitypin.css("opacity", "0");
-      $zamboangacitypin.css("transform", "translateY(-20px)");
-      $zamboangacitypath.css("mix-blend-mode", "normal");
-    }
-  );
-  $basilanpath = $(".basilanpath");
-  $basilanpin = $("#basilanpin");
-  $(".basilanpath,#basilanpin").hover(
-    function () {
-      $basilanpin.css("visibility", "visible");
-      $basilanpin.css("opacity", "1");
-      $basilanpin.css("transform", "translateY(0px)");
-      $basilanpath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $basilanpin.css("visibility", "hidden");
-      $basilanpin.css("opacity", "0");
-      $basilanpin.css("transform", "translateY(-20px)");
-      $basilanpath.css("mix-blend-mode", "normal");
-    }
-  );
-  $sulupath = $(".sulupath");
-  $sulupin = $("#sulupin");
-  $(".sulupath,#sulupin").hover(
-    function () {
-      $sulupin.css("visibility", "visible");
-      $sulupin.css("opacity", "1");
-      $sulupin.css("transform", "translateY(0px)");
-      $sulupath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $sulupin.css("visibility", "hidden");
-      $sulupin.css("opacity", "0");
-      $sulupin.css("transform", "translateY(-20px)");
-      $sulupath.css("mix-blend-mode", "normal");
-    }
-  );
-  $tawitawipath = $(".tawitawipath");
-  $tawitawipin = $("#tawitawipin");
-  $(".tawitawipath,#tawitawipin").hover(
-    function () {
-      $tawitawipin.css("visibility", "visible");
-      $tawitawipin.css("opacity", "1");
-      $tawitawipin.css("transform", "translateY(0px)");
-      $tawitawipath.css("mix-blend-mode", "color");
-    },
-    function () {
-      $tawitawipin.css("visibility", "hidden");
-      $tawitawipin.css("opacity", "0");
-      $tawitawipin.css("transform", "translateY(-20px)");
-      $tawitawipath.css("mix-blend-mode", "normal");
-    }
-  );
-} else {
-  $(".pin").css("visibility", "visible");
-  $(".pin").css("opacity", "1");
-}
-
-$("#menu").hover(
+////////////////////////
+$(".batanespath,#batanespin").hover(
   function () {
-    $("body").css("overflow", "hidden");
+    $("#batanespin,.batanesname").css("visibility", "visible");
+    $("#batanespin,.batanesname").css("opacity", "1");
+    $(".batanesname").css("transform", "translateY(0px)");
+    $("#batanespin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#batanespin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".batanespath").css("mix-blend-mode", "color");
   },
   function () {
-    $("body").css("overflow", "auto");
+    $("#batanespin,.batanesname").css("visibility", "hidden");
+    $("#batanespin,.batanesname").css("opacity", "0");
+    $(".batanesname").css("transform", "translateY(-20px)");
+    $("#batanespin .trail-pin").css("transform", "translateY(5vw)");
+    $("#batanespin .map-pin").css("transform", "translateY(-5vw)");
+    $(".batanespath").css("mix-blend-mode", "normal");
   }
 );
+
+$(".ilocosnortepath,#ilocosnortepin").hover(
+  function () {
+    $("#ilocosnortepin,.ilocosnortename").css("visibility", "visible");
+    $("#ilocosnortepin,.ilocosnortename").css("opacity", "1");
+    $(".ilocosnortename").css("transform", "translateY(0px)");
+    $("#ilocosnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#ilocosnortepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".ilocosnortepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#ilocosnortepin,.ilocosnortename").css("visibility", "hidden");
+    $("#ilocosnortepin,.ilocosnortename").css("opacity", "0");
+    $(".ilocosnortename").css("transform", "translateY(-20px)");
+    $("#ilocosnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#ilocosnortepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".ilocosnortepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".apayaopath,#apayaopin").hover(
+  function () {
+    $("#apayaopin,.apayaoname").css("visibility", "visible");
+    $("#apayaopin,.apayaoname").css("opacity", "1");
+    $(".apayaoname").css("transform", "translateY(0px)");
+    $("#apayaopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#apayaopin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".apayaopath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#apayaopin,.apayaoname").css("visibility", "hidden");
+    $("#apayaopin,.apayaoname").css("opacity", "0");
+    $(".apayaoname").css("transform", "translateY(-20px)");
+    $("#apayaopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#apayaopin .map-pin").css("transform", "translateY(-5vw)");
+    $(".apayaopath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".ilocossurpath,#ilocossurpin").hover(
+  function () {
+    $("#ilocossurpin,.ilocossurname").css("visibility", "visible");
+    $("#ilocossurpin,.ilocossurname").css("opacity", "1");
+    $(".ilocossurname").css("transform", "translateY(0px)");
+    $("#ilocossurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#ilocossurpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".ilocossurpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#ilocossurpin,.ilocossurname").css("visibility", "hidden");
+    $("#ilocossurpin,.ilocossurname").css("opacity", "0");
+    $(".ilocossurname").css("transform", "translateY(-20px)");
+    $("#ilocossurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#ilocossurpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".ilocossurpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".launionpath,#launionpin").hover(
+  function () {
+    $("#launionpin,.launionname").css("visibility", "visible");
+    $("#launionpin,.launionname").css("opacity", "1");
+    $(".launionname").css("transform", "translateY(0px)");
+    $("#launionpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#launionpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".launionpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#launionpin,.launionname").css("visibility", "hidden");
+    $("#launionpin,.launionname").css("opacity", "0");
+    $(".launionname").css("transform", "translateY(-20px)");
+    $("#launionpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#launionpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".launionpath").css("mix-blend-mode", "normal");
+  }
+);
+$(".pangasinanpath,#pangasinanpin").hover(
+  function () {
+    $("#pangasinanpin,.pangasinanname").css("visibility", "visible");
+    $("#pangasinanpin,.pangasinanname").css("opacity", "1");
+    $(".pangasinanname").css("transform", "translateY(0px)");
+    $("#pangasinanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#pangasinanpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".pangasinanpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#pangasinanpin,.pangasinanname").css("visibility", "hidden");
+    $("#pangasinanpin,.pangasinanname").css("opacity", "0");
+    $(".pangasinanname").css("transform", "translateY(-20px)");
+    $("#pangasinanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#pangasinanpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".pangasinanpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".abrapath,#abrapin").hover(
+  function () {
+    $("#abrapin,.abraname").css("visibility", "visible");
+    $("#abrapin,.abraname").css("opacity", "1");
+    $(".abraname").css("transform", "translateY(0px)");
+    $("#abrapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#abrapin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".abrapath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#abrapin,.abraname").css("visibility", "hidden");
+    $("#abrapin,.abraname").css("opacity", "0");
+    $(".abraname").css("transform", "translateY(-20px)");
+    $("#abrapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#abrapin .map-pin").css("transform", "translateY(-5vw)");
+    $(".abrapath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".kalingapath,#kalingapin").hover(
+  function () {
+    $("#kalingapin,.kalinganame").css("visibility", "visible");
+    $("#kalingapin,.kalinganame").css("opacity", "1");
+    $(".kalinganame").css("transform", "translateY(0px)");
+    $("#kalingapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#kalingapin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".kalingapath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#kalingapin,.kalinganame").css("visibility", "hidden");
+    $("#kalingapin,.kalinganame").css("opacity", "0");
+    $(".kalinganame").css("transform", "translateY(-20px)");
+    $("#kalingapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#kalingapin .map-pin").css("transform", "translateY(-5vw)");
+    $(".kalingapath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".mtprovincepath,#mtprovincepin").hover(
+  function () {
+    $("#mtprovincepin,.mtprovincename").css("visibility", "visible");
+    $("#mtprovincepin,.mtprovincename").css("opacity", "1");
+    $(".mtprovincename").css("transform", "translateY(0px)");
+    $("#mtprovincepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#mtprovincepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".mtprovincepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#mtprovincepin,.mtprovincename").css("visibility", "hidden");
+    $("#mtprovincepin,.mtprovincename").css("opacity", "0");
+    $(".mtprovincename").css("transform", "translateY(-20px)");
+    $("#mtprovincepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#mtprovincepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".mtprovincepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".ifugaopath,#ifugaopin").hover(
+  function () {
+    $("#ifugaopin,.ifugaoname").css("visibility", "visible");
+    $("#ifugaopin,.ifugaoname").css("opacity", "1");
+    $(".ifugaoname").css("transform", "translateY(0px)");
+    $("#ifugaopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#ifugaopin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".ifugaopath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#ifugaopin,.ifugaoname").css("visibility", "hidden");
+    $("#ifugaopin,.ifugaoname").css("opacity", "0");
+    $(".ifugaoname").css("transform", "translateY(-20px)");
+    $("#ifugaopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#ifugaopin .map-pin").css("transform", "translateY(-5vw)");
+    $(".ifugaopath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".benguetpath,#benguetpin").hover(
+  function () {
+    $("#benguetpin,.benguetname").css("visibility", "visible");
+    $("#benguetpin,.benguetname").css("opacity", "1");
+    $(".benguetname").css("transform", "translateY(0px)");
+    $("#benguetpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#benguetpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".benguetpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#benguetpin,.benguetname").css("visibility", "hidden");
+    $("#benguetpin,.benguetname").css("opacity", "0");
+    $(".benguetname").css("transform", "translateY(-20px)");
+    $("#benguetpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#benguetpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".benguetpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".cagayanpath,#cagayanpin").hover(
+  function () {
+    $("#cagayanpin,.cagayanname").css("visibility", "visible");
+    $("#cagayanpin,.cagayanname").css("opacity", "1");
+    $(".cagayanname").css("transform", "translateY(0px)");
+    $("#cagayanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#cagayanpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".cagayanpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#cagayanpin,.cagayanname").css("visibility", "hidden");
+    $("#cagayanpin,.cagayanname").css("opacity", "0");
+    $(".cagayanname").css("transform", "translateY(-20px)");
+    $("#cagayanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#cagayanpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".cagayanpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".isabelapath,#isabelapin").hover(
+  function () {
+    $("#isabelapin,.isabelaname").css("visibility", "visible");
+    $("#isabelapin,.isabelaname").css("opacity", "1");
+    $(".isabelaname").css("transform", "translateY(0px)");
+    $("#isabelapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#isabelapin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".isabelapath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#isabelapin,.isabelaname").css("visibility", "hidden");
+    $("#isabelapin,.isabelaname").css("opacity", "0");
+    $(".isabelaname").css("transform", "translateY(-20px)");
+    $("#isabelapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#isabelapin .map-pin").css("transform", "translateY(-5vw)");
+    $(".isabelapath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".quirinopath,#quirinopin").hover(
+  function () {
+    $("#quirinopin,.quirinoname").css("visibility", "visible");
+    $("#quirinopin,.quirinoname").css("opacity", "1");
+    $(".quirinoname").css("transform", "translateY(0px)");
+    $("#quirinopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#quirinopin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".quirinopath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#quirinopin,.quirinoname").css("visibility", "hidden");
+    $("#quirinopin,.quirinoname").css("opacity", "0");
+    $(".quirinoname").css("transform", "translateY(-20px)");
+    $("#quirinopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#quirinopin .map-pin").css("transform", "translateY(-5vw)");
+    $(".quirinopath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".nuevavizcayapath,#nuevavizcayapin").hover(
+  function () {
+    $("#nuevavizcayapin,.nuevavizcayaname").css("visibility", "visible");
+    $("#nuevavizcayapin,.nuevavizcayaname").css("opacity", "1");
+    $(".nuevavizcayaname").css("transform", "translateY(0px)");
+    $("#nuevavizcayapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#nuevavizcayapin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".nuevavizcayapath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#nuevavizcayapin,.nuevavizcayaname").css("visibility", "hidden");
+    $("#nuevavizcayapin,.nuevavizcayaname").css("opacity", "0");
+    $(".nuevavizcayaname").css("transform", "translateY(-20px)");
+    $("#nuevavizcayapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#nuevavizcayapin .map-pin").css("transform", "translateY(-5vw)");
+    $(".nuevavizcayapath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".aurorapath,#aurorapin").hover(
+  function () {
+    $("#aurorapin,.auroraname").css("visibility", "visible");
+    $("#aurorapin,.auroraname").css("opacity", "1");
+    $(".auroraname").css("transform", "translateY(0px)");
+    $("#aurorapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#aurorapin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".aurorapath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#aurorapin,.auroraname").css("visibility", "hidden");
+    $("#aurorapin,.auroraname").css("opacity", "0");
+    $(".auroraname").css("transform", "translateY(-20px)");
+    $("#aurorapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#aurorapin .map-pin").css("transform", "translateY(-5vw)");
+    $(".aurorapath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".nuevaecijapath,#nuevaecijapin").hover(
+  function () {
+    $("#nuevaecijapin,.nuevaecijaname").css("visibility", "visible");
+    $("#nuevaecijapin,.nuevaecijaname").css("opacity", "1");
+    $(".nuevaecijaname").css("transform", "translateY(0px)");
+    $("#nuevaecijapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#nuevaecijapin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".nuevaecijapath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#nuevaecijapin,.nuevaecijaname").css("visibility", "hidden");
+    $("#nuevaecijapin,.nuevaecijaname").css("opacity", "0");
+    $(".nuevaecijaname").css("transform", "translateY(-20px)");
+    $("#nuevaecijapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#nuevaecijapin .map-pin").css("transform", "translateY(-5vw)");
+    $(".nuevaecijapath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".tarlacpath,#tarlacpin").hover(
+  function () {
+    $("#tarlacpin,.tarlacname").css("visibility", "visible");
+    $("#tarlacpin,.tarlacname").css("opacity", "1");
+    $(".tarlacname").css("transform", "translateY(0px)");
+    $("#tarlacpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#tarlacpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".tarlacpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#tarlacpin,.tarlacname").css("visibility", "hidden");
+    $("#tarlacpin,.tarlacname").css("opacity", "0");
+    $(".tarlacname").css("transform", "translateY(-20px)");
+    $("#tarlacpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#tarlacpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".tarlacpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".zambalespath,#zambalespin").hover(
+  function () {
+    $("#zambalespin,.zambalesname").css("visibility", "visible");
+    $("#zambalespin,.zambalesname").css("opacity", "1");
+    $(".zambalesname").css("transform", "translateY(0px)");
+    $("#zambalespin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#zambalespin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".zambalespath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#zambalespin,.zambalesname").css("visibility", "hidden");
+    $("#zambalespin,.zambalesname").css("opacity", "0");
+    $(".zambalesname").css("transform", "translateY(-20px)");
+    $("#zambalespin .trail-pin").css("transform", "translateY(5vw)");
+    $("#zambalespin .map-pin").css("transform", "translateY(-5vw)");
+    $(".zambalespath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".pampangapath,#pampangapin").hover(
+  function () {
+    $("#pampangapin,.pampanganame").css("visibility", "visible");
+    $("#pampangapin,.pampanganame").css("opacity", "1");
+    $(".pampanganame").css("transform", "translateY(0px)");
+    $("#pampangapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#pampangapin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".pampangapath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#pampangapin,.pampanganame").css("visibility", "hidden");
+    $("#pampangapin,.pampanganame").css("opacity", "0");
+    $(".pampanganame").css("transform", "translateY(-20px)");
+    $("#pampangapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#pampangapin .map-pin").css("transform", "translateY(-5vw)");
+    $(".pampangapath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".bataanpath,#bataanpin").hover(
+  function () {
+    $("#bataanpin,.bataanname").css("visibility", "visible");
+    $("#bataanpin,.bataanname").css("opacity", "1");
+    $(".bataanname").css("transform", "translateY(0px)");
+    $("#bataanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#bataanpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".bataanpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#bataanpin,.bataanname").css("visibility", "hidden");
+    $("#bataanpin,.bataanname").css("opacity", "0");
+    $(".bataanname").css("transform", "translateY(-20px)");
+    $("#bataanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#bataanpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".bataanpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".bulacanpath,#bulacanpin").hover(
+  function () {
+    $("#bulacanpin,.bulacanname").css("visibility", "visible");
+    $("#bulacanpin,.bulacanname").css("opacity", "1");
+    $(".bulacanname").css("transform", "translateY(0px)");
+    $("#bulacanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#bulacanpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".bulacanpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#bulacanpin,.bulacanname").css("visibility", "hidden");
+    $("#bulacanpin,.bulacanname").css("opacity", "0");
+    $(".bulacanname").css("transform", "translateY(-20px)");
+    $("#bulacanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#bulacanpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".bulacanpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".cavitepath,#cavitepin").hover(
+  function () {
+    $("#cavitepin,.cavitename").css("visibility", "visible");
+    $("#cavitepin,.cavitename").css("opacity", "1");
+    $(".cavitename").css("transform", "translateY(0px)");
+    $("#cavitepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#cavitepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".cavitepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#cavitepin,.cavitename").css("visibility", "hidden");
+    $("#cavitepin,.cavitename").css("opacity", "0");
+    $(".cavitename").css("transform", "translateY(-20px)");
+    $("#cavitepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#cavitepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".cavitepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".lagunapath,#lagunapin").hover(
+  function () {
+    $("#lagunapin,.lagunaname").css("visibility", "visible");
+    $("#lagunapin,.lagunaname").css("opacity", "1");
+    $(".lagunaname").css("transform", "translateY(0px)");
+    $("#lagunapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#lagunapin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".lagunapath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#lagunapin,.lagunaname").css("visibility", "hidden");
+    $("#lagunapin,.lagunaname").css("opacity", "0");
+    $(".lagunaname").css("transform", "translateY(-20px)");
+    $("#lagunapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#lagunapin .map-pin").css("transform", "translateY(-5vw)");
+    $(".lagunapath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".rizalpath,#rizalpin").hover(
+  function () {
+    $("#rizalpin,.rizalname").css("visibility", "visible");
+    $("#rizalpin,.rizalname").css("opacity", "1");
+    $(".rizalname").css("transform", "translateY(0px)");
+    $("#rizalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#rizalpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".rizalpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#rizalpin,.rizalname").css("visibility", "hidden");
+    $("#rizalpin,.rizalname").css("opacity", "0");
+    $(".rizalname").css("transform", "translateY(-20px)");
+    $("#rizalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#rizalpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".rizalpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".quezonpath,#quezonpin").hover(
+  function () {
+    $("#quezonpin,.quezonname").css("visibility", "visible");
+    $("#quezonpin,.quezonname").css("opacity", "1");
+    $(".quezonname").css("transform", "translateY(0px)");
+    $("#quezonpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#quezonpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".quezonpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#quezonpin,.quezonname").css("visibility", "hidden");
+    $("#quezonpin,.quezonname").css("opacity", "0");
+    $(".quezonname").css("transform", "translateY(-20px)");
+    $("#quezonpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#quezonpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".quezonpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".batangaspath,#batangaspin").hover(
+  function () {
+    $("#batangaspin,.batangasname").css("visibility", "visible");
+    $("#batangaspin,.batangasname").css("opacity", "1");
+    $(".batangasname").css("transform", "translateY(0px)");
+    $("#batangaspin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#batangaspin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".batangaspath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#batangaspin,.batangasname").css("visibility", "hidden");
+    $("#batangaspin,.batangasname").css("opacity", "0");
+    $(".batangasname").css("transform", "translateY(-20px)");
+    $("#batangaspin .trail-pin").css("transform", "translateY(5vw)");
+    $("#batangaspin .map-pin").css("transform", "translateY(-5vw)");
+    $(".batangaspath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".marinduquepath,#marinduquepin").hover(
+  function () {
+    $("#marinduquepin,.marinduquename").css("visibility", "visible");
+    $("#marinduquepin,.marinduquename").css("opacity", "1");
+    $(".marinduquename").css("transform", "translateY(0px)");
+    $("#marinduquepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#marinduquepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".marinduquepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#marinduquepin,.marinduquename").css("visibility", "hidden");
+    $("#marinduquepin,.marinduquename").css("opacity", "0");
+    $(".marinduquename").css("transform", "translateY(-20px)");
+    $("#marinduquepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#marinduquepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".marinduquepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".occidentalmindoropath,#occidentalmindoropin").hover(
+  function () {
+    $("#occidentalmindoropin,.occidentalmindoroname").css(
+      "visibility",
+      "visible"
+    );
+    $("#occidentalmindoropin,.occidentalmindoroname").css("opacity", "1");
+    $(".occidentalmindoroname").css("transform", "translateY(0px)");
+    $("#occidentalmindoropin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#occidentalmindoropin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".occidentalmindoropath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#occidentalmindoropin,.occidentalmindoroname").css(
+      "visibility",
+      "hidden"
+    );
+    $("#occidentalmindoropin,.occidentalmindoroname").css("opacity", "0");
+    $(".occidentalmindoroname").css("transform", "translateY(-20px)");
+    $("#occidentalmindoropin .trail-pin").css("transform", "translateY(5vw)");
+    $("#occidentalmindoropin .map-pin").css("transform", "translateY(-5vw)");
+    $(".occidentalmindoropath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".orientalmindoropath,#orientalmindoropin").hover(
+  function () {
+    $("#orientalmindoropin,.orientalmindoroname").css("visibility", "visible");
+    $("#orientalmindoropin,.orientalmindoroname").css("opacity", "1");
+    $(".orientalmindoroname").css("transform", "translateY(0px)");
+    $("#orientalmindoropin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#orientalmindoropin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".orientalmindoropath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#orientalmindoropin,.orientalmindoroname").css("visibility", "hidden");
+    $("#orientalmindoropin,.orientalmindoroname").css("opacity", "0");
+    $(".orientalmindoroname").css("transform", "translateY(-20px)");
+    $("#orientalmindoropin .trail-pin").css("transform", "translateY(5vw)");
+    $("#orientalmindoropin .map-pin").css("transform", "translateY(-5vw)");
+    $(".orientalmindoropath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".palawanpath,#palawanpin").hover(
+  function () {
+    $("#palawanpin,.palawanname").css("visibility", "visible");
+    $("#palawanpin,.palawanname").css("opacity", "1");
+    $(".palawanname").css("transform", "translateY(0px)");
+    $("#palawanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#palawanpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".palawanpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#palawanpin,.palawanname").css("visibility", "hidden");
+    $("#palawanpin,.palawanname").css("opacity", "0");
+    $(".palawanname").css("transform", "translateY(-20px)");
+    $("#palawanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#palawanpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".palawanpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".romblonpath,#romblonpin").hover(
+  function () {
+    $("#romblonpin,.romblonname").css("visibility", "visible");
+    $("#romblonpin,.romblonname").css("opacity", "1");
+    $(".romblonname").css("transform", "translateY(0px)");
+    $("#romblonpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#romblonpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".romblonpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#romblonpin,.romblonname").css("visibility", "hidden");
+    $("#romblonpin,.romblonname").css("opacity", "0");
+    $(".romblonname").css("transform", "translateY(-20px)");
+    $("#romblonpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#romblonpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".romblonpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".camarinesnortepath,#camarinesnortepin").hover(
+  function () {
+    $("#camarinesnortepin,.camarinesnortename").css("visibility", "visible");
+    $("#camarinesnortepin,.camarinesnortename").css("opacity", "1");
+    $(".camarinesnortename").css("transform", "translateY(0px)");
+    $("#camarinesnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#camarinesnortepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".camarinesnortepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#camarinesnortepin,.camarinesnortename").css("visibility", "hidden");
+    $("#camarinesnortepin,.camarinesnortename").css("opacity", "0");
+    $(".camarinesnortename").css("transform", "translateY(-20px)");
+    $("#camarinesnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#camarinesnortepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".camarinesnortepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".camarinessurpath,#camarinessurpin").hover(
+  function () {
+    $("#camarinessurpin,.camarinessurname").css("visibility", "visible");
+    $("#camarinessurpin,.camarinessurname").css("opacity", "1");
+    $(".camarinessurname").css("transform", "translateY(0px)");
+    $("#camarinessurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#camarinessurpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".camarinessurpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#camarinessurpin,.camarinessurname").css("visibility", "hidden");
+    $("#camarinessurpin,.camarinessurname").css("opacity", "0");
+    $(".camarinessurname").css("transform", "translateY(-20px)");
+    $("#camarinessurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#camarinessurpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".camarinessurpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".catanduanespath,#catanduanespin").hover(
+  function () {
+    $("#catanduanespin,.catanduanesname").css("visibility", "visible");
+    $("#catanduanespin,.catanduanesname").css("opacity", "1");
+    $(".catanduanesname").css("transform", "translateY(0px)");
+    $("#catanduanespin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#catanduanespin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".catanduanespath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#catanduanespin,.catanduanesname").css("visibility", "hidden");
+    $("#catanduanespin,.catanduanesname").css("opacity", "0");
+    $(".catanduanesname").css("transform", "translateY(-20px)");
+    $("#catanduanespin .trail-pin").css("transform", "translateY(5vw)");
+    $("#catanduanespin .map-pin").css("transform", "translateY(-5vw)");
+    $(".catanduanespath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".albaypath,#albaypin").hover(
+  function () {
+    $("#albaypin,.albayname").css("visibility", "visible");
+    $("#albaypin,.albayname").css("opacity", "1");
+    $(".albayname").css("transform", "translateY(0px)");
+    $("#albaypin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#albaypin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".albaypath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#albaypin,.albayname").css("visibility", "hidden");
+    $("#albaypin,.albayname").css("opacity", "0");
+    $(".albayname").css("transform", "translateY(-20px)");
+    $("#albaypin .trail-pin").css("transform", "translateY(5vw)");
+    $("#albaypin .map-pin").css("transform", "translateY(-5vw)");
+    $(".albaypath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".masbatepath,#masbatepin").hover(
+  function () {
+    $("#masbatepin,.masbatename").css("visibility", "visible");
+    $("#masbatepin,.masbatename").css("opacity", "1");
+    $(".masbatename").css("transform", "translateY(0px)");
+    $("#masbatepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#masbatepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".masbatepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#masbatepin,.masbatename").css("visibility", "hidden");
+    $("#masbatepin,.masbatename").css("opacity", "0");
+    $(".masbatename").css("transform", "translateY(-20px)");
+    $("#masbatepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#masbatepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".masbatepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".sorsogonpath,#sorsogonpin").hover(
+  function () {
+    $("#sorsogonpin,.sorsogonname").css("visibility", "visible");
+    $("#sorsogonpin,.sorsogonname").css("opacity", "1");
+    $(".sorsogonname").css("transform", "translateY(0px)");
+    $("#sorsogonpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#sorsogonpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".sorsogonpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#sorsogonpin,.sorsogonname").css("visibility", "hidden");
+    $("#sorsogonpin,.sorsogonname").css("opacity", "0");
+    $(".sorsogonname").css("transform", "translateY(-20px)");
+    $("#sorsogonpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#sorsogonpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".sorsogonpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".leytepath,#leytepin").hover(
+  function () {
+    $("#leytepin,.leytename").css("visibility", "visible");
+    $("#leytepin,.leytename").css("opacity", "1");
+    $(".leytename").css("transform", "translateY(0px)");
+    $("#leytepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#leytepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".leytepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#leytepin,.leytename").css("visibility", "hidden");
+    $("#leytepin,.leytename").css("opacity", "0");
+    $(".leytename").css("transform", "translateY(-20px)");
+    $("#leytepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#leytepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".leytepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".northernsamarpath,#northernsamarpin").hover(
+  function () {
+    $("#northernsamarpin,.northernsamarname").css("visibility", "visible");
+    $("#northernsamarpin,.northernsamarname").css("opacity", "1");
+    $(".northernsamarname").css("transform", "translateY(0px)");
+    $("#northernsamarpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#northernsamarpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".northernsamarpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#northernsamarpin,.northernsamarname").css("visibility", "hidden");
+    $("#northernsamarpin,.northernsamarname").css("opacity", "0");
+    $(".northernsamarname").css("transform", "translateY(-20px)");
+    $("#northernsamarpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#northernsamarpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".northernsamarpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".samarpath,#samarpin").hover(
+  function () {
+    $("#samarpin,.samarname").css("visibility", "visible");
+    $("#samarpin,.samarname").css("opacity", "1");
+    $(".samarname").css("transform", "translateY(0px)");
+    $("#samarpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#samarpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".samarpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#samarpin,.samarname").css("visibility", "hidden");
+    $("#samarpin,.samarname").css("opacity", "0");
+    $(".samarname").css("transform", "translateY(-20px)");
+    $("#samarpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#samarpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".samarpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".easternsamarpath,#easternsamarpin").hover(
+  function () {
+    $("#easternsamarpin,.easternsamarname").css("visibility", "visible");
+    $("#easternsamarpin,.easternsamarname").css("opacity", "1");
+    $(".easternsamarname").css("transform", "translateY(0px)");
+    $("#easternsamarpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#easternsamarpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".easternsamarpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#easternsamarpin,.easternsamarname").css("visibility", "hidden");
+    $("#easternsamarpin,.easternsamarname").css("opacity", "0");
+    $(".easternsamarname").css("transform", "translateY(-20px)");
+    $("#easternsamarpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#easternsamarpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".easternsamarpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".biliranpath,#biliranpin").hover(
+  function () {
+    $("#biliranpin,.biliranname").css("visibility", "visible");
+    $("#biliranpin,.biliranname").css("opacity", "1");
+    $(".biliranname").css("transform", "translateY(0px)");
+    $("#biliranpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#biliranpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".biliranpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#biliranpin,.biliranname").css("visibility", "hidden");
+    $("#biliranpin,.biliranname").css("opacity", "0");
+    $(".biliranname").css("transform", "translateY(-20px)");
+    $("#biliranpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#biliranpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".biliranpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".southernleytepath,#southernleytepin").hover(
+  function () {
+    $("#southernleytepin,.southernleytename").css("visibility", "visible");
+    $("#southernleytepin,.southernleytename").css("opacity", "1");
+    $(".southernleytename").css("transform", "translateY(0px)");
+    $("#southernleytepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#southernleytepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".southernleytepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#southernleytepin,.southernleytename").css("visibility", "hidden");
+    $("#southernleytepin,.southernleytename").css("opacity", "0");
+    $(".southernleytename").css("transform", "translateY(-20px)");
+    $("#southernleytepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#southernleytepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".southernleytepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".antiquepath,#antiquepin").hover(
+  function () {
+    $("#antiquepin,.antiquename").css("visibility", "visible");
+    $("#antiquepin,.antiquename").css("opacity", "1");
+    $(".antiquename").css("transform", "translateY(0px)");
+    $("#antiquepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#antiquepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".antiquepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#antiquepin,.antiquename").css("visibility", "hidden");
+    $("#antiquepin,.antiquename").css("opacity", "0");
+    $(".antiquename").css("transform", "translateY(-20px)");
+    $("#antiquepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#antiquepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".antiquepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".iloilopath,#iloilopin").hover(
+  function () {
+    $("#iloilopin,.iloiloname").css("visibility", "visible");
+    $("#iloilopin,.iloiloname").css("opacity", "1");
+    $(".iloiloname").css("transform", "translateY(0px)");
+    $("#iloilopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#iloilopin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".iloilopath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#iloilopin,.iloiloname").css("visibility", "hidden");
+    $("#iloilopin,.iloiloname").css("opacity", "0");
+    $(".iloiloname").css("transform", "translateY(-20px)");
+    $("#iloilopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#iloilopin .map-pin").css("transform", "translateY(-5vw)");
+    $(".iloilopath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".aklanpath,#aklanpin").hover(
+  function () {
+    $("#aklanpin,.aklanname").css("visibility", "visible");
+    $("#aklanpin,.aklanname").css("opacity", "1");
+    $(".aklanname").css("transform", "translateY(0px)");
+    $("#aklanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#aklanpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".aklanpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#aklanpin,.aklanname").css("visibility", "hidden");
+    $("#aklanpin,.aklanname").css("opacity", "0");
+    $(".aklanname").css("transform", "translateY(-20px)");
+    $("#aklanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#aklanpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".aklanpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".capizpath,#capizpin").hover(
+  function () {
+    $("#capizpin,.capizname").css("visibility", "visible");
+    $("#capizpin,.capizname").css("opacity", "1");
+    $(".capizname").css("transform", "translateY(0px)");
+    $("#capizpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#capizpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".capizpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#capizpin,.capizname").css("visibility", "hidden");
+    $("#capizpin,.capizname").css("opacity", "0");
+    $(".capizname").css("transform", "translateY(-20px)");
+    $("#capizpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#capizpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".capizpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".guimaraspath,#guimaraspin").hover(
+  function () {
+    $("#guimaraspin,.guimarasname").css("visibility", "visible");
+    $("#guimaraspin,.guimarasname").css("opacity", "1");
+    $(".guimarasname").css("transform", "translateY(0px)");
+    $("#guimaraspin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#guimaraspin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".guimaraspath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#guimaraspin,.guimarasname").css("visibility", "hidden");
+    $("#guimaraspin,.guimarasname").css("opacity", "0");
+    $(".guimarasname").css("transform", "translateY(-20px)");
+    $("#guimaraspin .trail-pin").css("transform", "translateY(5vw)");
+    $("#guimaraspin .map-pin").css("transform", "translateY(-5vw)");
+    $(".guimaraspath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".negrosoccidentalpath,#negrosoccidentalpin").hover(
+  function () {
+    $("#negrosoccidentalpin,.negrosoccidentalname").css(
+      "visibility",
+      "visible"
+    );
+    $("#negrosoccidentalpin,.negrosoccidentalname").css("opacity", "1");
+    $(".negrosoccidentalname").css("transform", "translateY(0px)");
+    $("#negrosoccidentalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#negrosoccidentalpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".negrosoccidentalpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#negrosoccidentalpin,.negrosoccidentalname").css("visibility", "hidden");
+    $("#negrosoccidentalpin,.negrosoccidentalname").css("opacity", "0");
+    $(".negrosoccidentalname").css("transform", "translateY(-20px)");
+    $("#negrosoccidentalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#negrosoccidentalpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".negrosoccidentalpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".negrosorientalpath,#negrosorientalpin").hover(
+  function () {
+    $("#negrosorientalpin,.negrosorientalname").css("visibility", "visible");
+    $("#negrosorientalpin,.negrosorientalname").css("opacity", "1");
+    $(".negrosorientalname").css("transform", "translateY(0px)");
+    $("#negrosorientalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#negrosorientalpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".negrosorientalpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#negrosorientalpin,.negrosorientalname").css("visibility", "hidden");
+    $("#negrosorientalpin,.negrosorientalname").css("opacity", "0");
+    $(".negrosorientalname").css("transform", "translateY(-20px)");
+    $("#negrosorientalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#negrosorientalpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".negrosorientalpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".siquijorpath,#siquijorpin").hover(
+  function () {
+    $("#siquijorpin,.siquijorname").css("visibility", "visible");
+    $("#siquijorpin,.siquijorname").css("opacity", "1");
+    $(".siquijorname").css("transform", "translateY(0px)");
+    $("#siquijorpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#siquijorpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".siquijorpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#siquijorpin,.siquijorname").css("visibility", "hidden");
+    $("#siquijorpin,.siquijorname").css("opacity", "0");
+    $(".siquijorname").css("transform", "translateY(-20px)");
+    $("#siquijorpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#siquijorpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".siquijorpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".boholpath,#boholpin").hover(
+  function () {
+    $("#boholpin,.boholname").css("visibility", "visible");
+    $("#boholpin,.boholname").css("opacity", "1");
+    $(".boholname").css("transform", "translateY(0px)");
+    $("#boholpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#boholpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".boholpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#boholpin,.boholname").css("visibility", "hidden");
+    $("#boholpin,.boholname").css("opacity", "0");
+    $(".boholname").css("transform", "translateY(-20px)");
+    $("#boholpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#boholpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".boholpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".dinagatpath,#dinagatpin").hover(
+  function () {
+    $("#dinagatpin,.dinagatname").css("visibility", "visible");
+    $("#dinagatpin,.dinagatname").css("opacity", "1");
+    $(".dinagatname").css("transform", "translateY(0px)");
+    $("#dinagatpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#dinagatpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".dinagatpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#dinagatpin,.dinagatname").css("visibility", "hidden");
+    $("#dinagatpin,.dinagatname").css("opacity", "0");
+    $(".dinagatname").css("transform", "translateY(-20px)");
+    $("#dinagatpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#dinagatpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".dinagatpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".cebupath,#cebupin").hover(
+  function () {
+    $("#cebupin,.cebuname").css("visibility", "visible");
+    $("#cebupin,.cebuname").css("opacity", "1");
+    $(".cebuname").css("transform", "translateY(0px)");
+    $("#cebupin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#cebupin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".cebupath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#cebupin,.cebuname").css("visibility", "hidden");
+    $("#cebupin,.cebuname").css("opacity", "0");
+    $(".cebuname").css("transform", "translateY(-20px)");
+    $("#cebupin .trail-pin").css("transform", "translateY(5vw)");
+    $("#cebupin .map-pin").css("transform", "translateY(-5vw)");
+    $(".cebupath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".surigaodelnortepath,#surigaodelnortepin").hover(
+  function () {
+    $("#surigaodelnortepin,.surigaodelnortename").css("visibility", "visible");
+    $("#surigaodelnortepin,.surigaodelnortename").css("opacity", "1");
+    $(".surigaodelnortename").css("transform", "translateY(0px)");
+    $("#surigaodelnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#surigaodelnortepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".surigaodelnortepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#surigaodelnortepin,.surigaodelnortename").css("visibility", "hidden");
+    $("#surigaodelnortepin,.surigaodelnortename").css("opacity", "0");
+    $(".surigaodelnortename").css("transform", "translateY(-20px)");
+    $("#surigaodelnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#surigaodelnortepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".surigaodelnortepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".surigaodelsurpath,#surigaodelsurpin").hover(
+  function () {
+    $("#surigaodelsurpin,.surigaodelsurname").css("visibility", "visible");
+    $("#surigaodelsurpin,.surigaodelsurname").css("opacity", "1");
+    $(".surigaodelsurname").css("transform", "translateY(0px)");
+    $("#surigaodelsurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#surigaodelsurpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".surigaodelsurpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#surigaodelsurpin,.surigaodelsurname").css("visibility", "hidden");
+    $("#surigaodelsurpin,.surigaodelsurname").css("opacity", "0");
+    $(".surigaodelsurname").css("transform", "translateY(-20px)");
+    $("#surigaodelsurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#surigaodelsurpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".surigaodelsurpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".agusandelnortepath,#agusandelnortepin").hover(
+  function () {
+    $("#agusandelnortepin,.agusandelnortename").css("visibility", "visible");
+    $("#agusandelnortepin,.agusandelnortename").css("opacity", "1");
+    $(".agusandelnortename").css("transform", "translateY(0px)");
+    $("#agusandelnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#agusandelnortepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".agusandelnortepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#agusandelnortepin,.agusandelnortename").css("visibility", "hidden");
+    $("#agusandelnortepin,.agusandelnortename").css("opacity", "0");
+    $(".agusandelnortename").css("transform", "translateY(-20px)");
+    $("#agusandelnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#agusandelnortepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".agusandelnortepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".agusandelsurpath,#agusandelsurpin").hover(
+  function () {
+    $("#agusandelsurpin,.agusandelsurname").css("visibility", "visible");
+    $("#agusandelsurpin,.agusandelsurname").css("opacity", "1");
+    $(".agusandelsurname").css("transform", "translateY(0px)");
+    $("#agusandelsurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#agusandelsurpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".agusandelsurpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#agusandelsurpin,.agusandelsurname").css("visibility", "hidden");
+    $("#agusandelsurpin,.agusandelsurname").css("opacity", "0");
+    $(".agusandelsurname").css("transform", "translateY(-20px)");
+    $("#agusandelsurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#agusandelsurpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".agusandelsurpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".camiguinpath,#camiguinpin").hover(
+  function () {
+    $("#camiguinpin,.camiguinname").css("visibility", "visible");
+    $("#camiguinpin,.camiguinname").css("opacity", "1");
+    $(".camiguinname").css("transform", "translateY(0px)");
+    $("#camiguinpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#camiguinpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".camiguinpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#camiguinpin,.camiguinname").css("visibility", "hidden");
+    $("#camiguinpin,.camiguinname").css("opacity", "0");
+    $(".camiguinname").css("transform", "translateY(-20px)");
+    $("#camiguinpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#camiguinpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".camiguinpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".misamisorientalpath,#misamisorientalpin").hover(
+  function () {
+    $("#misamisorientalpin,.misamisorientalname").css("visibility", "visible");
+    $("#misamisorientalpin,.misamisorientalname").css("opacity", "1");
+    $(".misamisorientalname").css("transform", "translateY(0px)");
+    $("#misamisorientalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#misamisorientalpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".misamisorientalpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#misamisorientalpin,.misamisorientalname").css("visibility", "hidden");
+    $("#misamisorientalpin,.misamisorientalname").css("opacity", "0");
+    $(".misamisorientalname").css("transform", "translateY(-20px)");
+    $("#misamisorientalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#misamisorientalpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".misamisorientalpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".misamisoccidentalpath,#misamisoccidentalpin").hover(
+  function () {
+    $("#misamisoccidentalpin,.misamisoccidentalname").css(
+      "visibility",
+      "visible"
+    );
+    $("#misamisoccidentalpin,.misamisoccidentalname").css("opacity", "1");
+    $(".misamisoccidentalname").css("transform", "translateY(0px)");
+    $("#misamisoccidentalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#misamisoccidentalpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".misamisoccidentalpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#misamisoccidentalpin,.misamisoccidentalname").css(
+      "visibility",
+      "hidden"
+    );
+    $("#misamisoccidentalpin,.misamisoccidentalname").css("opacity", "0");
+    $(".misamisoccidentalname").css("transform", "translateY(-20px)");
+    $("#misamisoccidentalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#misamisoccidentalpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".misamisoccidentalpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".bukidnonpath,#bukidnonpin").hover(
+  function () {
+    $("#bukidnonpin,.bukidnonname").css("visibility", "visible");
+    $("#bukidnonpin,.bukidnonname").css("opacity", "1");
+    $(".bukidnonname").css("transform", "translateY(0px)");
+    $("#bukidnonpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#bukidnonpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".bukidnonpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#bukidnonpin,.bukidnonname").css("visibility", "hidden");
+    $("#bukidnonpin,.bukidnonname").css("opacity", "0");
+    $(".bukidnonname").css("transform", "translateY(-20px)");
+    $("#bukidnonpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#bukidnonpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".bukidnonpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".lanaodelnortepath,#lanaodelnortepin").hover(
+  function () {
+    $("#lanaodelnortepin,.lanaodelnortename").css("visibility", "visible");
+    $("#lanaodelnortepin,.lanaodelnortename").css("opacity", "1");
+    $(".lanaodelnortename").css("transform", "translateY(0px)");
+    $("#lanaodelnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#lanaodelnortepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".lanaodelnortepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#lanaodelnortepin,.lanaodelnortename").css("visibility", "hidden");
+    $("#lanaodelnortepin,.lanaodelnortename").css("opacity", "0");
+    $(".lanaodelnortename").css("transform", "translateY(-20px)");
+    $("#lanaodelnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#lanaodelnortepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".lanaodelnortepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".lanaodelsurpath,#lanaodelsurpin").hover(
+  function () {
+    $("#lanaodelsurpin,.lanaodelsurname").css("visibility", "visible");
+    $("#lanaodelsurpin,.lanaodelsurname").css("opacity", "1");
+    $(".lanaodelsurname").css("transform", "translateY(0px)");
+    $("#lanaodelsurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#lanaodelsurpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".lanaodelsurpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#lanaodelsurpin,.lanaodelsurname").css("visibility", "hidden");
+    $("#lanaodelsurpin,.lanaodelsurname").css("opacity", "0");
+    $(".lanaodelsurname").css("transform", "translateY(-20px)");
+    $("#lanaodelsurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#lanaodelsurpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".lanaodelsurpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".davaoorientalpath,#davaoorientalpin").hover(
+  function () {
+    $("#davaoorientalpin,.davaoorientalname").css("visibility", "visible");
+    $("#davaoorientalpin,.davaoorientalname").css("opacity", "1");
+    $(".davaoorientalname").css("transform", "translateY(0px)");
+    $("#davaoorientalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#davaoorientalpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".davaoorientalpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#davaoorientalpin,.davaoorientalname").css("visibility", "hidden");
+    $("#davaoorientalpin,.davaoorientalname").css("opacity", "0");
+    $(".davaoorientalname").css("transform", "translateY(-20px)");
+    $("#davaoorientalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#davaoorientalpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".davaoorientalpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".davaodeoropath,#davaodeoropin").hover(
+  function () {
+    $("#davaodeoropin,.davaodeoroname").css("visibility", "visible");
+    $("#davaodeoropin,.davaodeoroname").css("opacity", "1");
+    $(".davaodeoroname").css("transform", "translateY(0px)");
+    $("#davaodeoropin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#davaodeoropin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".davaodeoropath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#davaodeoropin,.davaodeoroname").css("visibility", "hidden");
+    $("#davaodeoropin,.davaodeoroname").css("opacity", "0");
+    $(".davaodeoroname").css("transform", "translateY(-20px)");
+    $("#davaodeoropin .trail-pin").css("transform", "translateY(5vw)");
+    $("#davaodeoropin .map-pin").css("transform", "translateY(-5vw)");
+    $(".davaodeoropath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".davaodelnortepath,#davaodelnortepin").hover(
+  function () {
+    $("#davaodelnortepin,.davaodelnortename").css("visibility", "visible");
+    $("#davaodelnortepin,.davaodelnortename").css("opacity", "1");
+    $(".davaodelnortename").css("transform", "translateY(0px)");
+    $("#davaodelnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#davaodelnortepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".davaodelnortepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#davaodelnortepin,.davaodelnortename").css("visibility", "hidden");
+    $("#davaodelnortepin,.davaodelnortename").css("opacity", "0");
+    $(".davaodelnortename").css("transform", "translateY(-20px)");
+    $("#davaodelnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#davaodelnortepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".davaodelnortepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".davaocitypath,#davaocitypin").hover(
+  function () {
+    $("#davaocitypin,.davaocityname").css("visibility", "visible");
+    $("#davaocitypin,.davaocityname").css("opacity", "1");
+    $(".davaocityname").css("transform", "translateY(0px)");
+    $("#davaocitypin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#davaocitypin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".davaocitypath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#davaocitypin,.davaocityname").css("visibility", "hidden");
+    $("#davaocitypin,.davaocityname").css("opacity", "0");
+    $(".davaocityname").css("transform", "translateY(-20px)");
+    $("#davaocitypin .trail-pin").css("transform", "translateY(5vw)");
+    $("#davaocitypin .map-pin").css("transform", "translateY(-5vw)");
+    $(".davaocitypath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".davaodelsurpath,#davaodelsurpin").hover(
+  function () {
+    $("#davaodelsurpin,.davaodelsurname").css("visibility", "visible");
+    $("#davaodelsurpin,.davaodelsurname").css("opacity", "1");
+    $(".davaodelsurname").css("transform", "translateY(0px)");
+    $("#davaodelsurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#davaodelsurpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".davaodelsurpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#davaodelsurpin,.davaodelsurname").css("visibility", "hidden");
+    $("#davaodelsurpin,.davaodelsurname").css("opacity", "0");
+    $(".davaodelsurname").css("transform", "translateY(-20px)");
+    $("#davaodelsurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#davaodelsurpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".davaodelsurpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".davaooccidentalpath,#davaooccidentalpin").hover(
+  function () {
+    $("#davaooccidentalpin,.davaooccidentalname").css("visibility", "visible");
+    $("#davaooccidentalpin,.davaooccidentalname").css("opacity", "1");
+    $(".davaooccidentalname").css("transform", "translateY(0px)");
+    $("#davaooccidentalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#davaooccidentalpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".davaooccidentalpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#davaooccidentalpin,.davaooccidentalname").css("visibility", "hidden");
+    $("#davaooccidentalpin,.davaooccidentalname").css("opacity", "0");
+    $(".davaooccidentalname").css("transform", "translateY(-20px)");
+    $("#davaooccidentalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#davaooccidentalpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".davaooccidentalpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".cotabatopath,#cotabatopin").hover(
+  function () {
+    $("#cotabatopin,.cotabatoname").css("visibility", "visible");
+    $("#cotabatopin,.cotabatoname").css("opacity", "1");
+    $(".cotabatoname").css("transform", "translateY(0px)");
+    $("#cotabatopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#cotabatopin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".cotabatopath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#cotabatopin,.cotabatoname").css("visibility", "hidden");
+    $("#cotabatopin,.cotabatoname").css("opacity", "0");
+    $(".cotabatoname").css("transform", "translateY(-20px)");
+    $("#cotabatopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#cotabatopin .map-pin").css("transform", "translateY(-5vw)");
+    $(".cotabatopath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".southcotabatopath,#southcotabatopin").hover(
+  function () {
+    $("#southcotabatopin,.southcotabatoname").css("visibility", "visible");
+    $("#southcotabatopin,.southcotabatoname").css("opacity", "1");
+    $(".southcotabatoname").css("transform", "translateY(0px)");
+    $("#southcotabatopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#southcotabatopin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".southcotabatopath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#southcotabatopin,.southcotabatoname").css("visibility", "hidden");
+    $("#southcotabatopin,.southcotabatoname").css("opacity", "0");
+    $(".southcotabatoname").css("transform", "translateY(-20px)");
+    $("#southcotabatopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#southcotabatopin .map-pin").css("transform", "translateY(-5vw)");
+    $(".southcotabatopath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".sultankudaratpath,#sultankudaratpin").hover(
+  function () {
+    $("#sultankudaratpin,.sultankudaratname").css("visibility", "visible");
+    $("#sultankudaratpin,.sultankudaratname").css("opacity", "1");
+    $(".sultankudaratname").css("transform", "translateY(0px)");
+    $("#sultankudaratpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#sultankudaratpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".sultankudaratpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#sultankudaratpin,.sultankudaratname").css("visibility", "hidden");
+    $("#sultankudaratpin,.sultankudaratname").css("opacity", "0");
+    $(".sultankudaratname").css("transform", "translateY(-20px)");
+    $("#sultankudaratpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#sultankudaratpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".sultankudaratpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".maguindanaopath,#maguindanaopin").hover(
+  function () {
+    $("#maguindanaopin,.maguindanaoname").css("visibility", "visible");
+    $("#maguindanaopin,.maguindanaoname").css("opacity", "1");
+    $(".maguindanaoname").css("transform", "translateY(0px)");
+    $("#maguindanaopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#maguindanaopin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".maguindanaopath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#maguindanaopin,.maguindanaoname").css("visibility", "hidden");
+    $("#maguindanaopin,.maguindanaoname").css("opacity", "0");
+    $(".maguindanaoname").css("transform", "translateY(-20px)");
+    $("#maguindanaopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#maguindanaopin .map-pin").css("transform", "translateY(-5vw)");
+    $(".maguindanaopath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".saranganipath,#saranganipin").hover(
+  function () {
+    $("#saranganipin,.saranganiname").css("visibility", "visible");
+    $("#saranganipin,.saranganiname").css("opacity", "1");
+    $(".saranganiname").css("transform", "translateY(0px)");
+    $("#saranganipin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#saranganipin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".saranganipath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#saranganipin,.saranganiname").css("visibility", "hidden");
+    $("#saranganipin,.saranganiname").css("opacity", "0");
+    $(".saranganiname").css("transform", "translateY(-20px)");
+    $("#saranganipin .trail-pin").css("transform", "translateY(5vw)");
+    $("#saranganipin .map-pin").css("transform", "translateY(-5vw)");
+    $(".saranganipath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".zamboangadelnortepath,#zamboangadelnortepin").hover(
+  function () {
+    $("#zamboangadelnortepin,.zamboangadelnortename").css(
+      "visibility",
+      "visible"
+    );
+    $("#zamboangadelnortepin,.zamboangadelnortename").css("opacity", "1");
+    $(".zamboangadelnortename").css("transform", "translateY(0px)");
+    $("#zamboangadelnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#zamboangadelnortepin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".zamboangadelnortepath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#zamboangadelnortepin,.zamboangadelnortename").css(
+      "visibility",
+      "hidden"
+    );
+    $("#zamboangadelnortepin,.zamboangadelnortename").css("opacity", "0");
+    $(".zamboangadelnortename").css("transform", "translateY(-20px)");
+    $("#zamboangadelnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#zamboangadelnortepin .map-pin").css("transform", "translateY(-5vw)");
+    $(".zamboangadelnortepath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".zamboangadelsurpath,#zamboangadelsurpin").hover(
+  function () {
+    $("#zamboangadelsurpin,.zamboangadelsurname").css("visibility", "visible");
+    $("#zamboangadelsurpin,.zamboangadelsurname").css("opacity", "1");
+    $(".zamboangadelsurname").css("transform", "translateY(0px)");
+    $("#zamboangadelsurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#zamboangadelsurpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".zamboangadelsurpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#zamboangadelsurpin,.zamboangadelsurname").css("visibility", "hidden");
+    $("#zamboangadelsurpin,.zamboangadelsurname").css("opacity", "0");
+    $(".zamboangadelsurname").css("transform", "translateY(-20px)");
+    $("#zamboangadelsurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#zamboangadelsurpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".zamboangadelsurpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".zamboangasibugaypath,#zamboangasibugaypin").hover(
+  function () {
+    $("#zamboangasibugaypin,.zamboangasibugayname").css(
+      "visibility",
+      "visible"
+    );
+    $("#zamboangasibugaypin,.zamboangasibugayname").css("opacity", "1");
+    $(".zamboangasibugayname").css("transform", "translateY(0px)");
+    $("#zamboangasibugaypin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#zamboangasibugaypin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".zamboangasibugaypath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#zamboangasibugaypin,.zamboangasibugayname").css("visibility", "hidden");
+    $("#zamboangasibugaypin,.zamboangasibugayname").css("opacity", "0");
+    $(".zamboangasibugayname").css("transform", "translateY(-20px)");
+    $("#zamboangasibugaypin .trail-pin").css("transform", "translateY(5vw)");
+    $("#zamboangasibugaypin .map-pin").css("transform", "translateY(-5vw)");
+    $(".zamboangasibugaypath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".zamboangacitypath,#zamboangacitypin").hover(
+  function () {
+    $("#zamboangacitypin,.zamboangacityname").css("visibility", "visible");
+    $("#zamboangacitypin,.zamboangacityname").css("opacity", "1");
+    $(".zamboangacityname").css("transform", "translateY(0px)");
+    $("#zamboangacitypin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#zamboangacitypin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".zamboangacitypath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#zamboangacitypin,.zamboangacityname").css("visibility", "hidden");
+    $("#zamboangacitypin,.zamboangacityname").css("opacity", "0");
+    $(".zamboangacityname").css("transform", "translateY(-20px)");
+    $("#zamboangacitypin .trail-pin").css("transform", "translateY(5vw)");
+    $("#zamboangacitypin .map-pin").css("transform", "translateY(-5vw)");
+    $(".zamboangacitypath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".basilanpath,#basilanpin").hover(
+  function () {
+    $("#basilanpin,.basilanname").css("visibility", "visible");
+    $("#basilanpin,.basilanname").css("opacity", "1");
+    $(".basilanname").css("transform", "translateY(0px)");
+    $("#basilanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#basilanpin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".basilanpath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#basilanpin,.basilanname").css("visibility", "hidden");
+    $("#basilanpin,.basilanname").css("opacity", "0");
+    $(".basilanname").css("transform", "translateY(-20px)");
+    $("#basilanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#basilanpin .map-pin").css("transform", "translateY(-5vw)");
+    $(".basilanpath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".sulupath,#sulupin").hover(
+  function () {
+    $("#sulupin,.suluname").css("visibility", "visible");
+    $("#sulupin,.suluname").css("opacity", "1");
+    $(".suluname").css("transform", "translateY(0px)");
+    $("#sulupin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#sulupin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".sulupath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#sulupin,.suluname").css("visibility", "hidden");
+    $("#sulupin,.suluname").css("opacity", "0");
+    $(".suluname").css("transform", "translateY(-20px)");
+    $("#sulupin .trail-pin").css("transform", "translateY(5vw)");
+    $("#sulupin .map-pin").css("transform", "translateY(-5vw)");
+    $(".sulupath").css("mix-blend-mode", "normal");
+  }
+);
+
+$(".tawitawipath,#tawitawipin").hover(
+  function () {
+    $("#tawitawipin,.tawitawiname").css("visibility", "visible");
+    $("#tawitawipin,.tawitawiname").css("opacity", "1");
+    $(".tawitawiname").css("transform", "translateY(0px)");
+    $("#tawitawipin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#tawitawipin .map-pin").css("transform", "translateY(-3.5vw)");
+    $(".tawitawipath").css("mix-blend-mode", "color");
+  },
+  function () {
+    $("#tawitawipin,.tawitawiname").css("visibility", "hidden");
+    $("#tawitawipin,.tawitawiname").css("opacity", "0");
+    $(".tawitawiname").css("transform", "translateY(-20px)");
+    $("#tawitawipin .trail-pin").css("transform", "translateY(5vw)");
+    $("#tawitawipin .map-pin").css("transform", "translateY(-5vw)");
+    $(".tawitawipath").css("mix-blend-mode", "normal");
+  }
+);
+// } else {
+//   $(".pin").css("visibility", "visible");
+//   $(".pin").css("opacity", "1");
+// }
+
+// $("#menu").hover(
+//   function () {
+//     $("body").css("overflow", "hidden");
+//   },
+//   function () {
+//     $("body").css("overflow", "auto");
+//   }
+// );
 
 //////////////
 var headers = ["H1", "H2", "H3", "H4", "H5", "H6"];

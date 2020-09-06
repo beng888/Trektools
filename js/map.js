@@ -1,4 +1,4 @@
-$(".pin").click(function () {
+$(".map-pin").click(function () {
   blur.classList.toggle("active");
   event.preventDefault();
   $("#body").append('<div class="blocker"></div>');

@@ -1,7 +1,8 @@
 @import "menu";
 @import "media";
 @import "trailmodal";
-@import "sidenav";
+@import "pins&names";
+
 body {
   margin: 0;
   padding: 0;
@@ -17,6 +18,7 @@ body {
     ),
     linear-gradient(135deg, hsl(199, 94%, 24%) 0%, hsl(199, 94%, 24%) 39%);
   background-size: 33px 33px;
+  overflow-x: hidden;
 }
 
 .scroll::-webkit-scrollbar {
@@ -31,83 +33,6 @@ body {
   background: #6649b8;
 }
 
-//modal-tabs//
-
-#modal-bodysecond {
-  position: relative;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-[data-tab-content] {
-  position: relative;
-  display: none;
-  width: 100%;
-}
-
-.activetab[data-tab-content] {
-  display: block;
-  transition: 0.3s;
-}
-
-.tabs {
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.tab {
-  position: relative;
-  cursor: pointer;
-  padding: 10px;
-  transition: 0.3s;
-  color: #000;
-  border: 2px solid #000;
-}
-
-.tab.activetab {
-  background-color: #ccc;
-}
-
-.tab:hover {
-  background-color: #aaa;
-}
-
-.tab-content {
-  width: 100%;
-  height: auto;
-  position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
-  margin-top: 5%;
-  align-items: center;
-  justify-content: center;
-
-  p {
-    font-size: 1.2rem;
-  }
-
-  li {
-    position: relative;
-    text-align: left;
-    text-indent: 50px;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    line-height: 1.5;
-    list-style: none;
-    padding: 1rem;
-  }
-}
 // .fil1 {
 //   fill: #999999;
 // }
@@ -117,21 +42,18 @@ body {
 }
 
 .fil1 {
-  transition: 1s;
+  transition: 3s;
   cursor: pointer;
-}
-
-.fil1:hover {
-  mix-blend-mode: color;
 }
 
 .mapdiv {
   position: relative;
-
+  overflow: hidden;
   #philippines {
     position: relative;
     width: 100%;
     height: auto;
+    overflow-y: hidden;
   }
 }
 
@@ -200,31 +122,51 @@ body {
   filter: blur(20px);
 }
 
-.pin {
+.trail-map {
   color: #000;
   position: absolute;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.5;
+  width: 5%;
+  height: 0;
+  background: #000;
   visibility: hidden;
   opacity: 0;
-  width: 3%;
-  transition: 1s;
+  transition: 0.3s ease-in;
 
-  img {
-    position: relative;
-    max-width: 100%;
+  .map-pin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in;
     height: auto;
+    transform: translateY(-5vw);
+
+    .pins {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .trail-pin {
+    position: absolute;
+    transform: translateY(5vw);
+    transition: 0.3s ease-in;
+    .trail {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   text {
+    transition: 0.3s;
     position: absolute;
     z-index: 1;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.5vw;
+    font-size: 2vw;
     line-height: 1.25;
     fill: #000000;
     fill-opacity: 1;
@@ -237,336 +179,336 @@ body {
   opacity: 1;
 }
 #batanespin {
-  left: 53%;
-  top: 0.5%;
+  left: 54%;
+  top: 3%;
 }
 #ilocosnortepin {
-  left: 41.5%;
-  top: 13%;
+  left: 40%;
+  top: 16.5%;
 }
 #apayaopin {
-  left: 46%;
-  top: 14%;
+  left: 45%;
+  top: 17.3%;
 }
 #cagayanpin {
-  left: 52%;
+  left: 50%;
   top: 15%;
 }
 #ilocossurpin {
-  left: 38.5%;
-  top: 20%;
+  left: 38%;
+  top: 22.5%;
 }
 #abrapin {
-  left: 42%;
-  top: 17.5%;
+  left: 41%;
+  top: 20.5%;
 }
 #kalingapin {
   left: 46%;
-  top: 19%;
+  top: 21.5%;
 }
 #mtprovincepin {
   left: 43%;
-  top: 21.5%;
+  top: 23.5%;
 }
 #ifugaopin {
-  left: 47%;
-  top: 23%;
+  left: 45%;
+  top: 25.4%;
 }
 #isabelapin {
-  left: 53.5%;
-  top: 20%;
+  left: 52%;
+  top: 24%;
 }
 #launionpin {
-  left: 38%;
-  top: 23.5%;
+  left: 36.5%;
+  top: 26.5%;
 }
 #benguetpin {
-  left: 41%;
-  top: 23.5%;
+  left: 39.5%;
+  top: 27%;
 }
 #nuevavizcayapin {
   left: 44%;
-  top: 26%;
+  top: 28.5%;
 }
 #quirinopin {
-  left: 49.5%;
-  top: 26%;
+  left: 48%;
+  top: 29%;
 }
 #aurorapin {
   left: 50%;
-  top: 29.5%;
+  top: 30.5%;
 }
 #nuevaecijapin {
-  left: 44%;
-  top: 29%;
+  left: 43%;
+  top: 32.5%;
 }
 #pangasinanpin {
   left: 36%;
-  top: 29%;
+  top: 31%;
 }
 #tarlacpin {
-  left: 38.5%;
-  top: 31%;
+  left: 37.5%;
+  top: 33.5%;
 }
 #zambalespin {
   left: 34%;
-  top: 30.5%;
+  top: 34.5%;
 }
 #pampangapin {
-  left: 40%;
-  top: 34%;
+  left: 39%;
+  top: 36.5%;
 }
 #bulacanpin {
-  left: 44%;
-  top: 34%;
+  left: 43%;
+  top: 36.5%;
 }
 #bataanpin {
-  left: 37.5%;
-  top: 36%;
+  left: 37%;
+  top: 38.5%;
 }
 #rizalpin {
-  left: 46.5%;
-  top: 37%;
-}
-#cavitepin {
-  left: 42%;
+  left: 45.5%;
   top: 39%;
 }
-#batangaspin {
-  left: 44%;
+#cavitepin {
+  left: 41.5%;
   top: 41%;
 }
+#batangaspin {
+  left: 42.5%;
+  top: 43.5%;
+}
 #lagunapin {
-  left: 47.5%;
-  top: 40%;
+  left: 46.5%;
+  top: 41%;
 }
 #quezonpin {
   left: 52%;
-  top: 41%;
+  top: 42%;
 }
 #camarinesnortepin {
-  left: 61%;
-  top: 40%;
+  left: 60%;
+  top: 41.7%;
 }
 #camarinessurpin {
   left: 65%;
-  top: 43%;
-}
-#catanduanespin {
-  left: 75%;
-  top: 42%;
-}
-#albaypin {
-  left: 69.5%;
   top: 45%;
 }
+#catanduanespin {
+  left: 74.5%;
+  top: 44%;
+}
+#albaypin {
+  left: 68%;
+  top: 47.2%;
+}
 #sorsogonpin {
-  left: 73.5%;
-  top: 47%;
+  left: 72%;
+  top: 50%;
 }
 #masbatepin {
   left: 67.5%;
-  top: 50%;
+  top: 52%;
 }
 #romblonpin {
-  left: 56%;
-  top: 50%;
+  left: 55%;
+  top: 51.5%;
 }
 #marinduquepin {
-  left: 53%;
-  top: 44.5%;
+  left: 52.5%;
+  top: 46.7%;
 }
 #orientalmindoropin {
   left: 46%;
-  top: 45.5%;
+  top: 49%;
 }
 #occidentalmindoropin {
-  left: 44.5%;
-  top: 50%;
+  left: 43%;
+  top: 49.5%;
 }
 #palawanpin {
   left: 28%;
   top: 62.5%;
 }
 #antiquepin {
-  left: 54.5%;
-  top: 59%;
+  left: 53.5%;
+  top: 60%;
 }
 #aklanpin {
-  left: 56%;
-  top: 55%;
+  left: 55%;
+  top: 57.5%;
 }
 #capizpin {
-  left: 61%;
-  top: 56.5%;
+  left: 59.5%;
+  top: 58.5%;
 }
 #iloilopin {
   left: 57%;
-  top: 58.5%;
-}
-#guimaraspin {
-  left: 60%;
   top: 61%;
 }
+#guimaraspin {
+  left: 58.5%;
+  top: 63.5%;
+}
 #negrosoccidentalpin {
-  left: 65.5%;
-  top: 60.5%;
+  left: 63.5%;
+  top: 63.5%;
 }
 #negrosorientalpin {
-  left: 64%;
+  left: 62.5%;
   top: 70%;
 }
 #cebupin {
-  left: 70.5%;
-  top: 62%;
+  left: 69.5%;
+  top: 64.5%;
 }
 #boholpin {
-  left: 75%;
-  top: 65%;
+  left: 74%;
+  top: 68%;
 }
 #siquijorpin {
-  left: 69.5%;
-  top: 70%;
+  left: 68%;
+  top: 72%;
 }
 #southernleytepin {
-  left: 84%;
-  top: 62.5%;
+  left: 83%;
+  top: 65%;
 }
 #leytepin {
-  left: 81.5%;
-  top: 58%;
+  left: 80%;
+  top: 61%;
 }
 #biliranpin {
-  left: 77.5%;
-  top: 55.7%;
+  left: 77%;
+  top: 57.2%;
 }
 #samarpin {
-  left: 83%;
-  top: 53%;
+  left: 82%;
+  top: 56%;
 }
 #northernsamarpin {
   left: 80%;
-  top: 50.5%;
-}
-#easternsamarpin {
-  left: 86%;
   top: 52.5%;
 }
+#easternsamarpin {
+  left: 85%;
+  top: 56%;
+}
 #dinagatpin {
-  left: 89%;
-  top: 63%;
+  left: 88%;
+  top: 66%;
 }
 #surigaodelnortepin {
-  left: 90.5%;
-  top: 68%;
+  left: 89.5%;
+  top: 69%;
 }
 #surigaodelsurpin {
-  left: 93.5%;
-  top: 71%;
+  left: 93%;
+  top: 74%;
 }
 #agusandelnortepin {
-  left: 87%;
-  top: 72%;
-}
-#agusandelsurpin {
-  left: 91%;
+  left: 87.5%;
   top: 73%;
 }
+#agusandelsurpin {
+  left: 89.5%;
+  top: 76%;
+}
 #davaoorientalpin {
-  left: 96.5%;
-  top: 80%;
+  left: 95%;
+  top: 83%;
 }
 #davaodeoropin {
-  left: 93%;
-  top: 78.5%;
+  left: 92%;
+  top: 81.5%;
 }
 #davaodelnortepin {
   left: 88.5%;
-  top: 78.5%;
+  top: 82%;
 }
 #davaocitypin {
-  left: 87%;
-  top: 81%;
+  left: 86%;
+  top: 83.5%;
 }
 #davaodelsurpin {
-  left: 86%;
-  top: 84.5%;
+  left: 85%;
+  top: 87%;
 }
 #davaooccidentalpin {
-  left: 89%;
-  top: 88%;
+  left: 87.5%;
+  top: 90.5%;
 }
 #saranganipin {
-  left: 85%;
+  left: 84.5%;
   top: 90.5%;
 }
 #southcotabatopin {
-  left: 83%;
-  top: 87.5%;
+  left: 81%;
+  top: 89.5%;
 }
 #sultankudaratpin {
-  left: 78%;
-  top: 85.5%;
+  left: 77%;
+  top: 88%;
 }
 #maguindanaopin {
-  left: 74%;
-  top: 83.5%;
+  left: 75%;
+  top: 84%;
 }
 #cotabatopin {
-  left: 83%;
-  top: 82.5%;
+  left: 81%;
+  top: 84%;
 }
 #bukidnonpin {
-  left: 83%;
-  top: 76.5%;
+  left: 82%;
+  top: 79%;
 }
 #misamisorientalpin {
-  left: 82.5%;
-  top: 72.5%;
-}
-#camiguinpin {
-  left: 80%;
-  top: 70%;
-}
-#lanaodelsurpin {
-  left: 77%;
-  top: 78%;
-}
-#lanaodelnortepin {
-  left: 74%;
-  top: 77%;
-}
-#misamisoccidentalpin {
-  left: 70%;
+  left: 81%;
   top: 74.5%;
 }
-#zamboangadelnortepin {
-  left: 64%;
-  top: 75%;
+#camiguinpin {
+  left: 79%;
+  top: 72%;
 }
-#zamboangadelsurpin {
-  left: 67%;
+#lanaodelsurpin {
+  left: 76%;
+  top: 80%;
+}
+#lanaodelnortepin {
+  left: 72%;
+  top: 79.5%;
+}
+#misamisoccidentalpin {
+  left: 69%;
   top: 77%;
 }
+#zamboangadelnortepin {
+  left: 63%;
+  top: 77.5%;
+}
+#zamboangadelsurpin {
+  left: 66%;
+  top: 80%;
+}
 #zamboangasibugaypin {
-  left: 61%;
-  top: 78.5%;
+  left: 59%;
+  top: 81.5%;
 }
 #zamboangacitypin {
-  left: 54%;
-  top: 83%;
+  left: 55%;
+  top: 84%;
 }
 #basilanpin {
-  left: 52.5%;
-  top: 86%;
+  left: 52%;
+  top: 88%;
 }
 #sulupin {
-  left: 44.5%;
-  top: 89%;
+  left: 43.5%;
+  top: 92%;
 }
 #tawitawipin {
-  left: 33.5%;
-  top: 94%;
+  left: 33%;
+  top: 96%;
 }
 ///////////////
 .mapnav {
