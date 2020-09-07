@@ -688,7 +688,7 @@ $(".batanespath,#batanespin").hover(
     $("#batanespin,.batanesname").css("visibility", "visible");
     $("#batanespin,.batanesname").css("opacity", "1");
     $(".batanesname").css("transform", "translateY(0px)");
-    $("#batanespin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#batanespin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#batanespin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".batanespath").css("mix-blend-mode", "color");
   },
@@ -696,7 +696,7 @@ $(".batanespath,#batanespin").hover(
     $("#batanespin,.batanesname").css("visibility", "hidden");
     $("#batanespin,.batanesname").css("opacity", "0");
     $(".batanesname").css("transform", "translateY(-20px)");
-    $("#batanespin .trail-pin").css("transform", "translateY(5vw)");
+    $("#batanespin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#batanespin .map-pin").css("transform", "translateY(-5vw)");
     $(".batanespath").css("mix-blend-mode", "normal");
   }
@@ -707,7 +707,7 @@ $(".ilocosnortepath,#ilocosnortepin").hover(
     $("#ilocosnortepin,.ilocosnortename").css("visibility", "visible");
     $("#ilocosnortepin,.ilocosnortename").css("opacity", "1");
     $(".ilocosnortename").css("transform", "translateY(0px)");
-    $("#ilocosnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#ilocosnortepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#ilocosnortepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".ilocosnortepath").css("mix-blend-mode", "color");
   },
@@ -715,7 +715,7 @@ $(".ilocosnortepath,#ilocosnortepin").hover(
     $("#ilocosnortepin,.ilocosnortename").css("visibility", "hidden");
     $("#ilocosnortepin,.ilocosnortename").css("opacity", "0");
     $(".ilocosnortename").css("transform", "translateY(-20px)");
-    $("#ilocosnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#ilocosnortepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#ilocosnortepin .map-pin").css("transform", "translateY(-5vw)");
     $(".ilocosnortepath").css("mix-blend-mode", "normal");
   }
@@ -726,7 +726,7 @@ $(".apayaopath,#apayaopin").hover(
     $("#apayaopin,.apayaoname").css("visibility", "visible");
     $("#apayaopin,.apayaoname").css("opacity", "1");
     $(".apayaoname").css("transform", "translateY(0px)");
-    $("#apayaopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#apayaopin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#apayaopin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".apayaopath").css("mix-blend-mode", "color");
   },
@@ -734,7 +734,7 @@ $(".apayaopath,#apayaopin").hover(
     $("#apayaopin,.apayaoname").css("visibility", "hidden");
     $("#apayaopin,.apayaoname").css("opacity", "0");
     $(".apayaoname").css("transform", "translateY(-20px)");
-    $("#apayaopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#apayaopin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#apayaopin .map-pin").css("transform", "translateY(-5vw)");
     $(".apayaopath").css("mix-blend-mode", "normal");
   }
@@ -745,7 +745,7 @@ $(".ilocossurpath,#ilocossurpin").hover(
     $("#ilocossurpin,.ilocossurname").css("visibility", "visible");
     $("#ilocossurpin,.ilocossurname").css("opacity", "1");
     $(".ilocossurname").css("transform", "translateY(0px)");
-    $("#ilocossurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#ilocossurpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#ilocossurpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".ilocossurpath").css("mix-blend-mode", "color");
   },
@@ -753,7 +753,7 @@ $(".ilocossurpath,#ilocossurpin").hover(
     $("#ilocossurpin,.ilocossurname").css("visibility", "hidden");
     $("#ilocossurpin,.ilocossurname").css("opacity", "0");
     $(".ilocossurname").css("transform", "translateY(-20px)");
-    $("#ilocossurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#ilocossurpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#ilocossurpin .map-pin").css("transform", "translateY(-5vw)");
     $(".ilocossurpath").css("mix-blend-mode", "normal");
   }
@@ -764,7 +764,7 @@ $(".launionpath,#launionpin").hover(
     $("#launionpin,.launionname").css("visibility", "visible");
     $("#launionpin,.launionname").css("opacity", "1");
     $(".launionname").css("transform", "translateY(0px)");
-    $("#launionpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#launionpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#launionpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".launionpath").css("mix-blend-mode", "color");
   },
@@ -772,7 +772,7 @@ $(".launionpath,#launionpin").hover(
     $("#launionpin,.launionname").css("visibility", "hidden");
     $("#launionpin,.launionname").css("opacity", "0");
     $(".launionname").css("transform", "translateY(-20px)");
-    $("#launionpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#launionpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#launionpin .map-pin").css("transform", "translateY(-5vw)");
     $(".launionpath").css("mix-blend-mode", "normal");
   }
@@ -782,7 +782,7 @@ $(".pangasinanpath,#pangasinanpin").hover(
     $("#pangasinanpin,.pangasinanname").css("visibility", "visible");
     $("#pangasinanpin,.pangasinanname").css("opacity", "1");
     $(".pangasinanname").css("transform", "translateY(0px)");
-    $("#pangasinanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#pangasinanpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#pangasinanpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".pangasinanpath").css("mix-blend-mode", "color");
   },
@@ -790,7 +790,7 @@ $(".pangasinanpath,#pangasinanpin").hover(
     $("#pangasinanpin,.pangasinanname").css("visibility", "hidden");
     $("#pangasinanpin,.pangasinanname").css("opacity", "0");
     $(".pangasinanname").css("transform", "translateY(-20px)");
-    $("#pangasinanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#pangasinanpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#pangasinanpin .map-pin").css("transform", "translateY(-5vw)");
     $(".pangasinanpath").css("mix-blend-mode", "normal");
   }
@@ -801,7 +801,7 @@ $(".abrapath,#abrapin").hover(
     $("#abrapin,.abraname").css("visibility", "visible");
     $("#abrapin,.abraname").css("opacity", "1");
     $(".abraname").css("transform", "translateY(0px)");
-    $("#abrapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#abrapin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#abrapin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".abrapath").css("mix-blend-mode", "color");
   },
@@ -809,7 +809,7 @@ $(".abrapath,#abrapin").hover(
     $("#abrapin,.abraname").css("visibility", "hidden");
     $("#abrapin,.abraname").css("opacity", "0");
     $(".abraname").css("transform", "translateY(-20px)");
-    $("#abrapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#abrapin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#abrapin .map-pin").css("transform", "translateY(-5vw)");
     $(".abrapath").css("mix-blend-mode", "normal");
   }
@@ -820,7 +820,7 @@ $(".kalingapath,#kalingapin").hover(
     $("#kalingapin,.kalinganame").css("visibility", "visible");
     $("#kalingapin,.kalinganame").css("opacity", "1");
     $(".kalinganame").css("transform", "translateY(0px)");
-    $("#kalingapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#kalingapin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#kalingapin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".kalingapath").css("mix-blend-mode", "color");
   },
@@ -828,7 +828,7 @@ $(".kalingapath,#kalingapin").hover(
     $("#kalingapin,.kalinganame").css("visibility", "hidden");
     $("#kalingapin,.kalinganame").css("opacity", "0");
     $(".kalinganame").css("transform", "translateY(-20px)");
-    $("#kalingapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#kalingapin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#kalingapin .map-pin").css("transform", "translateY(-5vw)");
     $(".kalingapath").css("mix-blend-mode", "normal");
   }
@@ -839,7 +839,7 @@ $(".mtprovincepath,#mtprovincepin").hover(
     $("#mtprovincepin,.mtprovincename").css("visibility", "visible");
     $("#mtprovincepin,.mtprovincename").css("opacity", "1");
     $(".mtprovincename").css("transform", "translateY(0px)");
-    $("#mtprovincepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#mtprovincepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#mtprovincepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".mtprovincepath").css("mix-blend-mode", "color");
   },
@@ -847,7 +847,7 @@ $(".mtprovincepath,#mtprovincepin").hover(
     $("#mtprovincepin,.mtprovincename").css("visibility", "hidden");
     $("#mtprovincepin,.mtprovincename").css("opacity", "0");
     $(".mtprovincename").css("transform", "translateY(-20px)");
-    $("#mtprovincepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#mtprovincepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#mtprovincepin .map-pin").css("transform", "translateY(-5vw)");
     $(".mtprovincepath").css("mix-blend-mode", "normal");
   }
@@ -858,7 +858,7 @@ $(".ifugaopath,#ifugaopin").hover(
     $("#ifugaopin,.ifugaoname").css("visibility", "visible");
     $("#ifugaopin,.ifugaoname").css("opacity", "1");
     $(".ifugaoname").css("transform", "translateY(0px)");
-    $("#ifugaopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#ifugaopin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#ifugaopin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".ifugaopath").css("mix-blend-mode", "color");
   },
@@ -866,7 +866,7 @@ $(".ifugaopath,#ifugaopin").hover(
     $("#ifugaopin,.ifugaoname").css("visibility", "hidden");
     $("#ifugaopin,.ifugaoname").css("opacity", "0");
     $(".ifugaoname").css("transform", "translateY(-20px)");
-    $("#ifugaopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#ifugaopin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#ifugaopin .map-pin").css("transform", "translateY(-5vw)");
     $(".ifugaopath").css("mix-blend-mode", "normal");
   }
@@ -877,7 +877,7 @@ $(".benguetpath,#benguetpin").hover(
     $("#benguetpin,.benguetname").css("visibility", "visible");
     $("#benguetpin,.benguetname").css("opacity", "1");
     $(".benguetname").css("transform", "translateY(0px)");
-    $("#benguetpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#benguetpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#benguetpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".benguetpath").css("mix-blend-mode", "color");
   },
@@ -885,7 +885,7 @@ $(".benguetpath,#benguetpin").hover(
     $("#benguetpin,.benguetname").css("visibility", "hidden");
     $("#benguetpin,.benguetname").css("opacity", "0");
     $(".benguetname").css("transform", "translateY(-20px)");
-    $("#benguetpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#benguetpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#benguetpin .map-pin").css("transform", "translateY(-5vw)");
     $(".benguetpath").css("mix-blend-mode", "normal");
   }
@@ -896,7 +896,7 @@ $(".cagayanpath,#cagayanpin").hover(
     $("#cagayanpin,.cagayanname").css("visibility", "visible");
     $("#cagayanpin,.cagayanname").css("opacity", "1");
     $(".cagayanname").css("transform", "translateY(0px)");
-    $("#cagayanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#cagayanpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#cagayanpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".cagayanpath").css("mix-blend-mode", "color");
   },
@@ -904,7 +904,7 @@ $(".cagayanpath,#cagayanpin").hover(
     $("#cagayanpin,.cagayanname").css("visibility", "hidden");
     $("#cagayanpin,.cagayanname").css("opacity", "0");
     $(".cagayanname").css("transform", "translateY(-20px)");
-    $("#cagayanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#cagayanpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#cagayanpin .map-pin").css("transform", "translateY(-5vw)");
     $(".cagayanpath").css("mix-blend-mode", "normal");
   }
@@ -915,7 +915,7 @@ $(".isabelapath,#isabelapin").hover(
     $("#isabelapin,.isabelaname").css("visibility", "visible");
     $("#isabelapin,.isabelaname").css("opacity", "1");
     $(".isabelaname").css("transform", "translateY(0px)");
-    $("#isabelapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#isabelapin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#isabelapin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".isabelapath").css("mix-blend-mode", "color");
   },
@@ -923,7 +923,7 @@ $(".isabelapath,#isabelapin").hover(
     $("#isabelapin,.isabelaname").css("visibility", "hidden");
     $("#isabelapin,.isabelaname").css("opacity", "0");
     $(".isabelaname").css("transform", "translateY(-20px)");
-    $("#isabelapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#isabelapin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#isabelapin .map-pin").css("transform", "translateY(-5vw)");
     $(".isabelapath").css("mix-blend-mode", "normal");
   }
@@ -934,7 +934,7 @@ $(".quirinopath,#quirinopin").hover(
     $("#quirinopin,.quirinoname").css("visibility", "visible");
     $("#quirinopin,.quirinoname").css("opacity", "1");
     $(".quirinoname").css("transform", "translateY(0px)");
-    $("#quirinopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#quirinopin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#quirinopin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".quirinopath").css("mix-blend-mode", "color");
   },
@@ -942,7 +942,7 @@ $(".quirinopath,#quirinopin").hover(
     $("#quirinopin,.quirinoname").css("visibility", "hidden");
     $("#quirinopin,.quirinoname").css("opacity", "0");
     $(".quirinoname").css("transform", "translateY(-20px)");
-    $("#quirinopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#quirinopin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#quirinopin .map-pin").css("transform", "translateY(-5vw)");
     $(".quirinopath").css("mix-blend-mode", "normal");
   }
@@ -953,7 +953,7 @@ $(".nuevavizcayapath,#nuevavizcayapin").hover(
     $("#nuevavizcayapin,.nuevavizcayaname").css("visibility", "visible");
     $("#nuevavizcayapin,.nuevavizcayaname").css("opacity", "1");
     $(".nuevavizcayaname").css("transform", "translateY(0px)");
-    $("#nuevavizcayapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#nuevavizcayapin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#nuevavizcayapin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".nuevavizcayapath").css("mix-blend-mode", "color");
   },
@@ -961,7 +961,7 @@ $(".nuevavizcayapath,#nuevavizcayapin").hover(
     $("#nuevavizcayapin,.nuevavizcayaname").css("visibility", "hidden");
     $("#nuevavizcayapin,.nuevavizcayaname").css("opacity", "0");
     $(".nuevavizcayaname").css("transform", "translateY(-20px)");
-    $("#nuevavizcayapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#nuevavizcayapin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#nuevavizcayapin .map-pin").css("transform", "translateY(-5vw)");
     $(".nuevavizcayapath").css("mix-blend-mode", "normal");
   }
@@ -972,7 +972,7 @@ $(".aurorapath,#aurorapin").hover(
     $("#aurorapin,.auroraname").css("visibility", "visible");
     $("#aurorapin,.auroraname").css("opacity", "1");
     $(".auroraname").css("transform", "translateY(0px)");
-    $("#aurorapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#aurorapin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#aurorapin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".aurorapath").css("mix-blend-mode", "color");
   },
@@ -980,7 +980,7 @@ $(".aurorapath,#aurorapin").hover(
     $("#aurorapin,.auroraname").css("visibility", "hidden");
     $("#aurorapin,.auroraname").css("opacity", "0");
     $(".auroraname").css("transform", "translateY(-20px)");
-    $("#aurorapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#aurorapin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#aurorapin .map-pin").css("transform", "translateY(-5vw)");
     $(".aurorapath").css("mix-blend-mode", "normal");
   }
@@ -991,7 +991,7 @@ $(".nuevaecijapath,#nuevaecijapin").hover(
     $("#nuevaecijapin,.nuevaecijaname").css("visibility", "visible");
     $("#nuevaecijapin,.nuevaecijaname").css("opacity", "1");
     $(".nuevaecijaname").css("transform", "translateY(0px)");
-    $("#nuevaecijapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#nuevaecijapin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#nuevaecijapin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".nuevaecijapath").css("mix-blend-mode", "color");
   },
@@ -999,7 +999,7 @@ $(".nuevaecijapath,#nuevaecijapin").hover(
     $("#nuevaecijapin,.nuevaecijaname").css("visibility", "hidden");
     $("#nuevaecijapin,.nuevaecijaname").css("opacity", "0");
     $(".nuevaecijaname").css("transform", "translateY(-20px)");
-    $("#nuevaecijapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#nuevaecijapin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#nuevaecijapin .map-pin").css("transform", "translateY(-5vw)");
     $(".nuevaecijapath").css("mix-blend-mode", "normal");
   }
@@ -1010,7 +1010,7 @@ $(".tarlacpath,#tarlacpin").hover(
     $("#tarlacpin,.tarlacname").css("visibility", "visible");
     $("#tarlacpin,.tarlacname").css("opacity", "1");
     $(".tarlacname").css("transform", "translateY(0px)");
-    $("#tarlacpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#tarlacpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#tarlacpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".tarlacpath").css("mix-blend-mode", "color");
   },
@@ -1018,7 +1018,7 @@ $(".tarlacpath,#tarlacpin").hover(
     $("#tarlacpin,.tarlacname").css("visibility", "hidden");
     $("#tarlacpin,.tarlacname").css("opacity", "0");
     $(".tarlacname").css("transform", "translateY(-20px)");
-    $("#tarlacpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#tarlacpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#tarlacpin .map-pin").css("transform", "translateY(-5vw)");
     $(".tarlacpath").css("mix-blend-mode", "normal");
   }
@@ -1029,7 +1029,7 @@ $(".zambalespath,#zambalespin").hover(
     $("#zambalespin,.zambalesname").css("visibility", "visible");
     $("#zambalespin,.zambalesname").css("opacity", "1");
     $(".zambalesname").css("transform", "translateY(0px)");
-    $("#zambalespin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#zambalespin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#zambalespin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".zambalespath").css("mix-blend-mode", "color");
   },
@@ -1037,7 +1037,7 @@ $(".zambalespath,#zambalespin").hover(
     $("#zambalespin,.zambalesname").css("visibility", "hidden");
     $("#zambalespin,.zambalesname").css("opacity", "0");
     $(".zambalesname").css("transform", "translateY(-20px)");
-    $("#zambalespin .trail-pin").css("transform", "translateY(5vw)");
+    $("#zambalespin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#zambalespin .map-pin").css("transform", "translateY(-5vw)");
     $(".zambalespath").css("mix-blend-mode", "normal");
   }
@@ -1048,7 +1048,7 @@ $(".pampangapath,#pampangapin").hover(
     $("#pampangapin,.pampanganame").css("visibility", "visible");
     $("#pampangapin,.pampanganame").css("opacity", "1");
     $(".pampanganame").css("transform", "translateY(0px)");
-    $("#pampangapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#pampangapin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#pampangapin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".pampangapath").css("mix-blend-mode", "color");
   },
@@ -1056,7 +1056,7 @@ $(".pampangapath,#pampangapin").hover(
     $("#pampangapin,.pampanganame").css("visibility", "hidden");
     $("#pampangapin,.pampanganame").css("opacity", "0");
     $(".pampanganame").css("transform", "translateY(-20px)");
-    $("#pampangapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#pampangapin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#pampangapin .map-pin").css("transform", "translateY(-5vw)");
     $(".pampangapath").css("mix-blend-mode", "normal");
   }
@@ -1067,7 +1067,7 @@ $(".bataanpath,#bataanpin").hover(
     $("#bataanpin,.bataanname").css("visibility", "visible");
     $("#bataanpin,.bataanname").css("opacity", "1");
     $(".bataanname").css("transform", "translateY(0px)");
-    $("#bataanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#bataanpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#bataanpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".bataanpath").css("mix-blend-mode", "color");
   },
@@ -1075,7 +1075,7 @@ $(".bataanpath,#bataanpin").hover(
     $("#bataanpin,.bataanname").css("visibility", "hidden");
     $("#bataanpin,.bataanname").css("opacity", "0");
     $(".bataanname").css("transform", "translateY(-20px)");
-    $("#bataanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#bataanpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#bataanpin .map-pin").css("transform", "translateY(-5vw)");
     $(".bataanpath").css("mix-blend-mode", "normal");
   }
@@ -1086,7 +1086,7 @@ $(".bulacanpath,#bulacanpin").hover(
     $("#bulacanpin,.bulacanname").css("visibility", "visible");
     $("#bulacanpin,.bulacanname").css("opacity", "1");
     $(".bulacanname").css("transform", "translateY(0px)");
-    $("#bulacanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#bulacanpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#bulacanpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".bulacanpath").css("mix-blend-mode", "color");
   },
@@ -1094,7 +1094,7 @@ $(".bulacanpath,#bulacanpin").hover(
     $("#bulacanpin,.bulacanname").css("visibility", "hidden");
     $("#bulacanpin,.bulacanname").css("opacity", "0");
     $(".bulacanname").css("transform", "translateY(-20px)");
-    $("#bulacanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#bulacanpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#bulacanpin .map-pin").css("transform", "translateY(-5vw)");
     $(".bulacanpath").css("mix-blend-mode", "normal");
   }
@@ -1105,7 +1105,7 @@ $(".cavitepath,#cavitepin").hover(
     $("#cavitepin,.cavitename").css("visibility", "visible");
     $("#cavitepin,.cavitename").css("opacity", "1");
     $(".cavitename").css("transform", "translateY(0px)");
-    $("#cavitepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#cavitepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#cavitepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".cavitepath").css("mix-blend-mode", "color");
   },
@@ -1113,7 +1113,7 @@ $(".cavitepath,#cavitepin").hover(
     $("#cavitepin,.cavitename").css("visibility", "hidden");
     $("#cavitepin,.cavitename").css("opacity", "0");
     $(".cavitename").css("transform", "translateY(-20px)");
-    $("#cavitepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#cavitepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#cavitepin .map-pin").css("transform", "translateY(-5vw)");
     $(".cavitepath").css("mix-blend-mode", "normal");
   }
@@ -1124,7 +1124,7 @@ $(".lagunapath,#lagunapin").hover(
     $("#lagunapin,.lagunaname").css("visibility", "visible");
     $("#lagunapin,.lagunaname").css("opacity", "1");
     $(".lagunaname").css("transform", "translateY(0px)");
-    $("#lagunapin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#lagunapin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#lagunapin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".lagunapath").css("mix-blend-mode", "color");
   },
@@ -1132,7 +1132,7 @@ $(".lagunapath,#lagunapin").hover(
     $("#lagunapin,.lagunaname").css("visibility", "hidden");
     $("#lagunapin,.lagunaname").css("opacity", "0");
     $(".lagunaname").css("transform", "translateY(-20px)");
-    $("#lagunapin .trail-pin").css("transform", "translateY(5vw)");
+    $("#lagunapin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#lagunapin .map-pin").css("transform", "translateY(-5vw)");
     $(".lagunapath").css("mix-blend-mode", "normal");
   }
@@ -1143,7 +1143,7 @@ $(".rizalpath,#rizalpin").hover(
     $("#rizalpin,.rizalname").css("visibility", "visible");
     $("#rizalpin,.rizalname").css("opacity", "1");
     $(".rizalname").css("transform", "translateY(0px)");
-    $("#rizalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#rizalpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#rizalpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".rizalpath").css("mix-blend-mode", "color");
   },
@@ -1151,7 +1151,7 @@ $(".rizalpath,#rizalpin").hover(
     $("#rizalpin,.rizalname").css("visibility", "hidden");
     $("#rizalpin,.rizalname").css("opacity", "0");
     $(".rizalname").css("transform", "translateY(-20px)");
-    $("#rizalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#rizalpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#rizalpin .map-pin").css("transform", "translateY(-5vw)");
     $(".rizalpath").css("mix-blend-mode", "normal");
   }
@@ -1162,7 +1162,7 @@ $(".quezonpath,#quezonpin").hover(
     $("#quezonpin,.quezonname").css("visibility", "visible");
     $("#quezonpin,.quezonname").css("opacity", "1");
     $(".quezonname").css("transform", "translateY(0px)");
-    $("#quezonpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#quezonpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#quezonpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".quezonpath").css("mix-blend-mode", "color");
   },
@@ -1170,7 +1170,7 @@ $(".quezonpath,#quezonpin").hover(
     $("#quezonpin,.quezonname").css("visibility", "hidden");
     $("#quezonpin,.quezonname").css("opacity", "0");
     $(".quezonname").css("transform", "translateY(-20px)");
-    $("#quezonpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#quezonpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#quezonpin .map-pin").css("transform", "translateY(-5vw)");
     $(".quezonpath").css("mix-blend-mode", "normal");
   }
@@ -1181,7 +1181,7 @@ $(".batangaspath,#batangaspin").hover(
     $("#batangaspin,.batangasname").css("visibility", "visible");
     $("#batangaspin,.batangasname").css("opacity", "1");
     $(".batangasname").css("transform", "translateY(0px)");
-    $("#batangaspin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#batangaspin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#batangaspin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".batangaspath").css("mix-blend-mode", "color");
   },
@@ -1189,7 +1189,7 @@ $(".batangaspath,#batangaspin").hover(
     $("#batangaspin,.batangasname").css("visibility", "hidden");
     $("#batangaspin,.batangasname").css("opacity", "0");
     $(".batangasname").css("transform", "translateY(-20px)");
-    $("#batangaspin .trail-pin").css("transform", "translateY(5vw)");
+    $("#batangaspin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#batangaspin .map-pin").css("transform", "translateY(-5vw)");
     $(".batangaspath").css("mix-blend-mode", "normal");
   }
@@ -1200,7 +1200,7 @@ $(".marinduquepath,#marinduquepin").hover(
     $("#marinduquepin,.marinduquename").css("visibility", "visible");
     $("#marinduquepin,.marinduquename").css("opacity", "1");
     $(".marinduquename").css("transform", "translateY(0px)");
-    $("#marinduquepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#marinduquepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#marinduquepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".marinduquepath").css("mix-blend-mode", "color");
   },
@@ -1208,7 +1208,7 @@ $(".marinduquepath,#marinduquepin").hover(
     $("#marinduquepin,.marinduquename").css("visibility", "hidden");
     $("#marinduquepin,.marinduquename").css("opacity", "0");
     $(".marinduquename").css("transform", "translateY(-20px)");
-    $("#marinduquepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#marinduquepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#marinduquepin .map-pin").css("transform", "translateY(-5vw)");
     $(".marinduquepath").css("mix-blend-mode", "normal");
   }
@@ -1222,7 +1222,7 @@ $(".occidentalmindoropath,#occidentalmindoropin").hover(
     );
     $("#occidentalmindoropin,.occidentalmindoroname").css("opacity", "1");
     $(".occidentalmindoroname").css("transform", "translateY(0px)");
-    $("#occidentalmindoropin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#occidentalmindoropin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#occidentalmindoropin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".occidentalmindoropath").css("mix-blend-mode", "color");
   },
@@ -1233,7 +1233,7 @@ $(".occidentalmindoropath,#occidentalmindoropin").hover(
     );
     $("#occidentalmindoropin,.occidentalmindoroname").css("opacity", "0");
     $(".occidentalmindoroname").css("transform", "translateY(-20px)");
-    $("#occidentalmindoropin .trail-pin").css("transform", "translateY(5vw)");
+    $("#occidentalmindoropin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#occidentalmindoropin .map-pin").css("transform", "translateY(-5vw)");
     $(".occidentalmindoropath").css("mix-blend-mode", "normal");
   }
@@ -1244,7 +1244,7 @@ $(".orientalmindoropath,#orientalmindoropin").hover(
     $("#orientalmindoropin,.orientalmindoroname").css("visibility", "visible");
     $("#orientalmindoropin,.orientalmindoroname").css("opacity", "1");
     $(".orientalmindoroname").css("transform", "translateY(0px)");
-    $("#orientalmindoropin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#orientalmindoropin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#orientalmindoropin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".orientalmindoropath").css("mix-blend-mode", "color");
   },
@@ -1252,7 +1252,7 @@ $(".orientalmindoropath,#orientalmindoropin").hover(
     $("#orientalmindoropin,.orientalmindoroname").css("visibility", "hidden");
     $("#orientalmindoropin,.orientalmindoroname").css("opacity", "0");
     $(".orientalmindoroname").css("transform", "translateY(-20px)");
-    $("#orientalmindoropin .trail-pin").css("transform", "translateY(5vw)");
+    $("#orientalmindoropin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#orientalmindoropin .map-pin").css("transform", "translateY(-5vw)");
     $(".orientalmindoropath").css("mix-blend-mode", "normal");
   }
@@ -1263,7 +1263,7 @@ $(".palawanpath,#palawanpin").hover(
     $("#palawanpin,.palawanname").css("visibility", "visible");
     $("#palawanpin,.palawanname").css("opacity", "1");
     $(".palawanname").css("transform", "translateY(0px)");
-    $("#palawanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#palawanpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#palawanpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".palawanpath").css("mix-blend-mode", "color");
   },
@@ -1271,7 +1271,7 @@ $(".palawanpath,#palawanpin").hover(
     $("#palawanpin,.palawanname").css("visibility", "hidden");
     $("#palawanpin,.palawanname").css("opacity", "0");
     $(".palawanname").css("transform", "translateY(-20px)");
-    $("#palawanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#palawanpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#palawanpin .map-pin").css("transform", "translateY(-5vw)");
     $(".palawanpath").css("mix-blend-mode", "normal");
   }
@@ -1282,7 +1282,7 @@ $(".romblonpath,#romblonpin").hover(
     $("#romblonpin,.romblonname").css("visibility", "visible");
     $("#romblonpin,.romblonname").css("opacity", "1");
     $(".romblonname").css("transform", "translateY(0px)");
-    $("#romblonpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#romblonpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#romblonpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".romblonpath").css("mix-blend-mode", "color");
   },
@@ -1290,7 +1290,7 @@ $(".romblonpath,#romblonpin").hover(
     $("#romblonpin,.romblonname").css("visibility", "hidden");
     $("#romblonpin,.romblonname").css("opacity", "0");
     $(".romblonname").css("transform", "translateY(-20px)");
-    $("#romblonpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#romblonpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#romblonpin .map-pin").css("transform", "translateY(-5vw)");
     $(".romblonpath").css("mix-blend-mode", "normal");
   }
@@ -1301,7 +1301,7 @@ $(".camarinesnortepath,#camarinesnortepin").hover(
     $("#camarinesnortepin,.camarinesnortename").css("visibility", "visible");
     $("#camarinesnortepin,.camarinesnortename").css("opacity", "1");
     $(".camarinesnortename").css("transform", "translateY(0px)");
-    $("#camarinesnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#camarinesnortepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#camarinesnortepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".camarinesnortepath").css("mix-blend-mode", "color");
   },
@@ -1309,7 +1309,7 @@ $(".camarinesnortepath,#camarinesnortepin").hover(
     $("#camarinesnortepin,.camarinesnortename").css("visibility", "hidden");
     $("#camarinesnortepin,.camarinesnortename").css("opacity", "0");
     $(".camarinesnortename").css("transform", "translateY(-20px)");
-    $("#camarinesnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#camarinesnortepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#camarinesnortepin .map-pin").css("transform", "translateY(-5vw)");
     $(".camarinesnortepath").css("mix-blend-mode", "normal");
   }
@@ -1320,7 +1320,7 @@ $(".camarinessurpath,#camarinessurpin").hover(
     $("#camarinessurpin,.camarinessurname").css("visibility", "visible");
     $("#camarinessurpin,.camarinessurname").css("opacity", "1");
     $(".camarinessurname").css("transform", "translateY(0px)");
-    $("#camarinessurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#camarinessurpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#camarinessurpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".camarinessurpath").css("mix-blend-mode", "color");
   },
@@ -1328,7 +1328,7 @@ $(".camarinessurpath,#camarinessurpin").hover(
     $("#camarinessurpin,.camarinessurname").css("visibility", "hidden");
     $("#camarinessurpin,.camarinessurname").css("opacity", "0");
     $(".camarinessurname").css("transform", "translateY(-20px)");
-    $("#camarinessurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#camarinessurpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#camarinessurpin .map-pin").css("transform", "translateY(-5vw)");
     $(".camarinessurpath").css("mix-blend-mode", "normal");
   }
@@ -1339,7 +1339,7 @@ $(".catanduanespath,#catanduanespin").hover(
     $("#catanduanespin,.catanduanesname").css("visibility", "visible");
     $("#catanduanespin,.catanduanesname").css("opacity", "1");
     $(".catanduanesname").css("transform", "translateY(0px)");
-    $("#catanduanespin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#catanduanespin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#catanduanespin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".catanduanespath").css("mix-blend-mode", "color");
   },
@@ -1347,7 +1347,7 @@ $(".catanduanespath,#catanduanespin").hover(
     $("#catanduanespin,.catanduanesname").css("visibility", "hidden");
     $("#catanduanespin,.catanduanesname").css("opacity", "0");
     $(".catanduanesname").css("transform", "translateY(-20px)");
-    $("#catanduanespin .trail-pin").css("transform", "translateY(5vw)");
+    $("#catanduanespin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#catanduanespin .map-pin").css("transform", "translateY(-5vw)");
     $(".catanduanespath").css("mix-blend-mode", "normal");
   }
@@ -1358,7 +1358,7 @@ $(".albaypath,#albaypin").hover(
     $("#albaypin,.albayname").css("visibility", "visible");
     $("#albaypin,.albayname").css("opacity", "1");
     $(".albayname").css("transform", "translateY(0px)");
-    $("#albaypin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#albaypin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#albaypin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".albaypath").css("mix-blend-mode", "color");
   },
@@ -1366,7 +1366,7 @@ $(".albaypath,#albaypin").hover(
     $("#albaypin,.albayname").css("visibility", "hidden");
     $("#albaypin,.albayname").css("opacity", "0");
     $(".albayname").css("transform", "translateY(-20px)");
-    $("#albaypin .trail-pin").css("transform", "translateY(5vw)");
+    $("#albaypin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#albaypin .map-pin").css("transform", "translateY(-5vw)");
     $(".albaypath").css("mix-blend-mode", "normal");
   }
@@ -1377,7 +1377,7 @@ $(".masbatepath,#masbatepin").hover(
     $("#masbatepin,.masbatename").css("visibility", "visible");
     $("#masbatepin,.masbatename").css("opacity", "1");
     $(".masbatename").css("transform", "translateY(0px)");
-    $("#masbatepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#masbatepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#masbatepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".masbatepath").css("mix-blend-mode", "color");
   },
@@ -1385,7 +1385,7 @@ $(".masbatepath,#masbatepin").hover(
     $("#masbatepin,.masbatename").css("visibility", "hidden");
     $("#masbatepin,.masbatename").css("opacity", "0");
     $(".masbatename").css("transform", "translateY(-20px)");
-    $("#masbatepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#masbatepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#masbatepin .map-pin").css("transform", "translateY(-5vw)");
     $(".masbatepath").css("mix-blend-mode", "normal");
   }
@@ -1396,7 +1396,7 @@ $(".sorsogonpath,#sorsogonpin").hover(
     $("#sorsogonpin,.sorsogonname").css("visibility", "visible");
     $("#sorsogonpin,.sorsogonname").css("opacity", "1");
     $(".sorsogonname").css("transform", "translateY(0px)");
-    $("#sorsogonpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#sorsogonpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#sorsogonpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".sorsogonpath").css("mix-blend-mode", "color");
   },
@@ -1404,7 +1404,7 @@ $(".sorsogonpath,#sorsogonpin").hover(
     $("#sorsogonpin,.sorsogonname").css("visibility", "hidden");
     $("#sorsogonpin,.sorsogonname").css("opacity", "0");
     $(".sorsogonname").css("transform", "translateY(-20px)");
-    $("#sorsogonpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#sorsogonpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#sorsogonpin .map-pin").css("transform", "translateY(-5vw)");
     $(".sorsogonpath").css("mix-blend-mode", "normal");
   }
@@ -1415,7 +1415,7 @@ $(".leytepath,#leytepin").hover(
     $("#leytepin,.leytename").css("visibility", "visible");
     $("#leytepin,.leytename").css("opacity", "1");
     $(".leytename").css("transform", "translateY(0px)");
-    $("#leytepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#leytepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#leytepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".leytepath").css("mix-blend-mode", "color");
   },
@@ -1423,7 +1423,7 @@ $(".leytepath,#leytepin").hover(
     $("#leytepin,.leytename").css("visibility", "hidden");
     $("#leytepin,.leytename").css("opacity", "0");
     $(".leytename").css("transform", "translateY(-20px)");
-    $("#leytepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#leytepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#leytepin .map-pin").css("transform", "translateY(-5vw)");
     $(".leytepath").css("mix-blend-mode", "normal");
   }
@@ -1434,7 +1434,7 @@ $(".northernsamarpath,#northernsamarpin").hover(
     $("#northernsamarpin,.northernsamarname").css("visibility", "visible");
     $("#northernsamarpin,.northernsamarname").css("opacity", "1");
     $(".northernsamarname").css("transform", "translateY(0px)");
-    $("#northernsamarpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#northernsamarpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#northernsamarpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".northernsamarpath").css("mix-blend-mode", "color");
   },
@@ -1442,7 +1442,7 @@ $(".northernsamarpath,#northernsamarpin").hover(
     $("#northernsamarpin,.northernsamarname").css("visibility", "hidden");
     $("#northernsamarpin,.northernsamarname").css("opacity", "0");
     $(".northernsamarname").css("transform", "translateY(-20px)");
-    $("#northernsamarpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#northernsamarpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#northernsamarpin .map-pin").css("transform", "translateY(-5vw)");
     $(".northernsamarpath").css("mix-blend-mode", "normal");
   }
@@ -1453,7 +1453,7 @@ $(".samarpath,#samarpin").hover(
     $("#samarpin,.samarname").css("visibility", "visible");
     $("#samarpin,.samarname").css("opacity", "1");
     $(".samarname").css("transform", "translateY(0px)");
-    $("#samarpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#samarpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#samarpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".samarpath").css("mix-blend-mode", "color");
   },
@@ -1461,7 +1461,7 @@ $(".samarpath,#samarpin").hover(
     $("#samarpin,.samarname").css("visibility", "hidden");
     $("#samarpin,.samarname").css("opacity", "0");
     $(".samarname").css("transform", "translateY(-20px)");
-    $("#samarpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#samarpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#samarpin .map-pin").css("transform", "translateY(-5vw)");
     $(".samarpath").css("mix-blend-mode", "normal");
   }
@@ -1472,7 +1472,7 @@ $(".easternsamarpath,#easternsamarpin").hover(
     $("#easternsamarpin,.easternsamarname").css("visibility", "visible");
     $("#easternsamarpin,.easternsamarname").css("opacity", "1");
     $(".easternsamarname").css("transform", "translateY(0px)");
-    $("#easternsamarpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#easternsamarpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#easternsamarpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".easternsamarpath").css("mix-blend-mode", "color");
   },
@@ -1480,7 +1480,7 @@ $(".easternsamarpath,#easternsamarpin").hover(
     $("#easternsamarpin,.easternsamarname").css("visibility", "hidden");
     $("#easternsamarpin,.easternsamarname").css("opacity", "0");
     $(".easternsamarname").css("transform", "translateY(-20px)");
-    $("#easternsamarpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#easternsamarpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#easternsamarpin .map-pin").css("transform", "translateY(-5vw)");
     $(".easternsamarpath").css("mix-blend-mode", "normal");
   }
@@ -1491,7 +1491,7 @@ $(".biliranpath,#biliranpin").hover(
     $("#biliranpin,.biliranname").css("visibility", "visible");
     $("#biliranpin,.biliranname").css("opacity", "1");
     $(".biliranname").css("transform", "translateY(0px)");
-    $("#biliranpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#biliranpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#biliranpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".biliranpath").css("mix-blend-mode", "color");
   },
@@ -1499,7 +1499,7 @@ $(".biliranpath,#biliranpin").hover(
     $("#biliranpin,.biliranname").css("visibility", "hidden");
     $("#biliranpin,.biliranname").css("opacity", "0");
     $(".biliranname").css("transform", "translateY(-20px)");
-    $("#biliranpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#biliranpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#biliranpin .map-pin").css("transform", "translateY(-5vw)");
     $(".biliranpath").css("mix-blend-mode", "normal");
   }
@@ -1510,7 +1510,7 @@ $(".southernleytepath,#southernleytepin").hover(
     $("#southernleytepin,.southernleytename").css("visibility", "visible");
     $("#southernleytepin,.southernleytename").css("opacity", "1");
     $(".southernleytename").css("transform", "translateY(0px)");
-    $("#southernleytepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#southernleytepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#southernleytepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".southernleytepath").css("mix-blend-mode", "color");
   },
@@ -1518,7 +1518,7 @@ $(".southernleytepath,#southernleytepin").hover(
     $("#southernleytepin,.southernleytename").css("visibility", "hidden");
     $("#southernleytepin,.southernleytename").css("opacity", "0");
     $(".southernleytename").css("transform", "translateY(-20px)");
-    $("#southernleytepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#southernleytepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#southernleytepin .map-pin").css("transform", "translateY(-5vw)");
     $(".southernleytepath").css("mix-blend-mode", "normal");
   }
@@ -1529,7 +1529,7 @@ $(".antiquepath,#antiquepin").hover(
     $("#antiquepin,.antiquename").css("visibility", "visible");
     $("#antiquepin,.antiquename").css("opacity", "1");
     $(".antiquename").css("transform", "translateY(0px)");
-    $("#antiquepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#antiquepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#antiquepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".antiquepath").css("mix-blend-mode", "color");
   },
@@ -1537,7 +1537,7 @@ $(".antiquepath,#antiquepin").hover(
     $("#antiquepin,.antiquename").css("visibility", "hidden");
     $("#antiquepin,.antiquename").css("opacity", "0");
     $(".antiquename").css("transform", "translateY(-20px)");
-    $("#antiquepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#antiquepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#antiquepin .map-pin").css("transform", "translateY(-5vw)");
     $(".antiquepath").css("mix-blend-mode", "normal");
   }
@@ -1548,7 +1548,7 @@ $(".iloilopath,#iloilopin").hover(
     $("#iloilopin,.iloiloname").css("visibility", "visible");
     $("#iloilopin,.iloiloname").css("opacity", "1");
     $(".iloiloname").css("transform", "translateY(0px)");
-    $("#iloilopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#iloilopin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#iloilopin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".iloilopath").css("mix-blend-mode", "color");
   },
@@ -1556,7 +1556,7 @@ $(".iloilopath,#iloilopin").hover(
     $("#iloilopin,.iloiloname").css("visibility", "hidden");
     $("#iloilopin,.iloiloname").css("opacity", "0");
     $(".iloiloname").css("transform", "translateY(-20px)");
-    $("#iloilopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#iloilopin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#iloilopin .map-pin").css("transform", "translateY(-5vw)");
     $(".iloilopath").css("mix-blend-mode", "normal");
   }
@@ -1567,7 +1567,7 @@ $(".aklanpath,#aklanpin").hover(
     $("#aklanpin,.aklanname").css("visibility", "visible");
     $("#aklanpin,.aklanname").css("opacity", "1");
     $(".aklanname").css("transform", "translateY(0px)");
-    $("#aklanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#aklanpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#aklanpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".aklanpath").css("mix-blend-mode", "color");
   },
@@ -1575,7 +1575,7 @@ $(".aklanpath,#aklanpin").hover(
     $("#aklanpin,.aklanname").css("visibility", "hidden");
     $("#aklanpin,.aklanname").css("opacity", "0");
     $(".aklanname").css("transform", "translateY(-20px)");
-    $("#aklanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#aklanpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#aklanpin .map-pin").css("transform", "translateY(-5vw)");
     $(".aklanpath").css("mix-blend-mode", "normal");
   }
@@ -1586,7 +1586,7 @@ $(".capizpath,#capizpin").hover(
     $("#capizpin,.capizname").css("visibility", "visible");
     $("#capizpin,.capizname").css("opacity", "1");
     $(".capizname").css("transform", "translateY(0px)");
-    $("#capizpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#capizpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#capizpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".capizpath").css("mix-blend-mode", "color");
   },
@@ -1594,7 +1594,7 @@ $(".capizpath,#capizpin").hover(
     $("#capizpin,.capizname").css("visibility", "hidden");
     $("#capizpin,.capizname").css("opacity", "0");
     $(".capizname").css("transform", "translateY(-20px)");
-    $("#capizpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#capizpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#capizpin .map-pin").css("transform", "translateY(-5vw)");
     $(".capizpath").css("mix-blend-mode", "normal");
   }
@@ -1605,7 +1605,7 @@ $(".guimaraspath,#guimaraspin").hover(
     $("#guimaraspin,.guimarasname").css("visibility", "visible");
     $("#guimaraspin,.guimarasname").css("opacity", "1");
     $(".guimarasname").css("transform", "translateY(0px)");
-    $("#guimaraspin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#guimaraspin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#guimaraspin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".guimaraspath").css("mix-blend-mode", "color");
   },
@@ -1613,7 +1613,7 @@ $(".guimaraspath,#guimaraspin").hover(
     $("#guimaraspin,.guimarasname").css("visibility", "hidden");
     $("#guimaraspin,.guimarasname").css("opacity", "0");
     $(".guimarasname").css("transform", "translateY(-20px)");
-    $("#guimaraspin .trail-pin").css("transform", "translateY(5vw)");
+    $("#guimaraspin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#guimaraspin .map-pin").css("transform", "translateY(-5vw)");
     $(".guimaraspath").css("mix-blend-mode", "normal");
   }
@@ -1627,7 +1627,7 @@ $(".negrosoccidentalpath,#negrosoccidentalpin").hover(
     );
     $("#negrosoccidentalpin,.negrosoccidentalname").css("opacity", "1");
     $(".negrosoccidentalname").css("transform", "translateY(0px)");
-    $("#negrosoccidentalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#negrosoccidentalpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#negrosoccidentalpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".negrosoccidentalpath").css("mix-blend-mode", "color");
   },
@@ -1635,7 +1635,7 @@ $(".negrosoccidentalpath,#negrosoccidentalpin").hover(
     $("#negrosoccidentalpin,.negrosoccidentalname").css("visibility", "hidden");
     $("#negrosoccidentalpin,.negrosoccidentalname").css("opacity", "0");
     $(".negrosoccidentalname").css("transform", "translateY(-20px)");
-    $("#negrosoccidentalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#negrosoccidentalpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#negrosoccidentalpin .map-pin").css("transform", "translateY(-5vw)");
     $(".negrosoccidentalpath").css("mix-blend-mode", "normal");
   }
@@ -1646,7 +1646,7 @@ $(".negrosorientalpath,#negrosorientalpin").hover(
     $("#negrosorientalpin,.negrosorientalname").css("visibility", "visible");
     $("#negrosorientalpin,.negrosorientalname").css("opacity", "1");
     $(".negrosorientalname").css("transform", "translateY(0px)");
-    $("#negrosorientalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#negrosorientalpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#negrosorientalpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".negrosorientalpath").css("mix-blend-mode", "color");
   },
@@ -1654,7 +1654,7 @@ $(".negrosorientalpath,#negrosorientalpin").hover(
     $("#negrosorientalpin,.negrosorientalname").css("visibility", "hidden");
     $("#negrosorientalpin,.negrosorientalname").css("opacity", "0");
     $(".negrosorientalname").css("transform", "translateY(-20px)");
-    $("#negrosorientalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#negrosorientalpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#negrosorientalpin .map-pin").css("transform", "translateY(-5vw)");
     $(".negrosorientalpath").css("mix-blend-mode", "normal");
   }
@@ -1665,7 +1665,7 @@ $(".siquijorpath,#siquijorpin").hover(
     $("#siquijorpin,.siquijorname").css("visibility", "visible");
     $("#siquijorpin,.siquijorname").css("opacity", "1");
     $(".siquijorname").css("transform", "translateY(0px)");
-    $("#siquijorpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#siquijorpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#siquijorpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".siquijorpath").css("mix-blend-mode", "color");
   },
@@ -1673,7 +1673,7 @@ $(".siquijorpath,#siquijorpin").hover(
     $("#siquijorpin,.siquijorname").css("visibility", "hidden");
     $("#siquijorpin,.siquijorname").css("opacity", "0");
     $(".siquijorname").css("transform", "translateY(-20px)");
-    $("#siquijorpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#siquijorpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#siquijorpin .map-pin").css("transform", "translateY(-5vw)");
     $(".siquijorpath").css("mix-blend-mode", "normal");
   }
@@ -1684,7 +1684,7 @@ $(".boholpath,#boholpin").hover(
     $("#boholpin,.boholname").css("visibility", "visible");
     $("#boholpin,.boholname").css("opacity", "1");
     $(".boholname").css("transform", "translateY(0px)");
-    $("#boholpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#boholpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#boholpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".boholpath").css("mix-blend-mode", "color");
   },
@@ -1692,7 +1692,7 @@ $(".boholpath,#boholpin").hover(
     $("#boholpin,.boholname").css("visibility", "hidden");
     $("#boholpin,.boholname").css("opacity", "0");
     $(".boholname").css("transform", "translateY(-20px)");
-    $("#boholpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#boholpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#boholpin .map-pin").css("transform", "translateY(-5vw)");
     $(".boholpath").css("mix-blend-mode", "normal");
   }
@@ -1703,7 +1703,7 @@ $(".dinagatpath,#dinagatpin").hover(
     $("#dinagatpin,.dinagatname").css("visibility", "visible");
     $("#dinagatpin,.dinagatname").css("opacity", "1");
     $(".dinagatname").css("transform", "translateY(0px)");
-    $("#dinagatpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#dinagatpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#dinagatpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".dinagatpath").css("mix-blend-mode", "color");
   },
@@ -1711,7 +1711,7 @@ $(".dinagatpath,#dinagatpin").hover(
     $("#dinagatpin,.dinagatname").css("visibility", "hidden");
     $("#dinagatpin,.dinagatname").css("opacity", "0");
     $(".dinagatname").css("transform", "translateY(-20px)");
-    $("#dinagatpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#dinagatpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#dinagatpin .map-pin").css("transform", "translateY(-5vw)");
     $(".dinagatpath").css("mix-blend-mode", "normal");
   }
@@ -1722,7 +1722,7 @@ $(".cebupath,#cebupin").hover(
     $("#cebupin,.cebuname").css("visibility", "visible");
     $("#cebupin,.cebuname").css("opacity", "1");
     $(".cebuname").css("transform", "translateY(0px)");
-    $("#cebupin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#cebupin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#cebupin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".cebupath").css("mix-blend-mode", "color");
   },
@@ -1730,7 +1730,7 @@ $(".cebupath,#cebupin").hover(
     $("#cebupin,.cebuname").css("visibility", "hidden");
     $("#cebupin,.cebuname").css("opacity", "0");
     $(".cebuname").css("transform", "translateY(-20px)");
-    $("#cebupin .trail-pin").css("transform", "translateY(5vw)");
+    $("#cebupin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#cebupin .map-pin").css("transform", "translateY(-5vw)");
     $(".cebupath").css("mix-blend-mode", "normal");
   }
@@ -1741,7 +1741,7 @@ $(".surigaodelnortepath,#surigaodelnortepin").hover(
     $("#surigaodelnortepin,.surigaodelnortename").css("visibility", "visible");
     $("#surigaodelnortepin,.surigaodelnortename").css("opacity", "1");
     $(".surigaodelnortename").css("transform", "translateY(0px)");
-    $("#surigaodelnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#surigaodelnortepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#surigaodelnortepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".surigaodelnortepath").css("mix-blend-mode", "color");
   },
@@ -1749,7 +1749,7 @@ $(".surigaodelnortepath,#surigaodelnortepin").hover(
     $("#surigaodelnortepin,.surigaodelnortename").css("visibility", "hidden");
     $("#surigaodelnortepin,.surigaodelnortename").css("opacity", "0");
     $(".surigaodelnortename").css("transform", "translateY(-20px)");
-    $("#surigaodelnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#surigaodelnortepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#surigaodelnortepin .map-pin").css("transform", "translateY(-5vw)");
     $(".surigaodelnortepath").css("mix-blend-mode", "normal");
   }
@@ -1760,7 +1760,7 @@ $(".surigaodelsurpath,#surigaodelsurpin").hover(
     $("#surigaodelsurpin,.surigaodelsurname").css("visibility", "visible");
     $("#surigaodelsurpin,.surigaodelsurname").css("opacity", "1");
     $(".surigaodelsurname").css("transform", "translateY(0px)");
-    $("#surigaodelsurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#surigaodelsurpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#surigaodelsurpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".surigaodelsurpath").css("mix-blend-mode", "color");
   },
@@ -1768,7 +1768,7 @@ $(".surigaodelsurpath,#surigaodelsurpin").hover(
     $("#surigaodelsurpin,.surigaodelsurname").css("visibility", "hidden");
     $("#surigaodelsurpin,.surigaodelsurname").css("opacity", "0");
     $(".surigaodelsurname").css("transform", "translateY(-20px)");
-    $("#surigaodelsurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#surigaodelsurpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#surigaodelsurpin .map-pin").css("transform", "translateY(-5vw)");
     $(".surigaodelsurpath").css("mix-blend-mode", "normal");
   }
@@ -1779,7 +1779,7 @@ $(".agusandelnortepath,#agusandelnortepin").hover(
     $("#agusandelnortepin,.agusandelnortename").css("visibility", "visible");
     $("#agusandelnortepin,.agusandelnortename").css("opacity", "1");
     $(".agusandelnortename").css("transform", "translateY(0px)");
-    $("#agusandelnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#agusandelnortepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#agusandelnortepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".agusandelnortepath").css("mix-blend-mode", "color");
   },
@@ -1787,7 +1787,7 @@ $(".agusandelnortepath,#agusandelnortepin").hover(
     $("#agusandelnortepin,.agusandelnortename").css("visibility", "hidden");
     $("#agusandelnortepin,.agusandelnortename").css("opacity", "0");
     $(".agusandelnortename").css("transform", "translateY(-20px)");
-    $("#agusandelnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#agusandelnortepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#agusandelnortepin .map-pin").css("transform", "translateY(-5vw)");
     $(".agusandelnortepath").css("mix-blend-mode", "normal");
   }
@@ -1798,7 +1798,7 @@ $(".agusandelsurpath,#agusandelsurpin").hover(
     $("#agusandelsurpin,.agusandelsurname").css("visibility", "visible");
     $("#agusandelsurpin,.agusandelsurname").css("opacity", "1");
     $(".agusandelsurname").css("transform", "translateY(0px)");
-    $("#agusandelsurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#agusandelsurpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#agusandelsurpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".agusandelsurpath").css("mix-blend-mode", "color");
   },
@@ -1806,7 +1806,7 @@ $(".agusandelsurpath,#agusandelsurpin").hover(
     $("#agusandelsurpin,.agusandelsurname").css("visibility", "hidden");
     $("#agusandelsurpin,.agusandelsurname").css("opacity", "0");
     $(".agusandelsurname").css("transform", "translateY(-20px)");
-    $("#agusandelsurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#agusandelsurpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#agusandelsurpin .map-pin").css("transform", "translateY(-5vw)");
     $(".agusandelsurpath").css("mix-blend-mode", "normal");
   }
@@ -1817,7 +1817,7 @@ $(".camiguinpath,#camiguinpin").hover(
     $("#camiguinpin,.camiguinname").css("visibility", "visible");
     $("#camiguinpin,.camiguinname").css("opacity", "1");
     $(".camiguinname").css("transform", "translateY(0px)");
-    $("#camiguinpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#camiguinpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#camiguinpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".camiguinpath").css("mix-blend-mode", "color");
   },
@@ -1825,7 +1825,7 @@ $(".camiguinpath,#camiguinpin").hover(
     $("#camiguinpin,.camiguinname").css("visibility", "hidden");
     $("#camiguinpin,.camiguinname").css("opacity", "0");
     $(".camiguinname").css("transform", "translateY(-20px)");
-    $("#camiguinpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#camiguinpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#camiguinpin .map-pin").css("transform", "translateY(-5vw)");
     $(".camiguinpath").css("mix-blend-mode", "normal");
   }
@@ -1836,7 +1836,7 @@ $(".misamisorientalpath,#misamisorientalpin").hover(
     $("#misamisorientalpin,.misamisorientalname").css("visibility", "visible");
     $("#misamisorientalpin,.misamisorientalname").css("opacity", "1");
     $(".misamisorientalname").css("transform", "translateY(0px)");
-    $("#misamisorientalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#misamisorientalpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#misamisorientalpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".misamisorientalpath").css("mix-blend-mode", "color");
   },
@@ -1844,7 +1844,7 @@ $(".misamisorientalpath,#misamisorientalpin").hover(
     $("#misamisorientalpin,.misamisorientalname").css("visibility", "hidden");
     $("#misamisorientalpin,.misamisorientalname").css("opacity", "0");
     $(".misamisorientalname").css("transform", "translateY(-20px)");
-    $("#misamisorientalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#misamisorientalpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#misamisorientalpin .map-pin").css("transform", "translateY(-5vw)");
     $(".misamisorientalpath").css("mix-blend-mode", "normal");
   }
@@ -1858,7 +1858,7 @@ $(".misamisoccidentalpath,#misamisoccidentalpin").hover(
     );
     $("#misamisoccidentalpin,.misamisoccidentalname").css("opacity", "1");
     $(".misamisoccidentalname").css("transform", "translateY(0px)");
-    $("#misamisoccidentalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#misamisoccidentalpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#misamisoccidentalpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".misamisoccidentalpath").css("mix-blend-mode", "color");
   },
@@ -1869,7 +1869,7 @@ $(".misamisoccidentalpath,#misamisoccidentalpin").hover(
     );
     $("#misamisoccidentalpin,.misamisoccidentalname").css("opacity", "0");
     $(".misamisoccidentalname").css("transform", "translateY(-20px)");
-    $("#misamisoccidentalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#misamisoccidentalpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#misamisoccidentalpin .map-pin").css("transform", "translateY(-5vw)");
     $(".misamisoccidentalpath").css("mix-blend-mode", "normal");
   }
@@ -1880,7 +1880,7 @@ $(".bukidnonpath,#bukidnonpin").hover(
     $("#bukidnonpin,.bukidnonname").css("visibility", "visible");
     $("#bukidnonpin,.bukidnonname").css("opacity", "1");
     $(".bukidnonname").css("transform", "translateY(0px)");
-    $("#bukidnonpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#bukidnonpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#bukidnonpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".bukidnonpath").css("mix-blend-mode", "color");
   },
@@ -1888,7 +1888,7 @@ $(".bukidnonpath,#bukidnonpin").hover(
     $("#bukidnonpin,.bukidnonname").css("visibility", "hidden");
     $("#bukidnonpin,.bukidnonname").css("opacity", "0");
     $(".bukidnonname").css("transform", "translateY(-20px)");
-    $("#bukidnonpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#bukidnonpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#bukidnonpin .map-pin").css("transform", "translateY(-5vw)");
     $(".bukidnonpath").css("mix-blend-mode", "normal");
   }
@@ -1899,7 +1899,7 @@ $(".lanaodelnortepath,#lanaodelnortepin").hover(
     $("#lanaodelnortepin,.lanaodelnortename").css("visibility", "visible");
     $("#lanaodelnortepin,.lanaodelnortename").css("opacity", "1");
     $(".lanaodelnortename").css("transform", "translateY(0px)");
-    $("#lanaodelnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#lanaodelnortepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#lanaodelnortepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".lanaodelnortepath").css("mix-blend-mode", "color");
   },
@@ -1907,7 +1907,7 @@ $(".lanaodelnortepath,#lanaodelnortepin").hover(
     $("#lanaodelnortepin,.lanaodelnortename").css("visibility", "hidden");
     $("#lanaodelnortepin,.lanaodelnortename").css("opacity", "0");
     $(".lanaodelnortename").css("transform", "translateY(-20px)");
-    $("#lanaodelnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#lanaodelnortepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#lanaodelnortepin .map-pin").css("transform", "translateY(-5vw)");
     $(".lanaodelnortepath").css("mix-blend-mode", "normal");
   }
@@ -1918,7 +1918,7 @@ $(".lanaodelsurpath,#lanaodelsurpin").hover(
     $("#lanaodelsurpin,.lanaodelsurname").css("visibility", "visible");
     $("#lanaodelsurpin,.lanaodelsurname").css("opacity", "1");
     $(".lanaodelsurname").css("transform", "translateY(0px)");
-    $("#lanaodelsurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#lanaodelsurpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#lanaodelsurpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".lanaodelsurpath").css("mix-blend-mode", "color");
   },
@@ -1926,7 +1926,7 @@ $(".lanaodelsurpath,#lanaodelsurpin").hover(
     $("#lanaodelsurpin,.lanaodelsurname").css("visibility", "hidden");
     $("#lanaodelsurpin,.lanaodelsurname").css("opacity", "0");
     $(".lanaodelsurname").css("transform", "translateY(-20px)");
-    $("#lanaodelsurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#lanaodelsurpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#lanaodelsurpin .map-pin").css("transform", "translateY(-5vw)");
     $(".lanaodelsurpath").css("mix-blend-mode", "normal");
   }
@@ -1937,7 +1937,7 @@ $(".davaoorientalpath,#davaoorientalpin").hover(
     $("#davaoorientalpin,.davaoorientalname").css("visibility", "visible");
     $("#davaoorientalpin,.davaoorientalname").css("opacity", "1");
     $(".davaoorientalname").css("transform", "translateY(0px)");
-    $("#davaoorientalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#davaoorientalpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#davaoorientalpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".davaoorientalpath").css("mix-blend-mode", "color");
   },
@@ -1945,7 +1945,7 @@ $(".davaoorientalpath,#davaoorientalpin").hover(
     $("#davaoorientalpin,.davaoorientalname").css("visibility", "hidden");
     $("#davaoorientalpin,.davaoorientalname").css("opacity", "0");
     $(".davaoorientalname").css("transform", "translateY(-20px)");
-    $("#davaoorientalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#davaoorientalpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#davaoorientalpin .map-pin").css("transform", "translateY(-5vw)");
     $(".davaoorientalpath").css("mix-blend-mode", "normal");
   }
@@ -1956,7 +1956,7 @@ $(".davaodeoropath,#davaodeoropin").hover(
     $("#davaodeoropin,.davaodeoroname").css("visibility", "visible");
     $("#davaodeoropin,.davaodeoroname").css("opacity", "1");
     $(".davaodeoroname").css("transform", "translateY(0px)");
-    $("#davaodeoropin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#davaodeoropin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#davaodeoropin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".davaodeoropath").css("mix-blend-mode", "color");
   },
@@ -1964,7 +1964,7 @@ $(".davaodeoropath,#davaodeoropin").hover(
     $("#davaodeoropin,.davaodeoroname").css("visibility", "hidden");
     $("#davaodeoropin,.davaodeoroname").css("opacity", "0");
     $(".davaodeoroname").css("transform", "translateY(-20px)");
-    $("#davaodeoropin .trail-pin").css("transform", "translateY(5vw)");
+    $("#davaodeoropin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#davaodeoropin .map-pin").css("transform", "translateY(-5vw)");
     $(".davaodeoropath").css("mix-blend-mode", "normal");
   }
@@ -1975,7 +1975,7 @@ $(".davaodelnortepath,#davaodelnortepin").hover(
     $("#davaodelnortepin,.davaodelnortename").css("visibility", "visible");
     $("#davaodelnortepin,.davaodelnortename").css("opacity", "1");
     $(".davaodelnortename").css("transform", "translateY(0px)");
-    $("#davaodelnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#davaodelnortepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#davaodelnortepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".davaodelnortepath").css("mix-blend-mode", "color");
   },
@@ -1983,7 +1983,7 @@ $(".davaodelnortepath,#davaodelnortepin").hover(
     $("#davaodelnortepin,.davaodelnortename").css("visibility", "hidden");
     $("#davaodelnortepin,.davaodelnortename").css("opacity", "0");
     $(".davaodelnortename").css("transform", "translateY(-20px)");
-    $("#davaodelnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#davaodelnortepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#davaodelnortepin .map-pin").css("transform", "translateY(-5vw)");
     $(".davaodelnortepath").css("mix-blend-mode", "normal");
   }
@@ -1994,7 +1994,7 @@ $(".davaocitypath,#davaocitypin").hover(
     $("#davaocitypin,.davaocityname").css("visibility", "visible");
     $("#davaocitypin,.davaocityname").css("opacity", "1");
     $(".davaocityname").css("transform", "translateY(0px)");
-    $("#davaocitypin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#davaocitypin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#davaocitypin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".davaocitypath").css("mix-blend-mode", "color");
   },
@@ -2002,7 +2002,7 @@ $(".davaocitypath,#davaocitypin").hover(
     $("#davaocitypin,.davaocityname").css("visibility", "hidden");
     $("#davaocitypin,.davaocityname").css("opacity", "0");
     $(".davaocityname").css("transform", "translateY(-20px)");
-    $("#davaocitypin .trail-pin").css("transform", "translateY(5vw)");
+    $("#davaocitypin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#davaocitypin .map-pin").css("transform", "translateY(-5vw)");
     $(".davaocitypath").css("mix-blend-mode", "normal");
   }
@@ -2013,7 +2013,7 @@ $(".davaodelsurpath,#davaodelsurpin").hover(
     $("#davaodelsurpin,.davaodelsurname").css("visibility", "visible");
     $("#davaodelsurpin,.davaodelsurname").css("opacity", "1");
     $(".davaodelsurname").css("transform", "translateY(0px)");
-    $("#davaodelsurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#davaodelsurpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#davaodelsurpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".davaodelsurpath").css("mix-blend-mode", "color");
   },
@@ -2021,7 +2021,7 @@ $(".davaodelsurpath,#davaodelsurpin").hover(
     $("#davaodelsurpin,.davaodelsurname").css("visibility", "hidden");
     $("#davaodelsurpin,.davaodelsurname").css("opacity", "0");
     $(".davaodelsurname").css("transform", "translateY(-20px)");
-    $("#davaodelsurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#davaodelsurpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#davaodelsurpin .map-pin").css("transform", "translateY(-5vw)");
     $(".davaodelsurpath").css("mix-blend-mode", "normal");
   }
@@ -2032,7 +2032,7 @@ $(".davaooccidentalpath,#davaooccidentalpin").hover(
     $("#davaooccidentalpin,.davaooccidentalname").css("visibility", "visible");
     $("#davaooccidentalpin,.davaooccidentalname").css("opacity", "1");
     $(".davaooccidentalname").css("transform", "translateY(0px)");
-    $("#davaooccidentalpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#davaooccidentalpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#davaooccidentalpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".davaooccidentalpath").css("mix-blend-mode", "color");
   },
@@ -2040,7 +2040,7 @@ $(".davaooccidentalpath,#davaooccidentalpin").hover(
     $("#davaooccidentalpin,.davaooccidentalname").css("visibility", "hidden");
     $("#davaooccidentalpin,.davaooccidentalname").css("opacity", "0");
     $(".davaooccidentalname").css("transform", "translateY(-20px)");
-    $("#davaooccidentalpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#davaooccidentalpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#davaooccidentalpin .map-pin").css("transform", "translateY(-5vw)");
     $(".davaooccidentalpath").css("mix-blend-mode", "normal");
   }
@@ -2051,7 +2051,7 @@ $(".cotabatopath,#cotabatopin").hover(
     $("#cotabatopin,.cotabatoname").css("visibility", "visible");
     $("#cotabatopin,.cotabatoname").css("opacity", "1");
     $(".cotabatoname").css("transform", "translateY(0px)");
-    $("#cotabatopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#cotabatopin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#cotabatopin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".cotabatopath").css("mix-blend-mode", "color");
   },
@@ -2059,7 +2059,7 @@ $(".cotabatopath,#cotabatopin").hover(
     $("#cotabatopin,.cotabatoname").css("visibility", "hidden");
     $("#cotabatopin,.cotabatoname").css("opacity", "0");
     $(".cotabatoname").css("transform", "translateY(-20px)");
-    $("#cotabatopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#cotabatopin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#cotabatopin .map-pin").css("transform", "translateY(-5vw)");
     $(".cotabatopath").css("mix-blend-mode", "normal");
   }
@@ -2070,7 +2070,7 @@ $(".southcotabatopath,#southcotabatopin").hover(
     $("#southcotabatopin,.southcotabatoname").css("visibility", "visible");
     $("#southcotabatopin,.southcotabatoname").css("opacity", "1");
     $(".southcotabatoname").css("transform", "translateY(0px)");
-    $("#southcotabatopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#southcotabatopin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#southcotabatopin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".southcotabatopath").css("mix-blend-mode", "color");
   },
@@ -2078,7 +2078,7 @@ $(".southcotabatopath,#southcotabatopin").hover(
     $("#southcotabatopin,.southcotabatoname").css("visibility", "hidden");
     $("#southcotabatopin,.southcotabatoname").css("opacity", "0");
     $(".southcotabatoname").css("transform", "translateY(-20px)");
-    $("#southcotabatopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#southcotabatopin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#southcotabatopin .map-pin").css("transform", "translateY(-5vw)");
     $(".southcotabatopath").css("mix-blend-mode", "normal");
   }
@@ -2089,7 +2089,7 @@ $(".sultankudaratpath,#sultankudaratpin").hover(
     $("#sultankudaratpin,.sultankudaratname").css("visibility", "visible");
     $("#sultankudaratpin,.sultankudaratname").css("opacity", "1");
     $(".sultankudaratname").css("transform", "translateY(0px)");
-    $("#sultankudaratpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#sultankudaratpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#sultankudaratpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".sultankudaratpath").css("mix-blend-mode", "color");
   },
@@ -2097,7 +2097,7 @@ $(".sultankudaratpath,#sultankudaratpin").hover(
     $("#sultankudaratpin,.sultankudaratname").css("visibility", "hidden");
     $("#sultankudaratpin,.sultankudaratname").css("opacity", "0");
     $(".sultankudaratname").css("transform", "translateY(-20px)");
-    $("#sultankudaratpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#sultankudaratpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#sultankudaratpin .map-pin").css("transform", "translateY(-5vw)");
     $(".sultankudaratpath").css("mix-blend-mode", "normal");
   }
@@ -2108,7 +2108,7 @@ $(".maguindanaopath,#maguindanaopin").hover(
     $("#maguindanaopin,.maguindanaoname").css("visibility", "visible");
     $("#maguindanaopin,.maguindanaoname").css("opacity", "1");
     $(".maguindanaoname").css("transform", "translateY(0px)");
-    $("#maguindanaopin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#maguindanaopin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#maguindanaopin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".maguindanaopath").css("mix-blend-mode", "color");
   },
@@ -2116,7 +2116,7 @@ $(".maguindanaopath,#maguindanaopin").hover(
     $("#maguindanaopin,.maguindanaoname").css("visibility", "hidden");
     $("#maguindanaopin,.maguindanaoname").css("opacity", "0");
     $(".maguindanaoname").css("transform", "translateY(-20px)");
-    $("#maguindanaopin .trail-pin").css("transform", "translateY(5vw)");
+    $("#maguindanaopin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#maguindanaopin .map-pin").css("transform", "translateY(-5vw)");
     $(".maguindanaopath").css("mix-blend-mode", "normal");
   }
@@ -2127,7 +2127,7 @@ $(".saranganipath,#saranganipin").hover(
     $("#saranganipin,.saranganiname").css("visibility", "visible");
     $("#saranganipin,.saranganiname").css("opacity", "1");
     $(".saranganiname").css("transform", "translateY(0px)");
-    $("#saranganipin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#saranganipin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#saranganipin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".saranganipath").css("mix-blend-mode", "color");
   },
@@ -2135,7 +2135,7 @@ $(".saranganipath,#saranganipin").hover(
     $("#saranganipin,.saranganiname").css("visibility", "hidden");
     $("#saranganipin,.saranganiname").css("opacity", "0");
     $(".saranganiname").css("transform", "translateY(-20px)");
-    $("#saranganipin .trail-pin").css("transform", "translateY(5vw)");
+    $("#saranganipin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#saranganipin .map-pin").css("transform", "translateY(-5vw)");
     $(".saranganipath").css("mix-blend-mode", "normal");
   }
@@ -2149,7 +2149,7 @@ $(".zamboangadelnortepath,#zamboangadelnortepin").hover(
     );
     $("#zamboangadelnortepin,.zamboangadelnortename").css("opacity", "1");
     $(".zamboangadelnortename").css("transform", "translateY(0px)");
-    $("#zamboangadelnortepin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#zamboangadelnortepin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#zamboangadelnortepin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".zamboangadelnortepath").css("mix-blend-mode", "color");
   },
@@ -2160,7 +2160,7 @@ $(".zamboangadelnortepath,#zamboangadelnortepin").hover(
     );
     $("#zamboangadelnortepin,.zamboangadelnortename").css("opacity", "0");
     $(".zamboangadelnortename").css("transform", "translateY(-20px)");
-    $("#zamboangadelnortepin .trail-pin").css("transform", "translateY(5vw)");
+    $("#zamboangadelnortepin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#zamboangadelnortepin .map-pin").css("transform", "translateY(-5vw)");
     $(".zamboangadelnortepath").css("mix-blend-mode", "normal");
   }
@@ -2171,7 +2171,7 @@ $(".zamboangadelsurpath,#zamboangadelsurpin").hover(
     $("#zamboangadelsurpin,.zamboangadelsurname").css("visibility", "visible");
     $("#zamboangadelsurpin,.zamboangadelsurname").css("opacity", "1");
     $(".zamboangadelsurname").css("transform", "translateY(0px)");
-    $("#zamboangadelsurpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#zamboangadelsurpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#zamboangadelsurpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".zamboangadelsurpath").css("mix-blend-mode", "color");
   },
@@ -2179,7 +2179,7 @@ $(".zamboangadelsurpath,#zamboangadelsurpin").hover(
     $("#zamboangadelsurpin,.zamboangadelsurname").css("visibility", "hidden");
     $("#zamboangadelsurpin,.zamboangadelsurname").css("opacity", "0");
     $(".zamboangadelsurname").css("transform", "translateY(-20px)");
-    $("#zamboangadelsurpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#zamboangadelsurpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#zamboangadelsurpin .map-pin").css("transform", "translateY(-5vw)");
     $(".zamboangadelsurpath").css("mix-blend-mode", "normal");
   }
@@ -2193,7 +2193,7 @@ $(".zamboangasibugaypath,#zamboangasibugaypin").hover(
     );
     $("#zamboangasibugaypin,.zamboangasibugayname").css("opacity", "1");
     $(".zamboangasibugayname").css("transform", "translateY(0px)");
-    $("#zamboangasibugaypin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#zamboangasibugaypin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#zamboangasibugaypin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".zamboangasibugaypath").css("mix-blend-mode", "color");
   },
@@ -2201,7 +2201,7 @@ $(".zamboangasibugaypath,#zamboangasibugaypin").hover(
     $("#zamboangasibugaypin,.zamboangasibugayname").css("visibility", "hidden");
     $("#zamboangasibugaypin,.zamboangasibugayname").css("opacity", "0");
     $(".zamboangasibugayname").css("transform", "translateY(-20px)");
-    $("#zamboangasibugaypin .trail-pin").css("transform", "translateY(5vw)");
+    $("#zamboangasibugaypin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#zamboangasibugaypin .map-pin").css("transform", "translateY(-5vw)");
     $(".zamboangasibugaypath").css("mix-blend-mode", "normal");
   }
@@ -2212,7 +2212,7 @@ $(".zamboangacitypath,#zamboangacitypin").hover(
     $("#zamboangacitypin,.zamboangacityname").css("visibility", "visible");
     $("#zamboangacitypin,.zamboangacityname").css("opacity", "1");
     $(".zamboangacityname").css("transform", "translateY(0px)");
-    $("#zamboangacitypin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#zamboangacitypin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#zamboangacitypin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".zamboangacitypath").css("mix-blend-mode", "color");
   },
@@ -2220,7 +2220,7 @@ $(".zamboangacitypath,#zamboangacitypin").hover(
     $("#zamboangacitypin,.zamboangacityname").css("visibility", "hidden");
     $("#zamboangacitypin,.zamboangacityname").css("opacity", "0");
     $(".zamboangacityname").css("transform", "translateY(-20px)");
-    $("#zamboangacitypin .trail-pin").css("transform", "translateY(5vw)");
+    $("#zamboangacitypin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#zamboangacitypin .map-pin").css("transform", "translateY(-5vw)");
     $(".zamboangacitypath").css("mix-blend-mode", "normal");
   }
@@ -2231,7 +2231,7 @@ $(".basilanpath,#basilanpin").hover(
     $("#basilanpin,.basilanname").css("visibility", "visible");
     $("#basilanpin,.basilanname").css("opacity", "1");
     $(".basilanname").css("transform", "translateY(0px)");
-    $("#basilanpin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#basilanpin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#basilanpin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".basilanpath").css("mix-blend-mode", "color");
   },
@@ -2239,7 +2239,7 @@ $(".basilanpath,#basilanpin").hover(
     $("#basilanpin,.basilanname").css("visibility", "hidden");
     $("#basilanpin,.basilanname").css("opacity", "0");
     $(".basilanname").css("transform", "translateY(-20px)");
-    $("#basilanpin .trail-pin").css("transform", "translateY(5vw)");
+    $("#basilanpin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#basilanpin .map-pin").css("transform", "translateY(-5vw)");
     $(".basilanpath").css("mix-blend-mode", "normal");
   }
@@ -2250,7 +2250,7 @@ $(".sulupath,#sulupin").hover(
     $("#sulupin,.suluname").css("visibility", "visible");
     $("#sulupin,.suluname").css("opacity", "1");
     $(".suluname").css("transform", "translateY(0px)");
-    $("#sulupin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#sulupin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#sulupin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".sulupath").css("mix-blend-mode", "color");
   },
@@ -2258,7 +2258,7 @@ $(".sulupath,#sulupin").hover(
     $("#sulupin,.suluname").css("visibility", "hidden");
     $("#sulupin,.suluname").css("opacity", "0");
     $(".suluname").css("transform", "translateY(-20px)");
-    $("#sulupin .trail-pin").css("transform", "translateY(5vw)");
+    $("#sulupin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#sulupin .map-pin").css("transform", "translateY(-5vw)");
     $(".sulupath").css("mix-blend-mode", "normal");
   }
@@ -2269,7 +2269,7 @@ $(".tawitawipath,#tawitawipin").hover(
     $("#tawitawipin,.tawitawiname").css("visibility", "visible");
     $("#tawitawipin,.tawitawiname").css("opacity", "1");
     $(".tawitawiname").css("transform", "translateY(0px)");
-    $("#tawitawipin .trail-pin").css("transform", "translateY(3.5vw)");
+    $("#tawitawipin .trail-pin").css("transform", "rotateZ(360deg)");
     $("#tawitawipin .map-pin").css("transform", "translateY(-3.5vw)");
     $(".tawitawipath").css("mix-blend-mode", "color");
   },
@@ -2277,7 +2277,7 @@ $(".tawitawipath,#tawitawipin").hover(
     $("#tawitawipin,.tawitawiname").css("visibility", "hidden");
     $("#tawitawipin,.tawitawiname").css("opacity", "0");
     $(".tawitawiname").css("transform", "translateY(-20px)");
-    $("#tawitawipin .trail-pin").css("transform", "translateY(5vw)");
+    $("#tawitawipin .trail-pin").css("transform", "rotateZ(180deg)");
     $("#tawitawipin .map-pin").css("transform", "translateY(-5vw)");
     $(".tawitawipath").css("mix-blend-mode", "normal");
   }
