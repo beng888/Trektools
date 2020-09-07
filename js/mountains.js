@@ -649,8 +649,10 @@ $(document).on("click", ".blocker2", function () {
   $(".blocker2").remove();
 });
 
-$(".trail-pin").append(`<img class = "trail" src="trail.png" >`);
-$(".map-pin").append(`<img class ="pins" src="pin.png" >`);
+$(".trail-pin").append(
+  `<img class = "trail" src="trail.png" title= "view trails">`
+);
+$(".map-pin").append(`<img class ="pins" src="pin.png">`);
 
 ///lazy loading scripts///
 
@@ -2322,4 +2324,21 @@ $(".accordion").click(function (e) {
       "border-bottom-left-radius": "0",
     });
   }
+});
+//////////////////////button-click///////
+const buttons = document.querySelectorAll("");
+buttons.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    let x = e.clientX - e.target.offsetLeft;
+    let y = e.clientY - e.target.offsetTop;
+
+    let ripples = document.createElement("span");
+    ripples.style.left = x + "px";
+    ripples.style.top = y + "px";
+    this.appendChild(ripples);
+
+    setTimeout(() => {
+      ripples.remove();
+    }, 1000);
+  });
 });

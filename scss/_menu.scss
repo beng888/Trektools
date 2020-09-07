@@ -73,10 +73,10 @@
 
 .menu-inner {
   overflow-y: auto;
+  overflow-x: hidden;
   direction: rtl;
   max-height: 100vh;
   .accordion {
-    left: 0;
     margin: 20px 30px 20px 5px;
     overflow: hidden;
     text-align: center;
@@ -86,6 +86,7 @@
   h2,
   h3,
   h4 {
+    overflow: hidden;
     cursor: pointer;
   }
   .accordion h2,
@@ -95,7 +96,18 @@
   }
   .accordion h1 {
     padding: 15px 20px;
-    background-color: #581845;
+    background-image: linear-gradient(
+      315deg,
+      #3f51b1 0%,
+      #5a55ae 13%,
+      #7b5fac 25%,
+      #8f6aae 38%,
+      #a86aa4 50%,
+      #cc6b8e 62%,
+      #f18271 75%,
+      #f3a469 87%,
+      #f7c978 100%
+    );
     font-family: Lobster;
     font-size: 1.5rem;
     font-weight: normal;
@@ -119,7 +131,7 @@
   }
   .accordion h2 {
     padding: 5px 25px;
-    background-color: #1abc9c;
+    background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
     font-size: 1.1rem;
     color: #900c3f;
   }
@@ -128,7 +140,7 @@
   }
   .accordion h3 {
     padding: 5px 30px;
-    background-color: #c70039;
+    background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
     font-size: 0.9rem;
     color: #ddd;
   }
@@ -136,14 +148,15 @@
     background-color: #a93142;
   }
   .accordion h4 {
-    padding: 0.2rem 1rem 0.2rem 1rem;
-    background-color: #ff5733;
+    background-image: linear-gradient(to right, #56ccf2 0%, #2f80ed 100%);
+
+    border: 0;
     font-size: 0.9rem;
     color: #000;
     text-transform: uppercase;
   }
   .accordion h4:hover {
-    background-color: #e0b040;
+    background: -webkit-linear-gradient(#eee, #333);
   }
   .accordion p {
     padding: 0.5rem;
@@ -158,5 +171,27 @@
   .accordion button {
     position: relative;
     left: 50%;
+  }
+}
+///////////// button-click
+span {
+  position: absolute;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
   }
 }
