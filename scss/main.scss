@@ -153,8 +153,8 @@ body {
 
   .trail-pin {
     position: absolute;
-    transition: 0.3s ease-in;
-    transform: rotateZ(180deg);
+    transition: all 0.3s ease-in;
+    transform: scale(0);
     .trail {
       max-width: 100%;
       height: auto;
